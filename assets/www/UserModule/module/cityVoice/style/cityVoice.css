@@ -1,0 +1,42 @@
+/** ------------------------------------图标样式---------------------------------------- **/
+
+.like-icon1{ background-image: url("../images/city/like-icon1.png") ; display: inline-block; width: 30px; height: 30px; background-repeat: no-repeat; background-size: 1.5em 1.5em; background-position: 0 2px; text-indent: 30px;  }
+.message-icon1{ background-image: url("../images/city/message-icon1.png") ; display: inline-block; width: 30px; height: 30px; background-repeat: no-repeat; background-size: 1.5em 1.5em; background-position: 0 5px; text-indent: 30px;  }
+.reply-icon1{ background-image: url("../images/city/icon11.png") ; display: inline-block; width: 30px; height: 30px; background-repeat: no-repeat; background-size: 1.5em 1.5em; background-position: 0 5px; text-indent: 30px;  }
+
+
+.add{border-radius:8px; /*background:#edfaf7;*/ text-align:left; line-height:30px;padding:5px;    margin: 10px auto;    width: 95%;}
+.add a{color:#639f91;}
+.add i{color:#639f91;padding:0 5px; margin-top:5px;}
+
+
+.add-index{border-radius:8px;  text-align:left;  padding:5px; color:#999; font-size:12px;   margin: 10px auto;    width: 95%;}
+.add-index a{color:#639f91;}
+.add-index i{color:#639f91;padding:0 5px; margin-top:4px; }
+
+.del-icon1 {
+    background-image: url("../images/city/del_icon1.png");
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    background-position: 0 5px;
+    text-indent: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

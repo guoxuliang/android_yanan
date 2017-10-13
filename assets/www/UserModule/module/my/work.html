@@ -1,0 +1,48 @@
+﻿<div class="workBox">
+    <div aigov-type="headerBack" id="header" aigov-auto-init='true' aigov-title="我的办事">
+    </div>
+
+    <div class="m-t-3-em"></div>
+    <div class="weui_panel weui_panel_access">
+        <div class="weui_panel_bd">
+            <div class="weui_media_box weui_media_text" style="padding:0px;">
+                <img src="UserModule/module/my/work/style/images/Img05.jpg" width="100%">
+            </div>
+            
+            <!-- <div class="weui_media_box weui_media_text">
+                <p class="weui_media">
+                    <label>2016-06-01</label> 您的[中小学教师资格认定]业务目前已经进入审核阶段，
+                    预计30日后可以前往<label>咸阳市教育局四楼人事科</label>领取，
+                    请携带好身份证前往领取。
+                    如有疑问，请拨打电话<label>029-33328033</label>。
+                </p>
+            </div>
+            <div class="weui_media_box weui_media_text">
+                <p class="weui_media">
+                    <label>2016-05-20</label> 您的[中级职称评审]业务目前已经进入审核阶段，预计20个工作日后可以前往<label>咸阳人社局专业技术人员管理科（渭阳中路6号）</label>领取，请携带好身份证领取。如有疑问，请拨打电话<label>029-33210252</label>。
+                </p>
+            </div> -->
+
+        </div>
+    </div>
+    <div aigov-type="datalist" id="workList" class="ai-body-box"  aigov-auto-init="false" style="position: absolute;top: 12em;bottom: 0em;left: 0;right: 0;overflow: hidden;">
+	</div>
+
+</div>
+
+<script id="tpl" type="text/x-handlebars-template">
+	{{#each data.caseBaseInfo}}
+		<div class="weui_media_box weui_media_text">
+                <p class="weui_media">
+                    <label>{{dateDayFormat caseapplydate}}</label> 您的[{{servname}}]业务目前已经进入{{casestatus}}阶段，
+                    预计{{surplusday}}后可以前往<label>{{deptname}}</label>领取，
+                    请携带好
+					{{#each caseMaterial}}	
+						{{matename}},
+					{{/each}}
+					前往领取。
+                    <!--如有疑问，请拨打电话<label>{{lxdh}}</label>。-->
+                </p>
+            </div>
+	{{/each}}
+</script>

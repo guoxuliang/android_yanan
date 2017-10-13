@@ -1,0 +1,101 @@
+<style>
+.weui_select {
+	padding-left: 0px;
+}
+</style>
+<div aigov-type="headerBack" id="header" aigov-auto-init="true" aigov-title="就诊人管理"></div>
+	<div class="ai-body-box" style="background: #fbf9fe;"> 
+	<div class="weui_cells_title">就诊人信息</div>
+	<div class="weui_cells weui_cells_form">
+		<div class="weui_cell">
+			<div class="weui_cell_hd">
+				<label class="weui_label">姓名</label>
+			</div>
+			<div class="weui_cell_bd">
+				<input id="name" class="weui_input" type="text" placeholder="请输入姓名">
+			</div>
+		</div>
+		<div class="weui_cell">
+			<div class="weui_cell_hd">
+				<label class="weui_label">性别</label>
+			</div>
+			<div class="weui_cell_bd">
+				<select id="sex" class="weui_select">
+	                 <option value="0">男</option>
+	                 <option value="1">女</option>
+	             </select>
+			</div>
+		</div>
+		<div class="weui_cell">
+			<div class="weui_cell_hd">
+				<label class="weui_label">身份证</label>
+			</div>
+			<div class="weui_cell_bd">
+				<input id="idNo" class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入身份证">
+			</div>
+		</div>
+		<div class="weui_cell">
+			<div class="weui_cell_hd">
+				<label class="weui_label">出生日期</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<input id="birthday" class="weui_input" type="date" value="">
+			</div>
+		</div>
+		<div class="weui_cell">
+			<div class="weui_cell_hd">
+				<label class="weui_label">联系电话</label>
+			</div>
+			<div class="weui_cell_bd">
+				<input id="phone" class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入联系电话">
+			</div>
+		</div>
+		<div id="divDefault" class="weui_cell">
+			<div class="weui_cell_hd">
+				<label class="weui_label">默认就诊人</label>
+			</div>
+			<div class="weui_cell_bd">
+				<select id="isDefault" class="weui_select">
+		            <option value="1">否</option>
+		            <option value="0">是</option>
+		        </select>
+			</div>
+		</div>
+		<div id="divHospital" class="weui_cell">
+			<div class="weui_cell_hd">
+				<label class="weui_label">医院</label>
+			</div>
+			<div id="hospital" class="weui_cell_bd">
+			</div>
+		</div>
+		<div id="divCard" class="weui_cell">
+			<div class="weui_cell_hd">
+				<label class="weui_label">就诊卡号</label>
+			</div>
+			<div class="weui_cell_bd">
+				<a href="javascript:;" id="btnCard" class="weui_btn weui_btn_mini weui_btn_primary">查询</a>
+				<p id="card"></p>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="weui_cells_tips">底部说明文字底部说明文字</div> -->
+	<div class="weui_btn_area">
+	    <a class="weui_btn weui_btn_primary" href="javascript:" id="btnSubmit">确定</a>
+	</div>
+</div>
+
+<script id="tpl" type="text/x-handlebars-template">
+<select id="hospitalId" class="weui_select">
+{{#each this}}
+<option value="{{hospitalId}}_{{hospitalCode}}">{{hospitalName}}</option>
+{{/each}}
+</select>
+</script>
+
+<script id="tpl2" type="text/x-handlebars-template">
+<select id="cardNo" class="weui_select">
+{{#each this}}
+<option value="{{card_No}}" data-patient-id="{{patient_Id}}">{{card_No}}</option>
+{{/each}}
+</select>
+</script>

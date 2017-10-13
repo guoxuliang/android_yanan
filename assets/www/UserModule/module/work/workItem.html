@@ -1,0 +1,42 @@
+
+<div id="J-work-list" class="work-list"></div>
+
+<script id="tpl1" type="text/x-handlebars-template">
+  <ul class="grid">
+    {{#ifCond thingsType '==' '001'}}
+      {{#each data}}
+      <li class="grid-item" data-id="{{id}}">
+        <a href="javascript:;" class="grid-item-contain" data_type="1" data_content="thingsAll" data_param='[{"id":"{{id}}"},{"type":"001"},{"type_name":"个人办事"}]' data_name="{{head}}">
+          <div class="grid-item-icon">
+            <img src="https://ydt.xy12345.cn/edot/images/icon/{{regionName}}" alt="">
+          </div>
+          <div class="gird-item-text">{{head}}</div>
+        </a>
+      </li>
+      {{/each}}
+    {{else}}
+      {{#each data}}
+      <li class="grid-item" data-id="{{id}}">
+        <a href="javascript:;" class="grid-item-contain" data_type="1" data_content="thingsAll" data_param='[{"id":"{{id}}"},{"type":"002"},{"type_name":"企业办事"}]' data_name="{{head}}">
+          <div class="grid-item-icon">
+            <img src="https://ydt.xy12345.cn/edot/images/icon/{{regionName}}" alt="">
+          </div>
+          <div class="gird-item-text">{{head}}</div>
+        </a>
+      </li>
+      {{/each}}
+    {{/ifCond}}
+  </ul>
+</script>
+
+<script id="tpl2" type="text/x-handlebars-template">
+  <ul class="grid-list">
+  {{#each data}}
+    <li class="grid-item" data-id="{{id}}">
+      <a href="javascript:;" class="grid-item-contain" data_type="1" data_content="thingsAll" data_param='[{"id":"{{id}}"},{"type":"003"},{"type_name":"部门办事"}]' data_name="{{head}}">
+        <div class="gird-item-text">{{head}}</div>
+      </a>
+    </li>
+  {{/each}}
+  </ul>
+</script>

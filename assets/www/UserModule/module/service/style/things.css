@@ -1,0 +1,23 @@
+.ai-service-scroll{
+	position: absolute;
+	top:2em;
+	right:0px;
+	bottom:0px;
+	left:0px;
+	overflow:auto;
+}
+.weui_label{
+	font-weight:700;
+}
+.weui_media_box .weui_media_desc_sp {
+    color: #999;
+    font-size: 13px;
+    line-height: 1.2;
+}
+img {
+  box-sizing: border-box;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+}

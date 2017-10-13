@@ -1,0 +1,59 @@
+<style>
+    .cityVoice .cityVoiceList .like-message a {
+        width: 30%;
+    }
+</style>
+
+{{@datas}}
+<div class="cityVoiceList" data-create-id="{{=_val.createId}}" data-city-voice-id="{{=_val.cityVoiceId}}">
+    <!--<dl>-->
+        <!--<dt><a><img src="UserModule/module/cityVoice/images/city/pic.png" width="50" /> </a> </dt>-->
+        <!--<dd>-->
+            <!--<strong>{{=_val.createName1}}</strong>{{=_val.createDate}}-->
+        <!--</dd>-->
+        <!--<div class="clear"></div>-->
+    <!--</dl>-->
+    <ol>
+        {{=_val.factContent}}
+    </ol>
+    <ul>
+        {{_val.img1}}
+        <li><a><img src="{{=_val.img1_min}}" width="100%" maxSrc="{{=_val.img1}}"/> </a> </li>
+        {{/_val.img1}}
+        {{_val.img2}}
+        <li><a><img src="{{=_val.img2_min}}" width="100%" maxSrc="{{=_val.img2}}"/> </a> </li>
+        {{/_val.img2}}
+        {{_val.img3}}
+        <li><a><img src="{{=_val.img3_min}}" width="100%" maxSrc="{{=_val.img3}}"/> </a> </li>
+        {{/_val.img3}}
+        {{_val.img4}}
+        <li><a><img src="{{=_val.img4_min}}" width="100%" maxSrc="{{=_val.img4}}"/> </a> </li>
+        {{/_val.img4}}
+        {{_val.img5}}
+        <li><a><img src="{{=_val.img5_min}}" width="100%" maxSrc="{{=_val.img5}}"/> </a> </li>
+        {{/_val.img5}}
+        {{_val.img6}}
+        <li><a><img src="{{=_val.img6_min}}" height="90" maxSrc="{{=_val.img6}}"/> </a> </li>
+        {{/_val.img6}}
+        {{_val.img7}}
+        <li><a><img src="{{=_val.img7_min}}" width="100%" maxSrc="{{=_val.img7}}"/> </a> </li>
+        {{/_val.img7}}
+        {{_val.img8}}
+        <li><a><img src="{{=_val.img8_min}}" width="100%" maxSrc="{{=_val.img8}}"/> </a> </li>
+        {{/_val.img8}}
+        {{_val.img9}}
+        <li><a><img src="{{=_val.img9_min}}" width="100%" maxSrc="{{=_val.img9}}"/> </a> </li>
+        {{/_val.img9}}
+        <div class="clear"></div>
+    </ul>
+    <!--<div class="add-index">-->
+        <!--<i class="fa fa-map-marker fl" aria-hidden="true"></i><p class="fl">{{=_val.address}}</p>-->
+        <!--<div class="clear"></div>-->
+    <!--</div>-->
+    <div class="like-message">
+        <a href="javascript:void(0);" class="b-r likeTag" data-id="{{=_val.cityVoiceId}}" aigov-is-record="true" cityVoiceId="{{=_val.cityVoiceId}}" type="like"><i class="like-icon1">{{=_val.likeNum}}</i></a>
+        <a href="javascript:void(0);" class="b-r messageTag" data-id="{{=_val.cityVoiceId}}" aigov-is-record="true" cityVoiceId="{{=_val.cityVoiceId}}" type="message"><i class="message-icon1">{{=_val.replyNum}}</i></a>
+        <a href="javascript:void(0);" class="del" data-id="{{=_val.cityVoiceId}}" aigov-is-record="true" cityVoiceId="{{=_val.cityVoiceId}}" type="del"><i class="del-icon1"></i></a>
+    </div>
+</div>
+{{/@datas}}

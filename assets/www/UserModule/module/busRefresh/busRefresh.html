@@ -1,0 +1,162 @@
+<div class="ai-body-box">
+	<div id="busRealtimeNav"></div>
+	<div id="busRealtimeBody">
+		<div id="busRealtime-query"></div>
+		<div id="busRealtime-station"></div>
+	</div>
+</div>
+
+<!--公交车信息显示div模板-->
+<script id="bus_nav_template" type="text/x-handlebars-template">
+	<div class="aigov-bus-nav-top">
+		<p>
+			<span class="aigov-bus-route-span">{{lineName}}</span>
+		</p>
+	</div>
+	<div class="aigov-bus-nav-clearfix"></div>
+	<div class="aigov-bus-nav-bottom">
+		<p>
+			<span class="aigov-bus-icon-span">
+				<i><img src="UserModule/module/busRealtime/style/bus-icon-small.png"></i>
+			</span>
+			<span class="aigov-bus-startend-route-span">{{startStation}} - {{endStation}}</span>
+		</p>
+	</div>
+</script>
+
+<!--公交车到站时间模板-->
+<script id="bus_realtime_query_template" type="text/x-handlebars-template">
+	{{#judgeLength data.length '3'}}
+		{{#each data}}
+		<div class="bus_rest_time">
+			<p class="bus_station_index">{{formatterNo number}}</p>
+			<p class="bus_station_time">{{formartterStation station}}<span class="bus_time_style"></span></p>
+			<p class="bus_station_no">车牌号{{time}}</p>
+		</div>
+		{{/each}}
+	{{/judgeLength}}
+	{{#judgeLength data.length '2'}}
+		{{#each data}}
+		<div class="bus_rest_time_2">
+			<p class="bus_station_index_2">{{formatterNo number}}</p>
+			<p class="bus_station_time_2">{{formartterStation station}}<span class="bus_time_style"></span></p>
+			<p class="bus_station_no_2">车牌号{{time}}</p>
+		</div>
+		{{/each}}
+	{{/judgeLength}}
+	{{#judgeLength data.length '1'}}
+		{{#each data}}
+		<div class="bus_rest_time_1">
+			<p class="bus_station_index_1">{{formatterNo number}}</p>
+			<p class="bus_station_time_1">{{formartterStation station}}<span class="bus_time_style"></span></p>
+			<p class="bus_station_no_1">车牌号{{time}}</p>
+		</div>
+		{{/each}}
+	{{/judgeLength}}
+	{{#judgeLength data.length '0'}}
+		<div class="bus_rest_time_1">
+			<p class="bus_station_index_1"></p>
+			<p class="bus_station_time_1">等待发车<span class="bus_time_style"></span></p>
+			<p class="bus_station_no_1"></p>
+		</div>
+	{{/judgeLength}}
+</script>
+
+<!--公交车线路站点模板-->
+<script id="bus_realtime_station_template" type="text/x-handlebars-template">
+	<ul id="bus_route_station">
+		{{#each data}}
+		{{#judgeCurrentLocation station_name.stationName}}
+		<li class="aigov-bus-route-station">
+			{{#judgeStatus status 'green'}}
+			<p id="aigov-bus-route-station-href">
+				<img id="busimg" src="UserModule/module/busRefresh/style/traffic/green-linec.png">
+				<img id="busarrow" src="UserModule/module/busRefresh/style/traffic/arrow.png" style="display:none;">
+				<span class="aigov-bus-route-station-no">{{station_no}}</span>
+				<span class="aigov-bus-route-station-name">{{station_name.stationName}}</span>
+			</p>
+			{{/judgeStatus}}
+			{{#judgeStatus status 'red'}}
+			<p id="aigov-bus-route-station-href">
+				<img id="busimg" src="UserModule/module/busRefresh/style/traffic/red-linec.png">
+				<img id="busarrow" src="UserModule/module/busRefresh/style/traffic/arrow.png" style="display:none;">
+				<span class="aigov-bus-route-station-no">{{station_no}}</span>
+				<span class="aigov-bus-route-station-name">{{station_name.stationName}}</span>
+			</p>
+			{{/judgeStatus}}
+			{{#judgeStatus status 'orange'}}
+			<p id="aigov-bus-route-station-href">
+				<img id="busimg" src="UserModule/module/busRefresh/style/traffic/orange-linec.png">
+				<img id="busarrow" src="UserModule/module/busRefresh/style/traffic/arrow.png" style="display:none;">
+				<span class="aigov-bus-route-station-no">{{station_no}}</span>
+				<span class="aigov-bus-route-station-name">{{station_name.stationName}}</span>
+			</p>
+			{{/judgeStatus}}
+			{{#judgeStatus status 'yellow'}}
+				<p id="aigov-bus-route-station-href">
+					<img id="busimg" src="UserModule/module/busRefresh/style/traffic/yellow-linec.png">
+					<img id="busarrow" src="UserModule/module/busRefresh/style/traffic/arrow.png" style="display:none;">
+					<span class="aigov-bus-route-station-no">{{station_no}}</span>
+					<span class="aigov-bus-route-station-name">{{station_name.stationName}}</span>
+				</p>
+			{{/judgeStatus}}
+			{{#judgeStatus status 'white'}}
+			<p id="aigov-bus-route-station-href">
+				<img id="busimg" src="UserModule/module/busRefresh/style/traffic/gray-linec.png">
+				<img id="busarrow" src="UserModule/module/busRefresh/style/traffic/arrow.png" style="display:none;">
+				<span class="aigov-bus-route-station-no">{{station_no}}</span>
+				<span class="aigov-bus-route-station-name">{{station_name.stationName}}</span>
+			</p>
+			{{/judgeStatus}}
+		</li>
+		{{else}}
+		<li class="aigov-bus-route-station">
+			{{#judgeStatus status 'green'}}
+			<p id="aigov-bus-route-station-href" class="p_color">
+				<img id="busimg" src="UserModule/module/busRefresh/style/traffic/green-linec.png">
+				<img id="busarrow" src="UserModule/module/busRefresh/style/traffic/arrow.png">
+				<span class="aigov-bus-route-station-no ">{{station_no}}</span>
+				<span class="aigov-bus-route-station-name">{{station_name.stationName}}</span>
+			</p>
+			{{/judgeStatus}}
+			{{#judgeStatus status 'red'}}
+			<p id="aigov-bus-route-station-href" class="p_color">
+				<img id="busimg" src="UserModule/module/busRefresh/style/traffic/red-linec.png">
+				<img id="busarrow" src="UserModule/module/busRefresh/style/traffic/arrow.png">
+				<span class="aigov-bus-route-station-no">{{station_no}}</span>
+				<span class="aigov-bus-route-station-name">{{station_name.stationName}}</span>
+			</p>
+			{{/judgeStatus}}
+			{{#judgeStatus status 'orange'}}
+			<p id="aigov-bus-route-station-href" class="p_color">
+				<img id="busimg" src="UserModule/module/busRefresh/style/traffic/orange-linec.png">
+				<img id="busarrow" src="UserModule/module/busRefresh/style/traffic/arrow.png">
+				<span class="aigov-bus-route-station-no">{{station_no}}</span>
+				<span class="aigov-bus-route-station-name">{{station_name.stationName}}</span>
+			</p>
+			{{/judgeStatus}}
+			{{#judgeStatus status 'yellow'}}
+				<p id="aigov-bus-route-station-href" class="p_color">
+					<img id="busimg" src="UserModule/module/busRefresh/style/traffic/yellow-linec.png">
+					<img id="busarrow" src="UserModule/module/busRefresh/style/traffic/arrow.png">
+					<span class="aigov-bus-route-station-no">{{station_no}}</span>
+					<span class="aigov-bus-route-station-name">{{station_name.stationName}}</span>
+				</p>
+			{{/judgeStatus}}
+			{{#judgeStatus status 'white'}}
+			<p id="aigov-bus-route-station-href" class="p_color">
+				<img id="busimg" src="UserModule/module/busRefresh/style/traffic/gray-linec.png">
+				<img id="busarrow" src="UserModule/module/busRefresh/style/traffic/arrow.png">
+				<span class="aigov-bus-route-station-no">{{station_no}}</span>
+				<span class="aigov-bus-route-station-name">{{station_name.stationName}}</span>
+			</p>
+			{{/judgeStatus}}
+		</li>
+		{{/judgeCurrentLocation}}
+		{{/each}}
+	</ul>
+</script>
+
+
+
+

@@ -1,0 +1,50 @@
+.weatherBg01{ background-image: url("images/weather_Bg01.png") ; background-size:100% 100%;background-repeat: no-repeat;background-attachment: fixed; margin: 0 auto; width: 100%; height: 100%;position: absolute;}
+.weatherBg02{ background-image: url("images/weather_Bg02.png") ; background-size:100% 100%;background-repeat: no-repeat;background-attachment: fixed; margin: 0 auto; width: 100%; height: 100%;position: absolute;}
+.weatherBg03{ background-image: url("images/weather_Bg03.png") ; background-size:100% 100%;background-repeat: no-repeat;background-attachment: fixed; margin: 0 auto; width: 100%; height: 100%;position: absolute;}
+.weatherBg04{ background-image: url("images/weather_Bg04.png") ; background-size:100% 100%;background-repeat: no-repeat;background-attachment: fixed; margin: 0 auto; width: 100%; height: 100%;position: absolute;}
+.weatherQuality{
+    font-weight: 100;
+    font-size: 18px;
+    background: rgba(0,0,0,0.3);
+    display:inline-block;
+    margin-left: 15px;
+    padding: 3px 18px;
+    color: #fff;
+    border-radius: 6px;
+    overflow: hidden;}
+.weatherQuality > span{ position: relative; color: #fff;}
+
+section#weather{ position:fixed; bottom:0;font:18px  "微软雅黑", Arial, Helvetica, sans-serif; color: #fff; padding: 0 10px;}
+section#weather > h5{ font-size: 80px;}
+section#weather > h5 > span{ font-size: 30px; font-weight: 100;}
+section#weather > p{ }
+section#weather > p > span{ font-size: 15px; }
+.weatherList{  width: 100%; display: table; overflow: hidden;}
+.weatherList > ul{ display: table-row;}
+.weatherList > ul > li{ font-size: 16px; vertical-align:middle;  display: table-cell; text-align: center; padding: 10px 0;}
+.weatherList > ul > li > span{ font-size: 14px;}
+.weatherList > ul > li > img{ margin-top: 5px; margin-bottom: 5px;}
+
+
+
+.dropDownMenu{font:18px  "微软雅黑", Arial, Helvetica, sans-serif; color: #fff;}
+.dropDownMenu > dl{}
+.dropDownMenu > dl > dt{}
+.dropDownMenu > dl > dd{}
+
+.dropDownMenuName{ width: 100%; display: table; overflow: hidden;}
+.dropDownMenuName > ul{ display: table-row;}
+.dropDownMenuName > ul > li{ vertical-align:middle;  display: table-cell; text-align: center; padding: 10px 0;}
+.dropDownMenuName > ul > li > a{ color: #fff; font-size: 24px; display: block;}
+.dropDownMenuName > ul > li > a > img{ padding: 5px;}
+
+.dropDownMenuList{ font-size: 16px; background: #fff;filter:alpha(opacity=90);
+    -moz-opacity:0.9;
+    opacity:0.9;  width: 100%; display: table; overflow: hidden; z-index: 2; position: fixed; }
+.dropDownMenuList > ul{display: table-row;}
+.dropDownMenuList > ul > li{ position:relative;vertical-align:middle;  display: table-cell; text-align: center; padding: 8px 10px;}
+.dropDownMenuList > ul > li > a{color: #222;}
+.dropDownMenuList > ul > li > a.current{color: #39a375;}
+.dropDownMenuList > ul > li > a > img{ padding-right: 10px;}
+
+

@@ -1,0 +1,135 @@
+<div aigov-type="headerBack" id="header" aigov-auto-init="true" aigov-title="在线申报"></div>
+<div class="ai-body-box">
+</div>
+
+
+<script id="tpl" type="text/x-handlebars-template">
+<form id="saveForm" enctype="multipart/form-data">
+<input id="servno" name="servno" type="hidden" value="{{datas.servno}}"/>
+
+		<div class="weui_cells">
+          <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label" style="width:120px">个人/企业名称</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input id="netcaseapplicant" name="netcaseapplicant" class="weui_input" placeholder="" type="text"/>
+            </div>
+          </div>
+          <div class="weui_cell weui_cell_select weui_select_after">
+            <div class="weui_cell_hd"><label class="weui_label" style="width:120px">申报类型</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+				<select id="netcaseapplicanttype" name="netcaseapplicanttype" class="weui_select">
+					<option value="个人">个人</option>
+					<option value="企业">企业</option>
+				</select>
+			</div>
+          </div>
+          <div class="weui_cell weui_cell_select weui_select_after">
+            <div class="weui_cell_hd"><label class="weui_label" style="width:120px">证件类型</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+				<select id="netcaseapplicantpapertype" name="netcaseapplicantpapertype" class="weui_select">
+					<option value="身份证">身份证</option>
+					<option value="组织机构代码">组织机构代码</option>
+					<option value="护照">护照</option>
+					<option value="回乡证">回乡证</option>
+					<option value="居住证">居住证</option>
+					<option value="军官证">军官证</option>
+					<option value="特区护照">特区护照</option>
+					<option value="通行证">通行证</option>
+					<option value="台胞证">台胞证</option>
+					<option value="营业执照">营业执照</option>
+					<option value="注册证书">注册证书</option>
+					<option value="其他">其他</option>
+				</select>
+            </div>
+          </div>
+ 		  <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label" style="width:120px">证件号码</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+				<input id="netcaseapplicantpapercode" name="netcaseapplicantpapercode" class="weui_input" placeholder=""/>
+			</div>
+          </div>
+ 		  <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label" style="width:120px">申报人电话</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+				<input id="netcaseapplicantphone" name="netcaseapplicantphone" class="weui_input" placeholder=""/>
+			</div>
+          </div>
+ 		  <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label" style="width:120px">手机号码</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+				<input id="netcaseapplicantmobile" name="netcaseapplicantmobile" class="weui_input" type="number" placeholder=""/>
+			</div>
+          </div>
+ 		  <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label" style="width:120px">联系地址</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+				<input id="netcaseapplicantaddress" name="netcaseapplicantaddress" class="weui_input" placeholder=""/>
+			</div>
+          </div>
+ 		  <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label" style="width:120px">邮政编码</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+				<input id="netcaseapplicantzipcode" name="netcaseapplicantzipcode" class="weui_input" placeholder=""/>
+			</div>
+          </div>
+ 		  <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label" style="width:120px">电子邮箱</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+				<input id="netcaseapplicantemail" name="netcaseapplicantemail" class="weui_input" placeholder=""/>
+			</div>
+          </div>
+		</div>
+
+{{#each titleItemsList}}
+<div class="bd">
+    <div class="weui_cells_title"><span>{{add @index}}</span>{{head}}</div>
+
+        {{#each items}}
+
+		{{#ifCond type '==' 'desc'}}
+		<div class="weui_cells">
+			<div class="weui_cells_tips">{{desc}}</div>
+		</div>
+		{{/ifCond}}
+
+		{{#ifCond type '==' 'input-text'}}
+		<div class="weui_cells">
+          <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">{{label}}</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input id="{{id}}" name="{{id}}" class="weui_input" type="number" pattern="[0-9]*" placeholder="请在此输入{{label}}"/>
+            </div>
+          </div>
+		</div>
+		{{/ifCond}}
+
+		{{#ifCond type '==' 'input-file'}}
+		<div class="weui_cells">
+          <div class="weui_cell">
+            <div class="weui_cell_bd weui_cell_primary">
+                <div class="weui_uploader">
+                    <div class="weui_uploader_bd">
+                        <ul class="weui_uploader_files"></ul>
+                        <div class="weui_uploader_input_wrp" mateno="{{label}}">
+							<input class="weui_uploader_input" type="file" name="file" accept="image/*" multiple />
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+		</div>
+		{{/ifCond}}
+
+		{{/each}}
+    </div>
+</div>
+{{/each}}
+
+<div class="weui_btn_area">
+<!--	<a class="weui_btn weui_btn_primary" href="javascript:" id="showTooltips">确定</a>-->
+	<a class="weui_btn weui_btn_primary" href="javascript:" id="workApply">确定</a>
+</div>
+</from>
+</script>
+
+

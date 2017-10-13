@@ -1,0 +1,3 @@
+{"code":0,"message":"操作成功！",
+  "data":[{"direction":0,"startStation":"新兴纺织工业园","endStation":"八厂"},
+    {"direction":1,"startStation":"八厂","endStation":"新兴纺织工业园"}]}

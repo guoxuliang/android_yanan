@@ -1,0 +1,22 @@
+
+{{@datas}}
+<dl class="lifes" data-service-id="{{=_val.serviceId}}" aigov-is-record="true" >
+    <dt>
+        <a href="javascript:void(0);">
+
+            <img src="{{=_val.serviceLogoPrefix}}/{{=_val.serviceLogo}}" lowsrc="UserModule/module/homeService/style/images/service.jpg" onerror="this.src='UserModule/module/homeService/style/images/service.jpg'" width="90px"/>
+        </a>
+    </dt>
+    <dd>
+        <h6><a href="javascript:void(0);"><span class="fl">{{=_val.serviceName}}</span></a> <em class="fr">{{=_val.serviceChecknum}}</em><img src="UserModule/module/homeService/style/images/lifeService_Icon01.png" width="18" class="fr"/></h6>
+        <div class="clear"></div>
+        <ol>{{=_val.serviceAbstract}}</ol>
+        <div class="m-t-8"></div>
+        <p>价格：{{=_val.servicePrice}}</p>
+        <p>电话：{{=_val.servicePhone}}</p>
+    </dd>
+    <div class="clear"></div>
+</dl>
+{{/@datas}}
+
+

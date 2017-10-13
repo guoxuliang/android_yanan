@@ -1,0 +1,11 @@
+﻿/**
+ *@author keyz@asiainfo.com
+ *@createtime 2016-05-27
+**/
+@charset "utf-8";
+.ai-hospitalInfo-box{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #eeeeee;
+}

@@ -1,0 +1,101 @@
+<div aigov-type="headerBack" id="header" aigov-auto-init="true" aigov-title="实名认证"></div>
+	
+	<div class="fact ai-body-box" id="J_authentification_Box">
+		<div style="overflow:hidden;">
+		<div id="J_rejectReason" style="padding:5px;display:none; width:100%;background:#F2DEDE;z-index:1;font-size:1em;box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;">
+		<img  src="UserModule/module/authentification/images/001_11.png" style="height:1em;vertical-align:middle;word-break:break-all;"/>
+		
+	</div>
+			<form id="J_user"  enctype="multipart/form-data">
+			<input type="hidden" id="idFrontImage" name="idFrontImage" />
+			<input type="hidden" id="idBackImage" name="idBackImage" />
+			<input type="hidden" id="idHandImage" name="idHandImage" />
+			<input type="hidden" id="phoneNo" name="phoneNo" />
+			<input type="hidden" id="userId" name="userId" />
+			<div class="weui_cells">
+			    <div class="weui_cell grsl">
+			        <div class="weui_cell_hd">
+			            <label class="weui_label"><font style="color:red">*</font>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</label>
+			        </div>
+			        <div class="weui_cell_bd weui_cell_primary">
+			    		<input class="weui_input" type="text" id="userName" name="realName" placeholder="请输入姓名">
+			        </div>
+			    </div>
+			    <div class="weui_cell grsl">
+			         <div class="weui_cell_hd">
+			             <label class="weui_label"><font style="color:red">*</font>身份证号</label>
+			         </div>
+			         <div class="weui_cell_bd weui_cell_primary">
+			             <input class="weui_input" type="text" id="idCardNo" name="cardNo" placeholder="请输入身份证号">
+			         </div>
+			     </div>
+			</div>
+			</form>
+			<div class="bd">
+			    <div class="weui_cells_title"><font style="color:red">*</font>身份证正面照(拍照时请确保姓名、证件号码等信息清晰可见)</div>
+				<div class="weui_cells">
+		          <div class="weui_cell">
+	            	<div class="content">
+						<div>
+							<img id="idFrontImage_img" src="UserModule/module/my/ykt/style/images/idcard_front.jpg">
+							<input type="file" accept="image/*" id="idFrontImage_file">
+							<div>
+								<dl>
+									<img src="UserModule/module/my/ykt/style/images/camera-icon.png">
+									<span>点此选取照片</span>
+								</dl>
+								<dt class="hide"><img src="UserModule/module/my/ykt/style/images/watermark.png" style="width:100%"></dt>
+							</div>
+						</div>
+					</div>
+		          </div>
+				</div>
+			</div>
+			<div class="bd">
+			    <div class="weui_cells_title"><font style="color:red">*</font>身份证反面照(拍照时请确保签发机关、有效期限等信息清晰可见)</div>
+				<div class="weui_cells">
+		          <div class="weui_cell">
+	            	<div class="content">
+						<div>
+							<img id="idBackImage_img" src="UserModule/module/my/ykt/style/images/idcard_back.jpg">
+							<input type="file" accept="image/*" id="idBackImage_file">
+							<div>
+								<dl>
+									<img src="UserModule/module/my/ykt/style/images/camera-icon.png">
+									<span>点此选取照片</span>
+								</dl>
+								<dt class="hide"><img src="UserModule/module/my/ykt/style/images/watermark.png" style="width:100%"></dt>
+							</div>
+						</div>
+					</div>
+		          </div>
+				</div>
+			</div>
+			<div class="bd">
+			    <div class="weui_cells_title"><font style="color:red">*</font>身份证手持照</div>
+				<div class="weui_cells">
+		          <div class="weui_cell">
+	            	<div class="content">
+						<div>
+							<img id="idHandImage_img" src="UserModule/module/my/ykt/style/images/idcard_hand.jpg">
+							<input type="file" accept="image/*" id="idHandImage_file">
+							<div>
+								<dl>
+									<img src="UserModule/module/my/ykt/style/images/camera-icon.png">
+									<span>点此选取照片</span>
+								</dl>
+								<dt class="hide"><img src="UserModule/module/my/ykt/style/images/watermark.png" style="width:100%"></dt>
+							</div>
+						</div>
+					</div>
+		          </div>
+				</div>
+			</div>
+			 <div class="weui_btn_area">
+		       	<a class="weui_btn weui_btn_primary" href="javascript:void(0);" id="sendFactBtn">提交</a>
+		    </div>
+	    </div>
+	</div>
+</div>

@@ -1,0 +1,24 @@
+﻿<div aigov-type="headerBack" id="header" aigov-auto-init="true" aigov-title="伴随症状">
+</div>
+<div class="ai-body-box">
+	<div class="weui_cells weui_cells_checkbox" style="margin-top:0" id="J-ai-box">
+        
+    </div>
+</div>
+
+
+
+
+<script id="J_relSymptomInfo_tpl" type="text/x-handlebars-template">
+{{@data}}
+ 		<label class="weui_cell weui_check_label" for="id_{{=_val.symptomId}}">
+            <div class="weui_cell_hd">
+                <input type="checkbox" name="symptomId" class="weui_check" value="{{=_val.symptomId}}" id="id_{{=_val.symptomId}}">
+                <i class="weui_icon_checked"></i>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <p>{{=_val.name}}</p>
+            </div>
+        </label>
+{{/@data}}
+</script>

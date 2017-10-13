@@ -1,0 +1,23 @@
+﻿{
+"code":0,
+"data":[{
+	"diseaseId":"12",
+	"name":"疾病名称",
+	"description":"dddddddddddd",
+	"cause":"",
+	"examine":"",
+	"feature":"",
+	"schedule":"",
+	"advice":"",
+	"causeUrl":"http://www.baidu.com",
+	"scheduleUrl":"http://www.baidu.com",
+	"result_List":[{
+			"officeId":"12",
+			"officeName":"科室1"
+		},{
+			"officeId":"12",
+			"officeName":"科室2"
+		}
+	]
+}]
+}

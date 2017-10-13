@@ -1,0 +1,61 @@
+<div aigov-type="headerBack" id="header" aigov-auto-init="true" aigov-title="掌上信访"></div>
+<div class="ai-body-box">
+<div class="weui_cells weui_cells_form">
+    <div class="weui_cell">
+        <div class="weui_cell_hd"><label class="weui_label">主题:</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="text" id="hotMailTitle" name="hotMailTitle" placeholder="请输入主题">
+        </div>
+    </div>
+    <div class="weui_cell weui_cell_select weui_select_after">
+        <div class="weui_cell_hd"><label class="weui_label">写信目的:</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <select class="weui_select" name="hotMailAim" id="hotMailAim">
+                  <option value="1">投诉</option>
+                  <option value="2">咨询</option>
+                  <option value="3">建议</option>
+                  <option value="4">表扬</option>
+              </select>
+        </div>
+    </div>
+    <div class="weui_cell">
+        <div class="weui_cell_hd"><label class="weui_label">信件内容:</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+           <textarea name="hotMailContent" id="hotMailContent" class="weui_textarea" placeholder="请输入信件内容" rows="3"></textarea>
+           <!-- <div class="weui_textarea_counter"><span>0</span>/200</div> -->
+        </div>
+    </div>
+    <div class="weui_cell weui_cell_select weui_select_after">
+        <div class="weui_cell_hd"><label class="weui_label">个人信息:</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <select class="weui_select" name="hotMailInfo" id="hotMailInfo">
+                  <option value="1">公开</option>
+                  <option value="2">不公开</option>
+              </select>
+        </div>
+    </div>
+    <div class="weui_cell weui_cell_select weui_select_after">
+        <div class="weui_cell_hd"><label class="weui_label">反馈方式:</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <select class="weui_select" name="hotMailFeedback" id="hotMailFeedback">
+                  <option value="1">电话</option>
+                  <option value="2">在线</option>
+              </select>
+        </div>
+    </div>
+    <div class="weui_cell">
+        <div class="weui_cell_hd">
+            <label class="weui_label">验证码</label>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+              <input class="weui_input" type="text" id="checkCode" name="checkCode" placeholder="请输入验证码" value="">
+          </div>
+          <div class="weui_cell_ft">
+              <img id="checkCodeImg" style="height:30px;" />
+          </div>
+    </div>
+    <div class="weui_btn_area">
+        <a class="weui_btn weui_btn_primary" href="javascript:" id="saveMailBtn">提交</a>
+    </div>
+</div>
+</div>

@@ -1,0 +1,22 @@
+﻿{
+"code":0,
+"data":[{
+"test_No":"100257424659",
+"apply_Doctor":"00035557",
+"apply_Date_Time":"2015-05-12 10:30:00",
+"specimen":"全血",
+"item_name":"生化全套",
+"report_Status":"1",
+"report_Date_Time":"2015-05-12 10:30:00",
+"report_Doctor":"楚苹苹"
+},{
+"test_No":"100257424651",
+"apply_Doctor":"00035557",
+"apply_Date_Time":"2015-05-12 10:30:00",
+"specimen":"全血",
+"item_name":"生化全套",
+"report_Status":"1",
+"report_Date_Time":"2015-05-12 10:30:00",
+"report_Doctor":"楚苹苹"
+}]	
+}

@@ -1,0 +1,85 @@
+<div class="workBox">
+	<div aigov-type="headerBack" id="header" aigov-auto-init='true' aigov-title="详情">
+	</div>
+
+	<div class="ai-body-box">
+	<div id="info">
+	
+	</div>
+	</div>
+	
+
+	
+</div>
+
+
+<script id="tpl" type="text/x-handlebars-template">
+	<div class="weui_cells_title">基本信息</div>
+	<div class="weui_cells weui_cells_form">
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">姓名:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{name}}
+            </div>
+        </div>
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">收缩压:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{sbp}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">舒张压:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{dbp}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">体重(kg):</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+               {{weight}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">身高(cm):</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                 {{height}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">体质指数:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+               {{bmi}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">随访日期:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{dateDayFormat thisFollowupDateDesc}}
+            </div>
+        </div>
+        
+	</div>
+	
+	<div class="weui_cells_title">生活方式</div>
+	<div class="weui_cells weui_cells_form">
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">日吸烟量(支):</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+               	{{dailySmokingAmount}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">日饮酒量(两):</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+               	{{dailyDrinkingAmount}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">运动时长:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                	{{exerciseDurationMins}}
+            </div>
+        </div>
+    </div>
+</script>

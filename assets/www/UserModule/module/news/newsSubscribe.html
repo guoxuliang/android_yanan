@@ -1,0 +1,34 @@
+<div aigov-type="headerBack" id="header" aigov-auto-init="true"></div>
+<div class="ai-body-box">
+	<div class="show-grid">
+		<div class="row">
+		 <div class="col-xs-12">
+				<h4>拖动到此处订阅</h4>
+				<ul id="sortable2" class="sortable2 clearfix">			
+				</ul>
+		 </div>
+		    <div class="col-xs-12">
+				<h4>全部频道</h4>
+				<ul id="sortable1" class="sortable1 clearfix">
+				</ul>
+			</div>
+		   
+		</div> 
+	</div>
+	<div class="weui_btn_area">
+		<a class="weui_btn weui_btn_primary"  id="showTooltips">保存</a>
+	</div>
+</div>
+
+
+<script id="tpl1" type="text/x-handlebars-template">
+	{{#each data}}
+		<li data-id="{{key}}">{{value}}</li>
+	{{/each}}
+</script>
+
+<script id="tpl2" type="text/x-handlebars-template">
+	{{#each data}}
+		<li data-id="{{key}}">{{value}}</li>
+	{{/each}}
+</script>

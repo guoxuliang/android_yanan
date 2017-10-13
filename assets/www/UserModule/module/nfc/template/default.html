@@ -1,0 +1,44 @@
+<style>
+#nfcDatalist .item{
+	border-bottom:1px solid #ccc;
+	margin-bottom: 8px;
+	color:#666;
+	font-size: 12px;
+	padding-top: 5px;
+}
+#nfcDatalist .info{width:95%; margin:5px auto;}
+
+#nfcDatalist .info a:link { color: orange; text-decoration: none}
+
+#nfcDatalist .info a:visited { color: orange; text-decoration: none}
+
+#nfcDatalist .info a:hover { color: orange; text-decoration: none}
+
+#nfcDatalist .info a:active { color: orange; text-decoration: none}
+</style>
+{{@datas}}
+<script type="text/javascript">
+if("{{=_val.payStatus}}" == "01"){
+	$("div[terminalTranNo='{{=_val.terminalTranNo}}']>.info>.fr").append("<a href=\"javascript:void(0);\" aigov-is-record=\"true\" terminalTranNo=\"{{=_val.terminalTranNo}}\" amount=\"{{=_val.amount}}\">支付</a>");
+}
+if("{{=_val.payStatus}}" == "01"){
+	$("div[terminalTranNo='{{=_val.terminalTranNo}}']>.info:nth-child(3)").append("待支付");
+} else if("{{=_val.payStatus}}" == "02"){
+	$("div[terminalTranNo='{{=_val.terminalTranNo}}']>.info:nth-child(3)").append("已支付");
+} else if("{{=_val.payStatus}}" == "03"){
+	$("div[terminalTranNo='{{=_val.terminalTranNo}}']>.info:nth-child(3)").append("支付失败");
+} else if("{{=_val.payStatus}}" == "04"){
+	$("div[terminalTranNo='{{=_val.terminalTranNo}}']>.info:nth-child(3)").append("已退款");
+}
+</script>
+<div class="item" terminalTranNo="{{=_val.terminalTranNo}}">
+	<div class="info">
+		<div class="fl">订单编号：{{=_val.terminalTranNo}}</div>
+		<div class="fr"></div>
+		<div class="clear"></div>
+	</div>
+	<div class="info">充值金额：{{=_val.amount}} 元</div>
+	<div class="info">订单状态：</div>
+	<div class="info">订单时间：{{=_val.orderTime}}</div>
+</div>
+{{/@datas}}

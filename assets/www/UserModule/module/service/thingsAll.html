@@ -1,0 +1,17 @@
+<div aigov-type="headerBack" id="header" aigov-auto-init="true" aigov-title="办事"></div>
+<div class="ai-body-box">
+</div>
+
+<script id="tpl" type="text/x-handlebars-template">
+<div class='ai-service-box-title'>
+  	<div class='title'>{{head}}</div>
+</div>
+<div class='ai-service-app-grids'>
+	{{#items}}                                                                    
+	<a class='ai-service-app-grid' data_type='1' data_content='things' data_param='[{"workCode":"{{id}}"}]' data_name=''>
+		<div class='icon'><img src='UserModule/module/service/style/images/inner_icon05.png'></div>
+		<div class='txt'>{{label}}</div>
+	</a>
+	{{/items}}
+</div>
+</script>

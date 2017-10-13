@@ -1,0 +1,11 @@
+{
+  "code":0,
+  "message":"操作成功！",
+  "data":[
+    {"name":"29路","startStation":"火车站","endStation":"火车站"},
+    {"name":"20路","error":"该线路站点缺失"},
+    {"name":"21路","startStation":"高铁秦都站","endStation":"后卫寨地铁口"},
+    {"name":"22路","startStation":"居然之家","endStation":"沙河风情园"},
+    {"name":"26路","startStation":"汽车北站","endStation":"朝阳二路"}
+  ]
+}

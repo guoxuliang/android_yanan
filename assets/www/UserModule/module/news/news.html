@@ -1,0 +1,54 @@
+<div class="ai-body-box" id="J-ai-body-box" style="top:0px;overflow:hidden;"> 
+		<div class="aigov-list-dl">
+			<div id="aigov-list-pulldown" style="display:none">
+				<span class="aigov-list-pulldown-icon"></span><span id="aigov-list-pulldown-label"></span>
+			</div>
+			<div>
+				<!-- 轮播新闻 -->
+				<div id="newstop" class="swiper-container">
+				    <div id="newstop-wrapper" class="swiper-wrapper newstop-wrapper">
+				    </div>
+				    
+				    <!-- 如果需要分页器 -->
+    				<div class="swiper-pagination" style="text-align: right;bottom: 5px;box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;padding-right: 1em;"></div>
+				</div>
+				<!-- 新闻列表 -->
+				<div class="weui_panel weui_panel_access">
+					<div id="newslist" class="weui_panel_bd">
+					</div>
+				</div>
+			</div>
+			
+			<div id="aigov-list-pullup" style="display:none">
+				<span class="aigov-list-pullup-icon"></span><span id="aigov-list-pullup-label"></span>
+			</div>
+		</div>
+</div>
+
+
+<script id="tpl2" type="text/x-handlebars-template">
+	{{#each data}}
+		<div class="swiper-slide">
+			<a data-id="{{info_id}}" data-title="{{title}}"><img alt="" src="{{thumb_url}}" lowsrc="UserModule/module/news/style/320x265.jpg" onerror="this.src='UserModule/module/news/style/320x265.jpg'" /></a>
+			<p>{{title}}</p>
+		</div>			
+	{{/each}}	
+</script>
+
+<script id="tpl3" type="text/x-handlebars-template">
+	{{#each data}}
+		<a href="javascript:void(0);" class="weui_media_box weui_media_appmsg" data-id="{{info_id}}" data-title="{{title}}" data-catid="{{cat_id}}" data-contenturl="{{content_url}}">
+			<div class="weui_media_hd">
+				{{#if thumb_url}}
+					<img class="weui_media_appmsg_thumb" src="{{thumb_url}}" lowsrc="UserModule/module/news/style/20160602155252.png" onerror="this.src='UserModule/module/news/style/20160602155252.png'" alt="">
+				{{else}}
+					<img class="weui_media_appmsg_thumb" src="UserModule/module/news/style/20160602155252.png" alt="">
+				{{/if}}
+			</div>
+			<div class="weui_media_bd">
+				<h4 class="weui_media_title">{{title}}</h4>
+				<p class="weui_media_desc">来源：{{source}} <br/> 发表时间：{{released_dtime}}</p>
+			</div>
+		</a>
+	{{/each}}
+</script>

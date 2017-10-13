@@ -1,0 +1,21 @@
+<div aigov-type="headerBack" id="header" aigov-auto-init="true" aigov-title="资讯"></div>
+
+<div class="ai-body-box">
+</div>
+
+<script id="tpl" type="text/x-handlebars-template">
+	<article class="article weui_article">
+		<header>
+			<h3 class="title">{{title}}</h3>
+			<div class="info">
+				来源：<span id=info_source>{{source}}</span>
+				&emsp;
+				&emsp;
+				发表时间：<span id=info_released_dtime>{{publicTime}}</span>
+			</div>
+		</header>
+		<section>
+			{{saftString content}}
+		</section>
+	</article>
+</script>

@@ -1,0 +1,29 @@
+<div class="workBox" id="box">
+    <div aigov-type="headerBack" id="busMoreHeaderBack" class="aigov-header-back-box" aigov-title="更多车辆"></div>
+    <div class="ai-body-box">
+        <div id="staion_route"></div>
+        <div id="same_bus_more"></div>
+    </div>
+</div>
+
+<!--站点信息模板-->
+<script id="station_route_template" type="text/x-handlebars-template">
+    <h4>{{currentStation}}</h4>
+    <p>{{startStation}}&nbsp;&nbsp;<img class="img_width10" src="UserModule/module/bus/style/images/line2.png">&nbsp;&nbsp;{{endStation}}</p>
+</script>
+<!--同线路更多车辆信息-->
+<script id="same_bus_more_template" type="text/x-handlebars-template">
+    {{#each sameBusRouteInfo}}
+    <div class="same_bus_div_style">
+        <table id="more_samebus_table">
+            <tr class="alt">
+                <td colspan="2">车辆自编号:{{busNO}}</td>
+            </tr>
+            <tr>
+                <td><span>{{busSpeed}}</span><br/>车辆速度</td>
+                <td><span>{{busStation}}站</span><br/>已过大楼</td>
+            </tr>
+        </table>
+    </div>
+    {{/each}}
+</script>

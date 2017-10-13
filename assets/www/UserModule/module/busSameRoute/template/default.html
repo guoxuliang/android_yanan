@@ -1,0 +1,12 @@
+{{@datas}}
+<a href="javascript:void(0);" class="weui_media_box weui_media_appmsg" aigov-is-record="true" lineName="{{=_val.name}}"  startStation="{{=_val.startStation}}" endStation="{{=_val.endStation}}">
+    <div class="img_width50">
+        <!--<img class="weui_media_appmsg_thumb" src="data:image/png;base64,{{=_val.name}}" lowsrc="UserModule/module/test/style/images/bus.png" lowsrc="UserModule/module/test/style/images/bus.png" onerror="this.src='UserModule/module/test/style/images/bus.png'">-->
+        <img class="weui_media_appmsg_thumb" src="UserModule/module/bus/style/images/bus.png" lowsrc="UserModule/module/test/style/images/bus.png" lowsrc="UserModule/module/test/style/images/bus.png" onerror="this.src='UserModule/module/test/style/images/bus.png'">
+    </div>
+    <div class="weui_media_bd">
+        <h4 class="weui_media_title">{{=_val.name}}</h4>
+        <label class="label_horizontal">{{=_val.startStation}}</label> <img class="img_width10" src="UserModule/module/bus/style/images/line2.png"> <label class="label_horizontal">{{=_val.endStation}}</label>
+    </div>
+</a>
+{{/@datas}}

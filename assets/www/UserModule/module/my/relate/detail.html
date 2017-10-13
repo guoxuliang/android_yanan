@@ -1,0 +1,130 @@
+﻿<div class="workBox">
+    <div aigov-type="headerBack" id="header" aigov-auto-init='true' aigov-title="详情">
+    </div>
+
+    <div class="ai-body-box" style="margin-top:1em;">
+    <div id="detailDiv">
+    </div>
+    </div>
+</div>
+
+<script id="tpl" type="text/x-handlebars-template">
+
+    <div class="taxReply taxBorder01" id="detail{{id}}">
+        <div class="taxReplyBg"><img src="UserModule/module/my/relate/style/images/tax_img01.png"/></div>
+        <dl>
+            <dt>
+                <span>
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </span>
+                <br/>{{phoneNo}}
+            </dt>
+            <dd>
+                <i class="fa fa-commenting fl" aria-hidden="true"></i><p class="fl">{{hotMailTitle}}</p>
+                <div class="clear"></div>
+                <div class="taxReplyTxt taxReplyTxtBg01">{{{hotMailContent}}}</div>
+                <div class="m-t-10"></div>
+                <span class="fr"><img src="UserModule/module/my/relate/style/images/tax_icon01.png" width="20" class="fl"/><em class="fl m-l-10 m-r-10">{{createDate}}</em></span>
+            </dd>
+        </dl>
+        <div class="clear"></div>
+        <div class="m-t-10"></div>
+    </div>
+    {{#if replyContent}}
+        <div class="m-t-50"></div>
+        <div class="taxReply taxBorder02">
+            <div class="taxReplyBg02"><img src="UserModule/module/my/relate/style/images/tax_img02.png"/></div>
+            <dl>
+                <dt>
+                    <span>
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </span>
+                    <br/>{{modelId}}
+                </dt>
+                <dd>
+                    <div class="taxReplyTxt taxReplyTxtBg02">{{{replyContent}}}</div>
+                    <div class="m-t-10"></div>
+                    <span class="fr"><img src="UserModule/module/my/relate/style/images/tax_icon01.png" width="20" class="fl"/><em class="fl m-l-10 m-r-10">{{replyTime}}</em></span>
+                </dd>
+            </dl>
+            <div class="clear"></div>
+            <div class="m-t-10"></div>
+        </div>
+    {{/if}}
+
+
+	<!-- <div class="weui_panel weui_panel_access" id="detail{{id}}">
+        <div class="weui_panel_bd">
+            <div class="weui_media_box weui_media_text">
+                <p class="weui_media">
+                    <label>标题：</label>{{hotMailTitle}}
+                </p>
+            </div>
+            <div class="weui_media_box weui_media_text">
+                <p class="weui_media">
+                    <label>内容：</label>{{{hotMailContent}}}
+                </p>
+                <ul class="weui_media_info">
+                    <li class="weui_media_info_meta_right">{{createDate}}</li>
+                </ul>
+            </div>
+			{{#if replyContent}}
+			<div class="weui_media_box weui_media_text">
+                <p class="weui_media">
+                    <label>回复：</label>{{{replyContent}}}
+                </p>
+                <ul class="weui_media_info">
+                    <li class="weui_media_info_meta_right">{{replyTime}}</li>
+                    <li class="weui_media_info_meta_right">{{replyerName}}</li>
+                </ul>
+            </div>
+			{{/if}}
+        </div>
+    </div> -->
+</script>
+
+<!-- 市长信箱，信访，部门信箱 -->
+<script id="tpl2" type="text/x-handlebars-template">
+    <div class="taxReply taxBorder01" id="detail{{id}}">
+        <div class="taxReplyBg"><img src="UserModule/module/my/relate/style/images/tax_img01.png"/></div>
+        <dl>
+            <dt>
+                <span>
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </span>
+                <br/>提问者
+            </dt>
+            <dd>
+                <i class="fa fa-commenting fl" aria-hidden="true"></i><p class="fl">{{sq_title2}}</p>
+                <div class="clear"></div>
+                <div class="taxReplyTxt taxReplyTxtBg01">{{{sq_content2}}}</div>
+                <div class="m-t-10"></div>
+                <span class="fr"><img src="UserModule/module/my/relate/style/images/tax_icon01.png" width="20" class="fl"/><em class="fl m-l-10 m-r-10">{{sq_dtime}}</em></span>
+            </dd>
+        </dl>
+        <div class="clear"></div>
+        <div class="m-t-10"></div>
+    </div>
+    {{#showReply sq_status}}
+        <div class="m-t-50"></div>
+        <div class="taxReply taxBorder02">
+            <div class="taxReplyBg02"><img src="UserModule/module/my/relate/style/images/tax_img02.png"/></div>
+            <dl>
+                <dt>
+                    <span>
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </span>
+                    <br/>{{modelName model_cname}}
+                </dt>
+                <dd>
+                    <div class="taxReplyTxt taxReplyTxtBg02">{{{sq_reply}}}</div>
+                    <div class="m-t-10"></div>
+                    <span class="fr"><img src="UserModule/module/my/relate/style/images/tax_icon01.png" width="20" class="fl"/><em class="fl m-l-10 m-r-10">{{over_dtime}}</em></span>
+                </dd>
+            </dl>
+            <div class="clear"></div>
+            <div class="m-t-10"></div>
+        </div>
+    {{/showReply}}
+    <div class="m-t-10"></div>
+</script>

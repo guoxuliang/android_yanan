@@ -1,0 +1,107 @@
+header#header .search{ position:absolute;font-size:3.6rem;  right:10px; bottom:8px; color:#fff; z-index:3;  }
+.m-t-8{ margin-top:8px;}
+
+/*生活服务*/
+.dropDownMenu{font:15px  "微软雅黑", Arial, Helvetica, sans-serif;}
+.dropDownMenu > dl{}
+.dropDownMenu > dl > dt{}
+.dropDownMenu > dl > dd{}
+
+.dropDownMenuName{ width: 100%; display: table; overflow: hidden;}
+.dropDownMenuName > ul{ display: table-row;}
+.dropDownMenuName > ul > li{ border-bottom:solid 1px #eee; border-right:solid 1px #eee;border-top:0;vertical-align:middle;  display: table-cell; text-align: center; padding: 10px 0;}
+.dropDownMenuName > ul > li > a{ color: #333; font-size: 16px; display: block;}
+.dropDownMenuName > ul > li > a > img{ padding: 5px;}
+
+.dropDownMenuList{ background: #fff; padding: 0 15px; z-index: 2; position: fixed; width: 94%;}
+.dropDownMenuList > ul{}
+.dropDownMenuList > ul > li{border-bottom:solid 1px #eee; padding: 10px; font-size: 15px;}
+.dropDownMenuList > ul > li:not(.current) > a{color: #888;}
+.dropDownMenuList > ul > li.current > a{color: #3fbc87;}
+.dropDownMenuList > ul > li.current{color: #3fbc87;}
+.dropDownMenuList > ul > li > a > img{ padding-right: 10px;}
+
+section#lifeService{ font-size: 16px;}
+section#lifeService dl.lifes{ padding: 20px 10px;border-bottom: 1px solid #ddd;}
+section#lifeService dl.lifes > dt{ float: left; width: 30%; margin-right: 1%; }
+section#lifeService dl.lifes > dt > a > img{ width: 90px; height: 90px; }
+section#lifeService dl.lifes > dd{ float: left;width: 69%; /*background: #cd1c1e;*/}
+section#lifeService dl.lifes > dd > h6 > a{width: 100%; font-size: 18px; font-weight: 100; color: #333;}
+section#lifeService dl.lifes > dd > h6 > a > span{overflow: hidden; display: block;  height: 25px; width: 72%;}
+section#lifeService dl.lifes > dd > h6 > em{ font-style: normal; color: #888;font-weight: 100;}
+section#lifeService dl.lifes > dd > h6 > img{ padding: 4px 3px 0 0;}
+section#lifeService dl.lifes > dd > ol{overflow: hidden; height: 20px; width: 100%; font-size: 14px;color: #999;white-space: nowrap; text-overflow: ellipsis;}
+section#lifeService dl.lifes > dd > p{overflow: hidden; height: 20px; font-size: 15px; width: 100%; color: #888;}
+
+
+/*服务详情*/
+.lifeServiceDetailTab{ width: 100%; display: table; overflow: hidden;}
+.lifeServiceDetailTab > ul{ display: table-row;}
+.lifeServiceDetailTab > ul > li{ border-bottom:solid 1px #eee; border-right:solid 1px #eee;border-top:0;vertical-align:middle;  display: table-cell; text-align: center; }
+.lifeServiceDetailTab > ul > li > a{ color: #333; font-size: 16px; display: block;padding: 10px 0;}
+.lifeServiceDetailTab > ul > li > a.current{ color: #3fbc87; border-bottom: solid 3px #3fbc87; font-size: 16px; display: block;}
+
+section#lifeServiceDetail{ padding: 15px;font:16px  "微软雅黑", Arial, Helvetica, sans-serif;}
+section#lifeServiceDetail > dl{}
+section#lifeServiceDetail > dl > dt{ float: left;color: #ff8d28; font-size: 30px;}
+section#lifeServiceDetail > dl > dt > span{ font-size: 16px;}
+section#lifeServiceDetail > dl > dd{ float: right;}
+section#lifeServiceDetail > dl > dd > span{ color: #888; }
+section#lifeServiceDetail > dl > dd > span > img{ padding: 12px 3px 0 0; }
+section#lifeServiceDetail > dl > dd > button{ margin-left: 8px; background: #ff8d28; border: 0; border-radius: 6px; padding: 7px 18px; font:16px  "微软雅黑", Arial, Helvetica, sans-serif; color: #fff;}
+
+section#lifeServiceDetail > ol{ color:#333;border-top:solid 1px #eee; padding: 8px 15px;}
+section#lifeServiceDetail > ol > span{ width: 30%; float: left; color: #888; display: block; }
+
+.lifeServiceDetail{}
+.lifeServiceDetail > h5{font-size: 16px; padding: 8px 0 4px 28px; color: #888; font-weight: 100; background: #eee; border: solid 1px #ddd; border-right: 0; border-left: 0;}
+.lifeServiceDetail > p{ font-size: 16px; color: #333; padding: 5px 20px 5px 20px;}
+
+.lifeServiceDetailImg{position: relative; height: 130px;}
+.lifeServiceDetailImg > img{height: 130px;z-index: 1;position: absolute;bottom: 0; }
+.lifeServiceDetailImg > h6{ text-indent: 10px; overflow: hidden; font-weight: 100; height: 32px; line-height: 32px; bottom: 0; width: 100%; position:absolute; color: #fff; font-size: 16px;z-index: 2; background:#000;filter: alpha(opacity=60); opacity: 0.6;}
+
+
+/*客户评价*/
+.interactiveTopic{ padding:0 10px 10px 10px;}
+.interactiveTopicImg{width: 60px; height: 60px; border-radius: 50px;}
+.interactiveTopicImg img{width: 60px; height: 60px; border-radius: 50px;}
+.interactiveTopicMain{}
+.interactiveTopicMain > h5{font-weight: 100;  font-size: 16px; color: #888;}
+.interactiveTopicMain > h5 > span{ color: #888; font-weight: 100; font-size: 13px;  padding: 2px 0; }
+.interactiveTopicMain > p{ color: #555; font-size: 16px; }
+
+.interactiveTopicReply{ background: #f3f2f2; margin-left: 80px; margin-right: 15px;}
+.interactiveTopicReplyImg{ padding:10px 0 0 10px;}
+.interactiveTopicReplyImg img{width: 35px; height: 35px; border-radius: 50px;}
+.interactiveTopicReplyMain{ padding-bottom: 5px;}
+.interactiveTopicReplyMain > h5{font-weight: 100;  font-size: 14px; color: #888;}
+.interactiveTopicReplyMain > h5 > span{ color: #888; font-weight: 100; font-size: 12px;  padding: 2px 0; }
+.interactiveTopicReplyMain > h5 > em{ color: #ff8d28; font-weight: 100;  padding: 0 2px; font-style: normal; }
+.interactiveTopicReplyMain > p{ color: #555; font-size: 14px; }
+
+.interactiveTopic > dl{ width: 100%;}
+.interactiveTopic > dl > dt{ float: left; width: 60px; height: 60px; border-radius: 50px; }
+.interactiveTopic > dl > dt img{width: 60px;  border-radius: 50px; }
+.interactiveTopic > dl > dd{ line-height: 40px; float:left;width: 66%; /*background: #666666;*/}
+.interactiveTopic > dl > dd > h5{font-weight: 100;  font-size: 17px; color: #333;}
+.interactiveTopic > dl > dd > h5 > span{ color: #888; font-weight: 100; font-size: 13px;  padding: 2px 6px; display: block;}
+.interactiveTopic > p{ line-height: 24px;}
+
+/*搜索头部*/
+header#search{
+    height:50px;
+    background:#fff;
+    width:100%;
+    position:fixed;
+    left:0;
+    z-index:1; _position:absolute; _top:expression(eval(document.documentElement.scrollTop));}
+header#search input{ text-indent: 30px; font-family: "微软雅黑", Arial, Helvetica, sans-serif;  height: 30px; line-height: 30px; border-radius: 4px; border: 0; background: #f2f2f2; position:absolute;font-size:14px; padding-right:20px; left:15px; bottom:7px; z-index:2;  }
+header#search button{ font-family: "微软雅黑", Arial, Helvetica, sans-serif; color: #3ec589; font-size: 16px;  position:absolute; right: 10px; bottom:20px; background: none; border:none; }
+header#search i{ z-index: 3; position: absolute; left: 20px; top:8px;}
+section#searchKey{}
+section#searchKey h6{ padding:10px 0 4px 15px;font-size: 14px; font-weight: 100; color: #777; background: #eee; border-bottom: 1px #ddd solid; border-top: 1px #ddd solid;border-left:0;border-right:0;}
+section#searchKey p{ font-size: 16px; padding: 10px 20px; border-bottom: solid 1px #ddd;}
+section#searchKey p > span{}
+section#searchKey p > span a{}
+section#searchKey p > span > a > img{ margin: 5px 0 0 10px;}

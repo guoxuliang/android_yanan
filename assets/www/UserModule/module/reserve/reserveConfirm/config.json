@@ -1,0 +1,27 @@
+﻿{	
+	"code":0,
+	"message":"操作成功！",
+	"data":[{
+		"patientId":"109998",
+		"patientName":"张天明",
+		"sex":"1",
+		"birthDate":"29",
+		"defaultFlag":"1",	
+		"certCode":"677628787111391093",
+		"cardNum":"0000678511",
+		"hisPatientId":"hisPatientId",
+		"age":"32",
+		"phoneNum":"13211111111"		
+	},{
+		"patientId":"109998",
+		"patientName":"张天明22",
+		"sex":"1",
+		"birthDate":"29",
+		"defaultFlag":"1",	
+		"certCode":"677628787111391093",
+		"cardNum":"0000678522",
+		"hisPatientId":"hisPatientId",
+		"age":"32",
+		"phoneNum":"13211111111"		
+	}]
+}

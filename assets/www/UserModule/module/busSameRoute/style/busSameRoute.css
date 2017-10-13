@@ -1,0 +1,24 @@
+.img_width50 {
+	margin-right: .8em;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.img_width10 {
+	width: 10px;
+	height: 10px;
+	padding: 0rem 0.3rem;
+}
+
+.label_horizontal {
+	color: #999;
+    font-size: 13px;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* display: -webkit-box; */
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}

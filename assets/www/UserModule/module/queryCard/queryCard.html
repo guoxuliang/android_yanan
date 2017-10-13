@@ -1,0 +1,44 @@
+<div class="workBox">
+	<div aigov-type="headerBack" id="header" aigov-auto-init='true' aigov-title="办卡进度查询">
+	</div>
+	<div class='ai-body-box'>
+		<div class="weui_cells weui_cells_form">
+		    <div class="weui_cell">
+		        <div class="weui_cell_hd">
+		            <label class="weui_label">身份证号码</label>
+		        </div>
+		        <div class="weui_cell_bd weui_cell_primary">
+		            <input class="weui_input" type="number" id="IdNo" placeholder="请输入身份证号码" value="">
+		        </div>
+		    </div>
+		    <div class="weui_cell">
+		        <div class="weui_cell_hd">
+		            <label class="weui_label">新农合卡号</label>
+		        </div>
+		        <div class="weui_cell_bd weui_cell_primary">
+		            <input class="weui_input" type="number" id="CombinedTreatmentNo" value="">
+		        </div>
+		    </div>
+		</div>
+		
+		<div class="weui_btn_area">
+		    <a id="queryBtn" class="weui_btn weui_btn_primary" href="javascript:void(0)">查询</a>
+		</div>
+	
+		<div class="schedulingList" id="J_table_box"  style="padding:10px;display:none;">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<thead>
+					<tr>
+						<th width='20%'>姓名</th>
+						<th width='30%'>身份证号码</td>
+						<th width='30%'>新农卡号</th>
+						<th width='20%'>办卡信息</td>
+					</tr>
+				</thead>
+				<tbody id="J_query_box">
+					
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

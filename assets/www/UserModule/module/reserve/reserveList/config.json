@@ -1,0 +1,6 @@
+﻿{	
+	"code":0,
+	"message":"操作成功！",
+	"data":[{"doctor_Img":""
+	,"doctor_Code":"111111","doctor_Name":"柯永锥","mark_Type":"职称名称","mark_Desc":"描述","attentionId":"1111","regist_List":[{"hb_Date":"2016-06-07","am_Pm":"上午","flag_Available":"0"},{"hb_Date":"2016-06-06","am_Pm":"上午","flag_Available":"0"}]}]
+}

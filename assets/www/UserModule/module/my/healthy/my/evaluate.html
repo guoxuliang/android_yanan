@@ -1,0 +1,102 @@
+<div class="workBox">
+	<div aigov-type="headerBack" id="header" aigov-auto-init='true' aigov-title="待评价">
+	</div>
+
+	<div class="ai-body-box">
+
+        <div class="weui_navbar">
+            <div class="weui_navbar_item weui_bar_item_on" data-item="1">
+                未评价
+            </div>
+            <div class="weui_navbar_item" data-item="2">
+                已评价
+            </div>
+        </div>
+        <div class="weui_tab_bd">
+			<div class="tab_content" data-item="1">
+				<div class="message_title">
+					为了能让您得到更好地治疗和服务体验，您能在百忙之余对我们的主治医生做出评价吗？您的建议将是我们莫大的动力。
+				</div>
+				<div id="info"></div>
+			</div>
+			<div class="tab_content hidden" data-item="2">
+				<div class="message_title">
+					为了能让您得到更好地治疗和服务体验，您能在百忙之余对我们的主治医生做出评价吗？您的建议将是我们莫大的动力。
+				</div>
+				<div id="info2"></div>
+			</div>
+        </div>
+
+
+	</div>
+</div>
+
+<script id="tpl" type="text/x-handlebars-template">
+{{#each data}}
+	<div class="message_div">
+		<div>
+			<div class="fl hospital">{{hospital_name}}</div>
+			<div class="fr remark"
+				data_orderid="{{id}}"
+				data_doctorname="{{doctor_name}}"
+				data_officecode="{{office_code}}"
+				data_officename="{{office_name}}"
+				data_hospitalname="{{hospital_name}}"
+				data_hospitalcode="{{hospital_code}}"
+				data_patientname="{{patient_name}}"
+				data_treatmenttime="{{visit_date}}"
+				data_evaluateStatus="{{evaluate_status}}"
+				data_orderTime="{{create_date}}"
+			>
+			{{#ifCond evaluate_status '==' '1'}}
+				查看评价
+			{{else}}
+				立即评价
+			{{/ifCond}}
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div>
+			<p class="time">{{dateDayFormat visit_date}}</p>
+		</div>
+		<div>
+			<div class="fl org">{{office_name}}</div>
+			<div class="fl name">{{doctor_name}}医生</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+{{/each}}
+</script>
+
+<script id="tpl2" type="text/x-handlebars-template">
+{{#each data}}
+	<div class="message_div">
+		<div>
+			<div class="fl hospital">{{hospatilName}}</div>
+			<div class="fr remark"
+				data_orderid="{{id}}"
+				data_doctorname="{{doctorName}}"
+				data_officecode="{{officeCode}}"
+				data_officename="{{officeName}}"
+				data_hospitalname="{{hospatilName}}"
+				data_hospitalcode="{{hospatilCode}}"
+				data_patientname="{{patientName}}"
+				data_treatmenttime="{{treatmentTime}}"
+				data_evaluateStatus="2"
+				data_orderTime="{{created}}"
+			>
+			查看评价
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div>
+			<p class="time">{{dateDayFormat treatmentTime}}</p>
+		</div>
+		<div>
+			<div class="fl org">{{officeName}}</div>
+			<div class="fl name">{{doctorName}}医生</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+{{/each}}
+</script>

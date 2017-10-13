@@ -1,0 +1,163 @@
+<div class="user-center">
+	<div class="member">
+		<div class="member-hd">
+			<div class="member-photo">
+				<img src="UserModule/module/my/style/images/avatar.jpg" width="88" height="88" />
+			</div>
+			<div class="member-info">
+				<p><span id="userName"></span><span id="userName_st"></span></p>
+				<p><span id="phone"></span></p>
+			</div>
+			<div class="member-action">
+				<a class="real-buton" id="J_real_buton" onclick="aigovApp.openAppWindow('kAuthentification')">去认证</a>
+			</div>
+		</div>
+		<div class="member-bd">
+			<!--<div class="integral">
+					<div class="integral_lt">
+						<img src="UserModule/module/my/style/images/person_icon1.png" alt="">
+					</div>
+					<div class="integral_md">
+						<h4>绿色积分：<span>10</span></h4>
+					</div>
+					<div class="integral_rt">
+						<span>可领3次</span><span><a onclick="aigovApp.openAppWindow('')" class="integral_get_link">领取</a></span>
+					</div>
+				</div>-->
+
+			<ul class="service_list">
+				<li class="service_item">
+					<a href="javascript:;" onclick="aigovApp.openAppWindow('myAccount')">
+						<div class="item_lt">
+							<img src="UserModule/module/my/style/images/person_icon7.png" alt="">
+						</div>
+						<div class="item_md">
+							<h4>一卡通记录</h4>
+						</div>
+						<div class="item_rt">
+						</div>
+					</a>
+				</li>
+				<li class="service_item">
+					<a href="javascript:;" onclick="aigovApp.openAppWindow('myAccount')">
+						<div class="item_lt">
+							<img src="UserModule/module/my/style/images/person_icon8.png" alt="">
+						</div>
+						<div class="item_md">
+							<h4>公积金</h4>
+						</div>
+						<div class="item_rt">
+						</div>
+					</a>
+				</li>
+				<li class="service_item">
+					<a href="javascript:;">
+						<div class="item_lt">
+							<img src="UserModule/module/my/style/images/person_icon2.png" alt="">
+						</div>
+						<div class="item_md">
+							<h4>今日步数</h4>
+						</div>
+						<div class="item_rt ">
+
+						</div>
+					</a>
+				</li>
+				<li class="service_item">
+					<a href="javascript:;" onclick="aigovApp.openAppWindow('')">
+						<div class="item_lt">
+							<img src="UserModule/module/my/style/images/person_icon3.png" alt="">
+						</div>
+						<div class="item_md">
+							<h4>挂号记录</h4>
+						</div>
+						<div class="item_rt">
+						</div>
+					</a>
+				</li>
+				<li class="service_item">
+					<a href="javascript:;">
+						<div class="item_lt">
+							<img src="UserModule/module/my/style/images/person_icon4.png" alt="">
+						</div>
+						<div class="item_md">
+							<h4>缴费记录</h4>
+						</div>
+						<div class="item_rt">
+						</div>
+					</a>
+				</li>
+				<li class="service_item">
+					<a href="javascript:;" onclick="aigovApp.openAppWindow('myWork')">
+						<div class="item_lt">
+							<img src="UserModule/module/my/style/images/person_icon5.png" alt="">
+						</div>
+						<div class="item_md">
+							<h4>办事记录</h4>
+						</div>
+						<div class="item_rt"></div>
+					</a>
+				</li>
+				<li class="service_item">
+					<a href="javascript:;" onclick="aigovApp.openAppWindow('myRelate')">
+						<div class="item_lt">
+							<img src="UserModule/module/my/style/images/person_icon6.png" alt="">
+						</div>
+						<div class="item_md">
+							<h4>互动记录</h4>
+						</div>
+						<div class="item_rt">
+						</div>
+					</a>
+				</li>
+				<li class="service_item">
+					<a href="javascript:;">
+						<div class="item_lt">
+							<img src="UserModule/module/my/style/images/person_icon9.png" alt="">
+						</div>
+						<div class="item_md">
+							<h4>优惠券</h4>
+						</div>
+						<div class="item_rt">
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="member-ft">
+			<a id="outBtn" class="weui_btn weui_btn_primary" href="javascript:void(0)">退出登录</a>
+		</div>
+	</div>
+	<!--<div class="MyHeaderMain">
+			<div class="weather">
+				<dl>
+					<dd>
+						<img src="UserModule/module/my/style/images/weatherIcon01.png" width="15" class="fl m-l-20" />
+						<span id="cityname"></span>
+						<p class="m-l-20" id="today"></p>
+						<p class="m-l-20" id="today2"></p>
+					</dd>
+					<dt>
+						<span class="fr m-r-10" id="weather"></span><img id="weatherImg" width="32" class="fr" />
+						<div class="clear"></div>
+						<p id="weather_tmp"></p>
+					</dt>
+				</dl>
+				<div class="clear"></div>
+			</div>
+		</div>-->
+</div>
+
+<div class="weui_dialog_confirm hidden" id="ifOut">
+	<div class="weui_mask"></div>
+	<div class="weui_dialog">
+		<div class="weui_dialog_hd">
+			<strong class="weui_dialog_title"></strong>
+		</div>
+		<div class="weui_dialog_bd">确定退出登录?</div>
+		<div class="weui_dialog_ft">
+			<a href="javascript:;" id="cancelBtn" class="weui_btn_dialog default">取消</a>
+			<a href="javascript:;" id="sureBtn" class="weui_btn_dialog primary">确定</a>
+		</div>
+	</div>
+</div>

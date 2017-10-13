@@ -1,0 +1,61 @@
+<div class="workBox">
+	<div aigov-type="headerBack" id="header" aigov-auto-init='true' aigov-title="我的关注">
+	</div>
+
+	<div id="info" class="ai-body-box">
+		
+	</div>
+</div>
+
+<div class="weui_dialog_confirm hidden" id="ifOut">
+    <div class="weui_mask"></div>
+    <div class="weui_dialog">
+        <div class="weui_dialog_hd">
+          <strong class="weui_dialog_title"></strong>
+        </div>
+        <div class="weui_dialog_bd">确定要取消关注?</div>
+        <div class="weui_dialog_ft">
+            <a href="javascript:;" id="cancelBtn" class="weui_btn_dialog default">取消</a>
+            <a href="javascript:;" id="sureBtn" class="weui_btn_dialog primary">确定</a>
+        </div>
+    </div>
+</div>
+
+<script id="tpl" type="text/x-handlebars-template">
+{{#each data}}
+<div class="notice_div">
+			<div class="fl pic">
+				<img src="UserModule/module/reserve/reserveList/style/images/none.gif">
+			</div>
+			<div class="fl info">
+				<div>
+					<div class="fl name">{{nameHidden doctorName}}<span>({{markType}})</span></div>
+					<div class="fr cancel" data-id="{{attentionId}}">取消关注</div>
+					<div class="clear"></div>
+				</div>
+				<div class="hospital">
+					{{hospitalName}}
+				</div>
+				<div class="dept">
+					所在科室:{{officeName}}
+				</div>
+				<div>
+					<div class="fr book" 
+						data-hospital-code = "{{hospitalCode}}"
+						data-dept-code = "{{officeCode}}"
+						data-dept-name = "{{officeName}}"
+						data-hospital-name = "{{hospitalName}}"
+						data-doctor-name = "{{doctorName}}"
+						data-doctor-code = "{{doctorCode}}"
+						data-mark-type = "{{markType}}"
+						data-hospital-id = "{{hospitalId}}"
+						data-doctor-id = "{{doctorId}}"
+						>我要预约</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+{{/each}}
+</script>
+

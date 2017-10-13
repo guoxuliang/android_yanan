@@ -1,0 +1,65 @@
+.ai-service-scroll{
+	position: absolute;
+	top:3em;
+	right:0px;
+	bottom:0px;
+	left:0px;
+	overflow:auto;
+	background:#eee
+}
+
+.weui_label{
+	font-weight:700;
+}
+
+.weui_cells_title span {
+    background: #efa530;
+    display: inline-table;
+    line-height: 30px;
+    text-align: center;
+    width: 30px;
+    font-size: 20px;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.weui_cells {
+    margin-top: 0; 
+}
+
+.ai-body-box{
+	background:#eee
+}
+
+.weui_cells_tips {
+    margin-top: 0;
+    color: #888;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 14px;
+    background-color: #eee;
+}
+
+.ai_weui_cells {
+    margin-top: 1.17647059em;
+    background-color: #fff;
+    line-height: 1.41176471;
+    font-size: 17px;
+    overflow: hidden;
+    position: static;
+}
+
+ul.weui_uploader_files li {
+	position: relative;
+}
+
+ul.weui_uploader_files li a {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: #fafafa;
+	border: 1px solid #ddd;
+	width: 25px;
+	border-radius: 50%;
+	text-align: center;
+}

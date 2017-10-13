@@ -1,0 +1,9 @@
+.ai-service-scroll{
+	position: absolute;
+	top:3em;
+	right:0px;
+	bottom:0px;
+	left:0px;
+	overflow:auto;
+	background:#eee
+}

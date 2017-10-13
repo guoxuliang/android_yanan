@@ -1,0 +1,19 @@
+{
+  "sameBusRouteInfo": [{
+    "busNO":"1112",
+    "busSpeed":"12km/h",
+    "busStation":"1"
+  },{
+    "busNO":"1212",
+    "busSpeed":"23km/h",
+    "busStation":"3"
+  },{
+    "busNO":"2112",
+    "busSpeed":"21km/h",
+    "busStation":"3"
+  },{
+    "busNO":"3122",
+    "busSpeed":"32km/h",
+    "busStation":"7"
+  }]
+}

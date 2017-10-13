@@ -1,0 +1,123 @@
+.bgc {
+	background-color: #f5f5f5;
+}
+.ai-hotline-swiper {
+	width: 100%;
+	min-height: 180px;
+	overflow: hidden;
+	margin-bottom: 0.625em;
+}
+.ai-hotline-swiper img {
+	vertical-align: top;
+	max-width: 100%;
+}
+
+.hotline-wrapper {
+
+}
+
+.grid,
+.grid-list {
+  overflow: hidden;
+  list-style: none;
+  background-color: #fff;
+}
+.hotline-wrapper .grid .grid-item {
+  position: relative;
+  z-index: 1;
+  float: left;
+  width: 33.3333%;
+  padding: 0;
+  text-align: center;
+}
+
+.grid .grid-item:before {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  font-size: 0;
+  border-right: 1px solid #D9D9D9;
+  z-index: 2;
+  color: #D9D9D9;
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+}
+.grid .grid-item:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  right: 0;
+  height: 1px;
+  z-index: 2;
+  font-size: 0;
+  border-bottom: 1px solid #D9D9D9;
+  color: #D9D9D9;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.grid .grid-item .grid-item-contain {
+	display: block;
+	overflow: hidden;
+}
+.grid .grid-item-icon {
+  width: 3em;
+  height: 3em;
+  margin: 0 auto 0.5em;
+}
+
+.grid-item-icon img {
+  max-width:100%;
+}
+
+.gird-item-text {
+  line-height: 1.125em;
+  display: block;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  font-size: 0.875em;
+  color: #333;
+}
+
+.grid-list .gird-item-text {
+  min-height: auto;
+  padding: 0.625em 0;
+  line-height: 1.375em;
+}
+.grid .grid-item-contain {
+  padding: 0.625em 0.32em;
+}
+.grid .grid-item-contain {
+  position: relative;
+  z-index: 3;
+}
+.grid .grid-item-contain:active {
+  background-color: #f5f5f5;
+}
+
+.grid {
+	margin-bottom: 0.625em;
+}
+.hotline-wrapper .grid-horizontal .grid-item {
+	width: 50%;
+}
+.hotline-wrapper .grid-horizontal .grid-item-icon {
+	float: right;
+	margin: 0;
+}
+.hotline-wrapper .grid-horizontal .gird-item-text {
+	float: left;
+	line-height: 3em;
+}
+.hotline-wrapper .grid-horizontal .grid-item-contain {
+	padding: 0.625em 1em;
+}

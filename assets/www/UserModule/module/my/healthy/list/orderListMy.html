@@ -1,0 +1,74 @@
+<div class="workBox">
+	<div aigov-type="headerBack" id="header" aigov-auto-init='true' aigov-title="列表">
+	</div>
+
+	<div class="ai-body-box">
+		<div class="cardContent">
+           <h4 class="cartTitle">
+               <div class="">
+                  <div class="weui_cells_title">挂号预约记录<div>
+               </div>
+
+           </h4>
+           <div class="contentDiv">
+
+              <div id="orderList" class="list" style="padding:2px 20px 10px 20px; color: #ccc;font-size: 15px;border-bottom: 1px solid #ccc;">
+              	<!-- <div class="item">
+              		<div class="info">
+              			<div class="fl">预约时间:2016/06/18(还有10天)</div>
+              			<div class="fr"><a href="javascript:void(0);">取消预约</a></div>
+              			<div class="clear"></div>
+              		</div>
+              		<div  class="info">
+              			就诊医院:XXXXX
+              		</div>
+              		<div class="info">
+              			科室:XXXXX
+              		</div>
+              		<div class="info">
+              			主任医师:XXXXX
+              		</div>
+              		<div class="info">
+              			状态:XXXXX
+              		</div>
+              	</div> -->
+              </div>
+           </div>
+       </div>
+	</div>
+</div>
+
+
+<script id="tplAppointOrder" type="text/x-handlebars-template">
+	{{#each data}}
+
+		<div class="item" data-order-id="{{orderId}}">
+              		<div class="info">
+              			<div class="fl">预约日期:{{dateDayFormat appTime}}(还有{{dateLast appTime}}天)</div>
+						{{#showCancel operateType status}}
+              			<div class="fr"><a href="javascript:void(0);" data-order-id="{{orderId}}" class="cancelOrder" data-type="{{operateType}}" data-hospital-code="{{hospitalCode}}" data-appoint-no="{{appointNo}}" data-receipt-no="{{receiptNo}}" data-his-patient-id="{{hisPatientId}}" data-order-fee="{{orderFee}}" data-hid="{{hid}}" data-id-no="{{patientCertNo}}" data-patient-name="{{patientName}}" data-office-code="{{officeCode}}" data-office-name="{{officeName}}" data-doctor-code="{{doctorCode}}" data-doctor-name="{{doctorName}}" data-app-time="{{appTime}}" data-am-pm="{{amPm}}" data-attend-card-num="{{attendCardNum}}" data-hospital-name="{{hospitalName}}" data-doctor-level="{{doctorLevel}}" data-payment-mode="{{paymentMode}}" data-status="{{status}}">取消预约</a></div>
+						{{/showCancel}}
+              			<div class="clear"></div>
+              		</div>
+              		<div  class="info">
+              			预约时间:{{amPm}}
+              		</div>
+              		<div  class="info">
+              			就诊医院:{{hospitalName}}
+              		</div>
+              		<div class="info">
+              			科室:{{officeName}}
+              		</div>
+              		<!-- <div class="info">
+              			主任医师:{{nameHidden doctorName}}
+              		</div> -->
+					<div  class="info">
+              			就诊人:{{patientName}}
+              		</div>
+              		<div class="info">
+              			订单状态:{{visitStatusName operateType status payStatus}}
+              		</div>
+              	</div>
+
+	{{/each}}
+</script>

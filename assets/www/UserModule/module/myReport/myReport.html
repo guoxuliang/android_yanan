@@ -1,0 +1,124 @@
+<div class="ai-hospitalInfo-box">
+	<!-- 头部 -->
+	<div class="ai-hospitalInfo-head">
+		<div class="aigov-header-back" id="aigov-header-back-btn">
+			<a></a>
+		</div>
+		<div class="ai-hospitalInfo-title" id="J_ai-hospitalInfo-title">
+			报告查询</div>
+		<div class="aigov-hospitalInfo-login"></div>
+		<div class="ai-hospitalInfo-button">
+			<ul>
+				<li class="ai-hospitalInfo-button-l cur" data_type="0"><a data_type="0"
+					class="J_hospitalInfo_btn">检验单</a>
+					<div></div></li>
+				<li class="ai-hospitalInfo-button-r" data_type="1"><a data_type="1"
+					class="J_hospitalInfo_btn">检查单</a>
+					<div></div></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="ai-hospitalInfo-scroll" id="reportSearch">
+		<div id="J_ai-hospitalInfo-box-l">
+			<h5>
+				<span></span> <span class="fr"> <a name="checkType"
+					id="weekCheck" class="curTime">本周</a> <a name="checkType"
+					id="monthCheck">本月</a> <a name="checkType" id="allCheck">全部</a>
+				</span>
+			</h5>
+			<div id="J_panel_l"></div>
+			<div id="J_panel_r" style="display: none">
+				
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<script id="J_panel_list" type="text/x-handlebars-template">
+{{@data}}
+				<ul>
+					<li><span class="fl">项目：{{=_val.item_name}}</span><span class="fr">2015-05-12
+							10:30:00</span></li>
+					<li><span class="fl">编号：{{=_val.test_No}}</span><span class="fr">标本：{{=_val.specimen}}</span></li>
+
+				</ul>
+				<div class="btn_3" id="qryCheckDetail_300257424659">
+					<button class="J_button" data_test_No="{{=_val.test_No}}">
+						查看详细 <i class="fa fa-caret-down" id="fa-caret"></i>
+					</button>
+				</div>
+
+				<!-- 表格 开始 -->
+				<div class="schedulingList" data_box="box_{{=_val.test_No}}">
+					
+				</div>
+{{/@data}}
+</script>
+
+<script id="J_panel_info" type="text/x-handlebars-template">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tbody>
+							<tr>
+								<th>项目名称</th>
+								<th>结果</th>
+								<th>单位</th>
+								<th>参考值</th>
+							</tr>
+{{@data}}
+							<tr>
+								<td>{{=_val.item_name}}</td>
+								<td>{{=_val.result}}</td>
+								<td>{{=_val.units}}</td>
+								<td>{{=_val.reference_Range}}</td>
+							</tr>
+{{/@data}}
+						</tbody>
+</table>
+</script>
+
+<script id="J_showExam_info" type="text/x-handlebars-template">
+{{@data}}
+<ul>
+<li><span class="fl">{{=_val.exam_Class}}：{{=_val.exam_Sub_Class}}</span>
+	<span class="fr">2015-05-12 10:30:00</span></li>
+<li><span class="fl">印象及建议：{{=_val.specimen}}</span></span>
+<span class="fr">{{=_val.impression}}/{{=_val.recommendation}}</li>
+
+</ul>
+<div class="btn_3" id="qryCheckDetail_300257424659">
+<button class="J_button"
+	onClick="$('#box_{{=_val.exam_No}}').show();">
+	查看详细 <i class="fa fa-caret-down" id="fa-caret"></i>
+</button>
+</div>
+<!-- 表格 开始 -->
+<div class="schedulingList" id="box_{{=_val.exam_No}}"
+style="display: none;">
+<div class="schedulingList" data_box="box_{{=_val.test_No}}">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<th width='23%'>申请日期</th>
+				<td width='26%'>{{=_val.report_Date_Time}}</td>
+				<th width='23%'>申请医生</th>
+				<td width='28%'>{{=_val.apply_Doctor_Range}}</td>
+			</tr>
+			<tr>
+				<th width='23%'>报告日期</th>
+				<td width='26%'>{{=_val.exam_Date_Time}}</td>
+				<th width='23%'>报告医生</th>
+				<td width='28%'>{{=_val.report_Doctor}}</td>
+			</tr>
+			<tr>
+				<th width='23%'>检查所见</th>
+				<td colspan='3'  style="text-align: left;">{{=_val.description}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div>
+<!-- 表格 结束 -->
+{{/@data}}
+</script>

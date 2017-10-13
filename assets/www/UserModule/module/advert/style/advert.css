@@ -1,0 +1,4 @@
+.advert_box{position:absolute;top: 0em;right: 0em;left:0em;bottom:0em;width: 100%;height: 100%;}
+.advert_box>div{width:100%;height: 100%;}
+.advert_J{color: #fff;position: absolute;font-size: 0.8em;padding: 0.4em;background: #000;border-radius: 0.5em; -moz-border-radius: 0.5em;-webkit-border-radius: 0.5em;filter: alpha(opacity=60);opacity: 0.60;top: 1em;right: 1em;z-index: 1;}
+.advert_box img{position: absolute;top: 0em;right: 0em;left: 0em;bottom: 0em;width: 100%;height: 100%;}

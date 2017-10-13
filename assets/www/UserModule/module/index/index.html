@@ -1,0 +1,106 @@
+<div class="ai-index-box" id="J-ai-index-box" style="display:none">
+	<div class="ai-index-box-bd">
+		<!-- 头部 -->
+		<div class="ai-index-head">
+			<div class="navbar is-fixed">
+				<div class="navbar-left">
+					<div class="avatar" id="my_nav" data_content="my" content="aiMenu.openModule('my')">
+						<img src="UserModule/module/index/style/images/avatar.png" alt="登录头像">
+					</div>
+				</div>
+				<div class="navbar-title">
+					<div class="search-box">
+						<input type="text" name="q" id="q" placeholder="文化旅游节">
+					</div>
+				</div>
+				<div class="navbar-right">
+					<span class="navbar-right-icon" id="allapp" data_content="allapp" content="aiMenu.openModule('allapp')">
+						<i class="icon icon-menu"></i>
+					</span>
+				</div>
+			</div><!-- /.navbar -->
+
+			<div class="swiper-container ai-index-swiper" id="J-ai-index-swiper">
+				<div class="swiper-wrapper" id="J-ai-index-head-c">
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+
+			<div class="ai-index-h-grids" id="ai-index-h-grids">
+
+			</div>
+		</div>
+
+		<div id="J-ai-index-hot-news" class="ai-index-hot-news">
+		
+		</div><!-- /.ai-index-hot-news -->
+
+		<div class="ai-index-b">
+			<div class="ai-index-app-grids" id="ai-index-app-grids">
+			</div>
+		</div>
+		<div class="ai-index-news-box">
+			<ul id="J-ai-index-news-list" class="ai-index-news-list"></ul><!-- /.ai-index-news-list -->
+		</div>
+
+		<script id="newslisttpl" type="text/x-handlebars-template">
+			{{#each data}} 
+			{{#ifCond @index '==' '0'}}
+			<li class="item">
+				<a class="link" data-id="{{id}}" data_type="1" data_content="hotNewsDetail" data_param='[{"id":"{{id}}"},{"title":"{{title}}"}]' data_name="" href="javascript:;">
+					<h3 class="title title-big">{{title}}</h3>
+					<div class="image image-big">
+						<div class="image-innner">
+							{{#each files}}
+								{{#ifCond @index '==' '0'}}
+								<img src="http://www.sn-dt.com/{{this}}" alt="">
+								{{/ifCond}}
+							{{else}}
+							<img src="UserModule/module/index/style/images/picture.jpg" alt="无图">
+							{{/each}}
+						</div>
+					</div>
+					<div class="info">
+						<span class="datatime">{{dateDayFormat publicTime}}</span>
+						<span class="source">{{source}}</span>
+					</div>
+				</a>
+			</li>
+			{{else}}
+			<li class="item">
+				<a class="link" data-id="{{id}}" data_type="1" data_content="hotNewsDetail" data_param='[{"id":"{{id}}"},{"title":"{{title}}"}]' data_name="" href="javascript:;">
+					{{#ifCond files.length '>=' '2'}}
+						<h3 class="title title-big">{{title}}</h3>
+						<div class="images">
+							{{#each files}}
+							<div class="image-item">
+								<img src="http://www.sn-dt.com/{{this}}" alt="">
+							</div>
+							{{/each}}
+						</div>
+					{{else}}
+						<div class="image">
+							<div class="image-innner">
+								{{#ifCond files.length '>=' '1'}}
+								<img src="http://www.sn-dt.com/{{files}}" alt="">
+								{{else}}
+								<img src="UserModule/module/index/style/images/picture.jpg" alt="无图">
+								{{/ifCond}}
+							</div>
+						</div>
+						<h3 class="title">{{title}}</h3>
+					{{/ifCond}}
+					<div class="info">
+						<span class="datatime">{{dateDayFormat publicTime}}</span>
+						<span class="source">{{source}}</span>
+					</div>
+				</a>
+			</li>
+			{{/ifCond}}
+			{{/each}}
+		</script>
+	</div>
+</div>
+<div class="ai-index-box" style="display:none" id="error_info">
+	<img src="UserModule/module/index/style/images/error02.png" width="100%">
+</div>

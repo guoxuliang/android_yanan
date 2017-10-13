@@ -1,0 +1,37 @@
+<style>
+    section{
+        width: 90%;
+        margin-left:5%;
+        background-color: #fff;
+        margin-top:20px;
+        border-radius: 10px;
+    }
+    .detailInfo{padding:10px;}
+    .timeInfo{text-align: center;margin-top: 30px;}
+    .timeInfo span{
+        color: white;
+        background-color: #D5D5D5;
+        padding: 10px;
+        ßborder-radius: 10px;
+    }
+</style>
+
+<div aigov-type="headerBack" id="header" aigov-auto-init="true" aigov-title="健康关怀"></div>
+<div class="ai-body-box" style="background: #EBEBEB;"> 
+</div>
+
+<script id="tpl" type="text/x-handlebars-template">
+{{#each this}}
+<div class='list' data-id='{{id}}'>
+	<div class="timeInfo">
+		<span>{{formatDate createTime "yyyy-mm-dd"}}</span>
+	</div>
+	<section>
+		<div class="detailInfo">
+      		<p class="weui_media_desc">{{message}}</p>
+		</div>
+	</section>
+</div>
+{{/each}}
+<br/><br/>
+</script>

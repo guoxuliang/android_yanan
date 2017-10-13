@@ -1,0 +1,114 @@
+<div class="workBox">
+	<div aigov-type="headerBack" id="header" aigov-auto-init='true' aigov-title="详情">
+	</div>
+	
+	<div class="ai-body-box">
+	<div id="info">
+	
+	</div>
+	</div>
+
+	
+</div>
+
+<script id="tpl" type="text/x-handlebars-template">
+	<div class="weui_cells_title">基本信息</div>
+	<div class="weui_cells weui_cells_form">
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">日期:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                 {{dateDayFormat thisFollowupDateDesc}}
+            </div>
+        </div>
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">姓名:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{name}}
+            </div>
+        </div>
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">责任医生姓名:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{nameHidden respDoctorName}}
+            </div>
+        </div>
+       
+	</div>
+	
+	<div class="weui_cells_title">详细信息</div>
+	<div class="weui_cells weui_cells_form">
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">收缩压(mmHg):</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+               {{sbp}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">舒张压(mmHg):</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+               {{dbp}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">体重(kg):</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{weight}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">身高(cm):</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{height}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">体质指数:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{bmi}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">目标体质指数:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{aimBmi}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">空腹血糖值(mmol/L):</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{fbg}}
+            </div>
+        </div>
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">餐后两小时血糖值(mmol/L):</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{pbg}}
+            </div>
+        </div>
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">糖化血红蛋白值(％):</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{ghb}}
+            </div>
+        </div>
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">糖化血红蛋白检查日期:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{ghbExamDate}}
+            </div>
+        </div>
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">胰岛素用药使用频率(次/d):</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{insulinUsingFreq}}
+            </div>
+        </div>
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">胰岛素用药使用频率(次/d):</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{insulinPerDose}}
+            </div>
+        </div>
+    </div>
+</script>
+

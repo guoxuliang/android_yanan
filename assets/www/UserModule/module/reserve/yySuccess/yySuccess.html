@@ -1,0 +1,92 @@
+<div class="workBox">
+	<div aigov-type="headerBack" id="header" aigov-auto-init='true' aigov-title="预约确认单">
+	</div>
+
+	<div class="ai-body-box">
+		<div style="background-color:#ccc;padding:15px;">
+			<div>预约短信已发送到您的手机<span id="phoneNo"></span></div>
+			<div>如遇专家停诊，您的订单将会被取消，我们会以短信的方式通知到您，请保持手机畅通</div>
+			<div>您可以关注“<a href="javascript:;" id="myYyd">我的预约单</a>”了解订单状态</div>
+		</div>
+
+		<div class="weui_cells">
+		    <div class="weui_cell">
+		        <div class="weui_cell_hd">
+		            <label class="weui_label">订单号</label>
+		        </div>
+		        <div class="weui_cell_ft" style="width:100%">
+		            <span id="orderId"></span>
+		        </div>
+		    </div>
+		    <div class="weui_cell">
+		        <div class="weui_cell_hd">
+		            <label class="weui_label">就诊人</label>
+		        </div>
+		        <div class="weui_cell_ft" style="width:100%">
+		            <span id="patientName"></span>
+		        </div>
+		    </div>
+		    <div class="weui_cell">
+		        <div class="weui_cell_hd">
+		            <label class="weui_label">就诊医院</label>
+		        </div>
+		        <div class="weui_cell_ft" style="width:100%">
+		            <span id="hospitalName"></span>
+		        </div>
+		    </div>
+		    <div class="weui_cell">
+		        <div class="weui_cell_hd">
+		            <label class="weui_label">就诊医生</label>
+		        </div>
+		        <div class="weui_cell_ft" style="width:100%">
+		            <span id="doctorName"></span>
+		        </div>
+		    </div>
+		    <div class="weui_cell">
+		        <div class="weui_cell_hd">
+		            <label class="weui_label">医生职称</label>
+		        </div>
+		        <div class="weui_cell_ft" style="width:100%">
+		            <span id="doctorLevel"></span>
+		        </div>
+		    </div>
+		    <div class="weui_cell">
+		        <div class="weui_cell_hd">
+		            <label class="weui_label">费用</label>
+		        </div>
+		        <div class="weui_cell_ft" style="width:100%">
+		            <span id="orderFee"></span>元
+		        </div>
+		    </div>
+		    <div class="weui_cell">
+		        <div class="weui_cell_hd">
+		            <label class="weui_label">就诊时段</label>
+		        </div>
+		        <div class="weui_cell_ft" style="width:100%">
+		            <span id="amPm"></span>
+		        </div>
+		    </div>
+		    <div class="weui_cell">
+		        <div class="weui_cell_hd">
+		            <label class="weui_label">支付方式</label>
+		        </div>
+		        <div class="weui_cell_ft" style="width:100%">
+		            <span id="paymentMode"></span>
+		        </div>
+		    </div>
+		    <div class="weui_cell">
+		        <div class="weui_cell_hd">
+		            <label class="weui_label">订单状态</label>
+		        </div>
+		        <div class="weui_cell_ft" style="width:100%">
+		            <span id="status"></span>
+		        </div>
+		    </div>
+		</div>
+
+		<div class="weui_btn_area">
+		    <a id="successBtn" class="weui_btn weui_btn_primary weui_btn_disabled" href="javascript:void(0)">完成</a>
+		</div>
+	</div>
+</div>
+

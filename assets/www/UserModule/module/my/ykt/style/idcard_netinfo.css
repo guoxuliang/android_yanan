@@ -1,0 +1,43 @@
+/*
+body,html{ background:#fff; padding-bottom:60px; }
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend{margin:0;padding:0;}
+body,button,input,select,textarea{font: 12px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+ul,ol{list-style:none;}
+#clear{ clear:both;}
+a{ color:#333; text-decoration:none;}
+.button_blue{ border:none; width:90%; border-radius:5px; -webkit-border-radius:5px; padding:0; margin-left:5%; margin-top:5px; margin-bottom:5px; background:#06c1ae; line-height:40px; height:40px; color:#fff; font-size:18px; }
+img{ display:block;}
+.input30{width:30%; }
+.input60{width:60%; }
+.hide{display:none;}
+
+
+.header{}
+.header p{height:45px;width:100%;text-align:center;line-height:45px;font-weight:bold;font-size:18px;background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,#f6f6f6),color-stop(1,#d9d9d9))}
+*/
+
+.content{}
+.content h3{margin:10px;font-size:14px}
+.content>div{width:100%;margin:0px auto;position:relative;}
+.content>div>img{width:100%;border:0px;}
+.content>div div{position:absolute;width:100%;height:100%;left:0;top:0;background:rgba(0,0,0,.35);}
+.content>div div dl{position:absolute;left:50%;top:50%;padding:10px 20px 23px;border:1px dashed #fff;margin-left:-41px;margin-top:-34px;}
+.content>div dl img{width:40px;border:0px;}
+.content>div dl span{position:absolute;font-size:12px;color:#fff;left:4px;width:80px;}
+.content p{margin:10px;font-weight:bold;color:#666;}
+.content div input{position:absolute;opacity:0;width:100%;height:100%;z-index:12;left:0px;top:0px;}
+.content div .showImg{top:0px;left:0px;width:100%;}
+.content div dt{ position:absolute; top:0; left:0; z-index:11; width:100%; filter:alpha(opacity=50); /*IE滤镜，透明度50%*/-moz-opacity:0.5; /*Firefox私有，透明度50%*/opacity:0.5;/*其他，透明度50%*/}
+
+.promptmsg{}
+.promptmsg p{margin:10px;color:red;border:1px dashed;padding:10px;}
+
+.footBtn{margin:10px 10px 20px;overflow:hidden;}
+.footBtn button{width:45%;height:40px;border-radius:5px;font-size:16px;}
+.footBtn button:nth-child(1){float:left;border:0px;color:#fff;background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,#ec6618),color-stop(1,#ed7c18));}
+.footBtn button:nth-child(2){float:right;border:1px solid #ed6d00;color:#ed6d00;background-color:#fff}
+
+.hide{display: none;}
+
+

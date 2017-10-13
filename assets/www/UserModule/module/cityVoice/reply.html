@@ -1,0 +1,160 @@
+<div aigov-type="headerBack" id="header" aigov-auto-init="true" aigov-title="评论"></div>
+
+<div class="cityVoice ai-body-box" style="padding-bottom: 45px;">
+	<div id="replyContent">
+	
+	</div>
+    
+</div>
+	<div class="weui_search_bar weui_search_focusing" id="search_bar" style="position: absolute;width:100%;bottom:0em;">
+        <form class="weui_search_outer">
+            <div class="weui_search_inner">
+                <input type="search" class="weui_search_input" id="replyInput" placeholder="评论" required="">
+            </div>
+        </form>
+        <a href="javascript:" style="display: block;margin-left: 10px;line-height: 28px;white-space: nowrap;color: #09bb07;" id="saveReplyBtn">发表</a>
+    </div>
+    
+<div class="weui_dialog_confirm hidden" id="ifOut">
+    <div class="weui_mask"></div>
+    <div class="weui_dialog">
+        <div class="weui_dialog_hd">
+          <strong class="weui_dialog_title"></strong>
+        </div>
+        <div class="weui_dialog_bd">确定要撤销?</div>
+        <div class="weui_dialog_ft">
+            <a href="javascript:;" id="cancelBtn" class="weui_btn_dialog default">取消</a>
+            <a href="javascript:;" id="sureBtn" class="weui_btn_dialog primary">确定</a>
+        </div>
+    </div>
+</div>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script id="tpl" type="text/x-handlebars-template">
+	<!--list begin-->
+    <div class="cityVoiceList">
+        <dl>
+            <dt><a><img src="UserModule/module/cityVoice/images/city/pic.png" width="50"  /> </a> </dt>
+            <dd>
+                <strong>{{info.createName1}}</strong>{{info.createDate}}
+            </dd>
+            <div class="clear"></div>
+        </dl>
+        <ol>
+            {{info.factContent}}
+        </ol>
+        <ul>
+            {{#if info.img1}}
+            <li><a><img src="{{info.img1}}" width="90" /> </a> </li>
+            {{/if}}
+			{{#if info.img2}}
+            <li><a><img src="{{info.img2}}" width="90" /> </a> </li>
+            {{/if}}
+			{{#if info.img3}}
+            <li><a><img src="{{info.img3}}" width="90" /> </a> </li>
+            {{/if}}
+			{{#if info.img4}}
+            <li><a><img src="{{info.img4}}" width="90" /> </a> </li>
+            {{/if}}
+			{{#if info.img5}}
+            <li><a><img src="{{info.img5}}" width="90" /> </a> </li>
+            {{/if}}
+			{{#if info.img6}}
+            <li><a><img src="{{info.img6}}" width="90" /> </a> </li>
+            {{/if}}
+			{{#if info.img7}}
+            <li><a><img src="{{info.img7}}" width="90" /> </a> </li>
+            {{/if}}
+			{{#if info.img8}}
+            <li><a><img src="{{info.img8}}" width="90" /> </a> </li>
+            {{/if}}
+			{{#if info.img9}}
+            <li><a><img src="{{info.img9}}" width="90" /> </a> </li>
+            {{/if}}
+			<div class="clear"></div>
+        </ul>
+    </div>
+    
+	<div class="weui_panel">
+        <div class="weui_panel_hd" style="background-color: #eee;">评论</div>
+        <div id="replyList">
+		{{#each replylist}}
+        <div class="cityVoiceList">
+			<dl>
+            <dt><a><img src="UserModule/module/cityVoice/images/city/pic.png" width="50"/> </a> </dt>
+            <dd>
+                <strong>{{createName1}}</strong>{{reverseIndex @index ../replylist.length}}楼 {{createDate}}
+            </dd>
+			{{#ifCond createId '==' ../userInfo.userId}}
+            <div style="float: right;"><a data-id="{{cityVoiceId}}" href="javascript:void(0);" class="delReplyBtn"><i class="reply-icon1">&nbsp;&nbsp;&nbsp;</i></a></div>
+			{{/ifCond}}
+            <div class="clear"></div>
+        	</dl>
+        	<ol style="padding-left:80px;font-size: 0.8em;">
+            	{{factContent}}
+        	</ol>	
+        </div>
+		{{/each}}
+		</div>
+    </div>
+</script>

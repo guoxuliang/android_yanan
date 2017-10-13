@@ -1,0 +1,21 @@
+<div class="workBox" id="box">
+	<div aigov-type="headerBack" id="hospitallHeaderBack" class="aigov-header-back-box" aigov-title='我的一卡通' ></div>
+	<div class="ai-body-box">
+			<div id="J_hospitaldept_body_Box" >
+				<div  class="ai-cardList-msg" style="display:none;" >
+                             	您申请的一卡通目前状态：正在办理
+            	</div>
+			</div>
+	</div>
+</div>
+<script id="J_hospitaldept_tpl" type="text/x-handlebars-template">
+<div class="weui_cells weui_cells_access">
+{{@departList}}
+	<a class="weui_cell" data_deptCode="{{=_val.dept_Code}}" data_deptName="{{=_val.dept_Name}}" >
+		<div class="aigov-hospitallDept-list weui_cell_primary">
+			<p>{{=_val.dept_Name}}</p>
+		</div>
+	</a>
+{{/@departList}}
+</div>
+</script>

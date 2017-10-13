@@ -1,0 +1,111 @@
+
+.weui_media {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+/*.weui_media_info_meta_right {
+    float: right;
+    padding-right: 1em;
+}*/
+
+label{color: #999;}
+
+.weui_media_desc{
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+}
+
+.weui_media_box .weui_media_desc{color:#666;}
+
+.weui_media_info_list{
+	margin-top:0;
+	line-height:1.4em;
+    font-size: 15px;
+    color: #666;
+    list-style: none;
+    overflow: hidden;
+}
+
+.my-cricle {
+    margin-right: 10px;
+    width: 5px;
+    height: 5px;
+    text-align: center;
+    font-size: 14px;
+    margin-top:7px;
+    border-radius: 50%;
+}
+
+.read01{
+	background: #f60;
+}
+
+.read101{
+	font-weight: bold;
+}
+
+
+.tax{
+    margin: 0 auto;
+    border-radius: 6px;
+    width:94%;
+    border:solid 1px #ddd;
+    background:#FFF;
+    font-size:16px;
+    line-height:30px;
+}
+.tax ol{
+    color:#666;
+    padding:7px 10px 5px 10px;
+    background:#eee;
+    border-bottom:solid 1px #ddd;
+}
+.tax ol i{ padding-right:5px; }
+.tax ol span{ color: #639f91;}
+.tax p{
+    line-height:42px;
+    font-size:16px;
+    color:#999;
+    padding:0 10px 0 10px;
+    display: block;
+}
+.tax p span{
+    color: #666;
+    width: 75%;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.tax p em{ font-style: normal;}
+.tax p i{ padding-right:0; padding-left: 5px; font-size: 24px; color: #999;}
+.taxBorder{ border-bottom:solid 1px #eee;}
+.taxBorder01{ border: solid 1px #ddd;}
+.taxBorder02{ border: solid 1px #30abf3;}
+
+.taxReply{ position: relative;  margin: 0 auto; width: 92%;display: block; }
+.taxReply > dl{ margin-top: 10px;}
+.taxReply > dl > dt{ line-height: 20px; font-size: 14px; color: #888; float: left; text-align: center; width: 20%; padding-left: 15px; padding-right: 10px;}
+.taxReply > dl > dt > span{ border: solid 1px #ddd; text-align: center;display: inline-block; overflow: hidden;font-size: 16px; background: #fff; color: #fff; border-radius: 50%; height: 50px; width:50px;}
+.taxReply > dl > dt > span > i{ color: #888; font-size: 30px; line-height: 45px;}
+.taxReply > dl > dd{ float: left;width: 71%; }
+.taxReply > dl > dd > i{ color: #888; font-size: 22px; margin-right: 8px; }
+.taxReply > dl > dd > p{ overflow: hidden; display: block;font-size:16px; color:#999; width: 85%;}
+.taxReply > dl > dd > span{ }
+.taxReply > dl > dd > span > em{ font-style: normal; color: #888; font-size: 16px; }
+.taxReply > p{ padding: 10px 10px 10px 20px; font-size: 14px; }
+.taxReply > p > i{color: #639f91; font-size: 18px;}
+.taxReply > p > span{color: #639f91; font-size: 18px; display: block; }
+.taxReply > p > span > a > i{color: #888;font-size: 20px;}
+.taxReply > p > span > a{color: #639f91;  }
+
+.taxReplyBg{ position: absolute; bottom: -34px; right: 20px;}
+.taxReplyBg02{ position: absolute; top: -28px; left: 25px;}
+.taxReplyTxt{ margin-top: 8px;  font-size: 15px;padding: 5px 10px; width: 90%; }
+.taxReplyTxtBg01{ background: #eee; color: #666; }
+.taxReplyTxtBg02{ background: #f3fbff; color: #255c7d;}
+

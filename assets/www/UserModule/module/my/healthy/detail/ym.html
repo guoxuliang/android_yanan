@@ -1,0 +1,85 @@
+<div class="workBox">
+	<div aigov-type="headerBack" id="header" aigov-auto-init='true' aigov-title="详情">
+	</div>
+	
+	<div class="ai-body-box">
+	<div id="info">
+	
+	</div>
+	</div>
+
+	
+	
+</div>
+
+<script id="tpl" type="text/x-handlebars-template">
+		<div class="weui_cells_title">信息</div>
+	<div class="weui_cells weui_cells_form">
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">日期:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+               {{dateDayFormat vaccinateDateDesc}}
+            </div>
+        </div>
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">疫苗名称代码:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{vaccineCode}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">疫苗名称:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{vaccineName}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">接种剂次:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+               {{vaccinateDoses}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">疫苗接种日期:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">接种部位:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{vaccinateSite}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">疫苗批号:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{vaccineBatchNo}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">疫苗接种医生姓名:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{vaccinateDoctorName}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">备注:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{remarks}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">疫苗接种单位名称:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+               {{vaccinateOrgName}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">记录创建日期:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                 {{dateDayFormat createDate}}
+            </div>
+        </div>
+	</div>
+</script>

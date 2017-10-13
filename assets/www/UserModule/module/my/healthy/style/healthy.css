@@ -1,0 +1,168 @@
+.weui_cells_title{
+	background-color: #eee;
+	height: 35px;
+    line-height: 35px;
+    font-weight:bold;
+}
+
+.weui_media {
+    color: #999999;
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.tit_col{color: #222;font-weight: 600;}
+
+#orderList .item{
+	border-bottom:1px solid #ccc;
+	margin-bottom: 8px;
+	color:#666;
+}
+
+.img_item{
+      position: relative;
+      overflow: hidden;
+      float: left;
+      width: 25%;
+      padding: 0.8em 0em;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      }
+.img_item:active {
+    background-color: #e4e4e4
+}
+
+.img_item .box{
+            bottom: 2.2em;
+            margin: auto;
+            text-align: center;
+            }
+
+.img_item img{
+	width: 65px;
+	height: 65px;
+}
+
+.img_item p{
+	color: #666;
+	font-size: 13px;
+}
+
+.title_icon{
+	padding-left: 10px;
+}
+.title_icon .fl img{
+	width: 25px;
+	height: 25px;
+}
+.title_icon p{
+	padding-top:5px;
+	color: #6666;
+}
+
+.title_icon .fr img{
+	padding-top:5px;
+	width: 19px;
+	height: 16px;
+	margin-right: 10px;
+}
+
+.cardContent a:link { color: orange; text-decoration: none}
+
+.cardContent a:visited { color: orange; text-decoration: none}
+
+.cardContent a:hover { color: orange; text-decoration: none}
+
+.cardContent a:active { color: orange; text-decoration: none}
+
+.row_list .info .fl{
+	margin-right: 15px;
+}
+
+.message_title{
+	color:green;
+	border-bottom: 5px solid #eee;
+	padding: 10px 30px;
+	font-size: 14px;
+}
+.message_div{
+	border-top:1px solid #ccc;
+	border-bottom: 5px solid #eee;
+	padding:20px;
+}
+
+.message_div .hospital{
+	font-size: 18px;
+}
+
+.message_div .remark{
+	color:orange;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+.message_div .time{
+	color:#666;
+	font-size: 13px;
+}
+
+.message_div .org{
+	font-size: 15px;
+	margin-right: 10px;
+}
+
+.message_div .name{
+	font-size: 14px;
+}
+
+.notice_div{
+	border-bottom: 1px solid #eee;
+	padding:10px;
+}
+
+.notice_div .pic{
+	width: 20%;
+}
+
+.notice_div .pic img{
+	    width: 95px;
+}
+
+.notice_div .info{
+	margin-left: 10px;
+	font-size: 14px;
+	width: 70%;
+}
+
+.notice_div .info .name{
+	
+}
+
+.notice_div .info .name span{
+	color:orange;
+}
+
+.notice_div .info .cancel{
+	padding-right: 20px;
+	cursor:pointer;
+}
+
+.notice_div .info .hospital{
+	font-size: 13px;
+	color:#666;
+}
+
+.notice_div .info .dept{
+	font-size: 13px;
+	color:#666;
+}
+
+.notice_div .info .book{
+	padding:3px 5px;
+	cursor:pointer;
+	background-color: orange;
+	color: white;
+}

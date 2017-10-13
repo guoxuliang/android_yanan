@@ -1,0 +1,70 @@
+<div class="workBox" id="box">
+	<div aigov-type="headerBack" id="busStopHeaderBack" class="aigov-header-back-box" aigov-title="智能停车"></div>
+	<div class="ai-body-box">
+		<div class="aigov-search-width">
+			<div class="aigov-search-inputbox">
+				<input type="text" placeholder="找停车场" class="aigov-search-input" id="aigov-search-input">
+				<div class="aigov-search-icon" id="aigov-search-icon"></div>
+				<button class="aigov-search-close-btn" id="aigov-search-close-btn" style="display:none"></button>
+			</div>
+		</div>
+		<div class="aigov-content-width">
+			<div class="aigov-img-div">
+				<img class="aigov-img" src="UserModule/module/busStop/style/images/main.png">
+			</div>
+			<div class="aigov-tab" id="aigov-tab-menu"></div>
+			<div class="aigov-list" id="aigov-stop-list"></div>
+		</div>
+	</div>
+</div>
+<!--tab菜单模板-->
+<script id="tab-menu-template" type="text/x-handlebars-template">
+	<ul>
+		{{#each menu}}
+			<li>
+				<a href="#">{{menu_name}}&or;</a>
+			</li>
+		{{/each}}
+	</ul>
+</script>
+<!--停车场信息列表-->
+<script id="park-list-template" type="text/x-handlebars-template">
+	<div class="park-info-div">
+			<h1>{{parkName}}</h1>
+			<div class="park_detail_real">
+				<p>
+					<img class="list_img" src="UserModule/module/busStop/style/images/bus_remain.png"/>
+					<span class="font12 span-float-left-30">剩余车位：{{restSpace}} 个</span>
+				</p>
+				<p>
+					<img class="list_img" src="UserModule/module/busStop/style/images/bus_sum.png"/>
+					<span class="font12 span-float-left-30">总车位：{{totalSpace}} 个</span>
+				</p>
+				<p>
+					<img class="list_img" src="UserModule/module/busStop/style/images/bus_fee.png"/>
+					<span class="font12 span-float-left-30">停车费：3元 / 小时</span>
+				</p>
+			</div>
+	</div> 
+
+</script>
+
+
+
+		
+	<!-- 	 {{#each parkInfo}}
+		<div class="park-info-div">
+			<h4>{{park_name}}</h4>
+			<p class="font14">{{park_place}}</p>
+			<div class="park_detail">
+				<p class="font14">{{park_remind}}/{{park_sum}}</p>
+				<p class="font14">￥{{park_price}}/小时</p>
+				<p class="font14">{{park_distance}}km</p>
+			</div>
+			<div class="park_menu">
+				<p class="fonttest">{{park_menu_name1}}</p>
+				<p class="fonttest">{{park_menu_name2}}</p>
+				<p class="fonttest">{{park_menu_name3}}</p>
+			</div>
+		</div>
+	{{/each}}  -->

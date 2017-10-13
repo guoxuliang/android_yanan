@@ -1,0 +1,139 @@
+<div class="ai-hospitalInfo-box">
+	<!-- 头部 -->
+	<div class="ai-hospitalInfo-head">
+		<div class="aigov-header-back" id="aigov-header-back-btn"><a></a></div>
+	 	<div class="ai-hospitalInfo-title" id="J_ai-hospitalInfo-title">
+	 		医院名称
+	 	</div>
+	 	<div class="aigov-hospitalInfo-login">
+	 	</div>
+	 	<div class="ai-hospitalInfo-button">
+	 		<ul>
+				<li class="ai-hospitalInfo-button-l cur" >
+					<a data_type="0" class="J_hospitalInfo_btn">医院介绍</a>
+					<div></div>
+				</li>
+				<li class="ai-hospitalInfo-button-r">
+					<a data_type="1"  class="J_hospitalInfo_btn">平面导航</a>
+					<div></div>
+				</li>
+			</ul>
+	 	</div>
+    </div>
+    
+    <div class="ai-hospitalInfo-scroll">
+    	<div id="J_ai-hospitalInfo-box-l">
+    		<div id="J_panel_l">
+ 	
+			</div>
+    	</div>
+    	<div id="J_ai-hospitalInfo-box-r" style="display:none">
+    		<div id="J_panel_r">
+
+			</div>
+    	</div>
+	</div>
+</div>
+
+<!-- 用于显示图片的容器 -->
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script id="J_panel_l_tpl" type="text/x-handlebars-template">
+	<div>
+		<img alt="" src="{{=hospital_Image}}" style="width:100%"/>
+   	</div>
+	<div class="weui_panel weui_panel_access">
+       <div class="weui_panel_hd">医院信息</div>
+       <div class="weui_panel_bd">
+           <div class="weui_media_box weui_media_text">
+               <h4 class="weui_media_title">{{=hospital_Name}}</h4>
+               <p class="weui_media_desc">{{=hospital_Introduction}}</p>
+				<p class="weui_media_desc">{{=hospital_Address}}</p>
+           </div>
+       </div>
+       <a href="javascript:void(0);" class="weui_panel_ft" id="J_open_map" data_title="{{=hospital_Name}}" data_address="{{=hospital_Address}}" data_lng="{{=hospital_Lng}}" data_lat="{{=hospital_Lat}}">查看地图</a>
+   </div>
+  	<div class="weui_btn_area">
+  		<a href="tel:{{=hospital_TelPhone}}?allow" class="weui_btn weui_btn_primary" id="J_hospitalInfo_Map" data_phone="{{=hospital_TelPhone}}">电话咨询</a>
+  	</div>
+</script>
+
+<script id="J_panel_r_tpl" type="text/x-handlebars-template">
+<div>
+	<img alt="" src="{{=hospital_Nav_Image}}" style="width:100%" onClick="$(this).ImgZoomIn();"/>
+</div>
+<div class="weui_panel weui_panel_access">
+    <div class="weui_panel_hd">导航信息</div>
+    <div class="weui_panel_bd">
+        <div class="weui_media_box weui_media_text">
+            <h4 class="weui_media_title">{{=hospital_Name}}</h4>
+            <p class="weui_media_desc">{{=hospital_Nav_Introduction}}</p>
+        </div>
+    </div>
+</div>
+</script>

@@ -1,0 +1,87 @@
+<div class="workBox">
+	<div aigov-type="headerBack" id="header" aigov-auto-init='true' aigov-title="详情">
+	</div>
+	
+	<div class="ai-body-box">
+	<div id="info">
+	
+	</div>
+	</div>
+	
+	
+</div>
+
+<script id="tpl" type="text/x-handlebars-template">
+	<div class="weui_cells_title">信息</div>
+	<div class="weui_cells weui_cells_form">
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">日期:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{dateDayFormat reportDateDesc}}
+            </div>
+        </div>
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">年龄:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+               {{patientAges}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">患者职业:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+               {{infectPatOccupName}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">传染病类型:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{infectionTypeName}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">传染病:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{infectionName}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">其他法定管理以及重点监测传染病:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+               {{otherInfectionName}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">订正病名:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{revisedDiag}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">报告医生:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{nameHidden reportDoctorName}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">填卡日期:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{dateDayFormat reportDate}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">发病日期:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+               {{dateDayFormat firstSympAppearDate}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">诊断日期:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{dateDayFormat diagDate}}
+            </div>
+        </div>
+        
+        
+	</div>
+</script>
+

@@ -1,0 +1,35 @@
+
+.sortable2 {
+	border: 1px dashed #aaa;
+    padding: 10px;
+}
+
+
+ .sortable1, .sortable2 { list-style-type: none; margin: 3px; padding: 10px 0; width: 100%; min-height:100px;}
+ .sortable1 li, .sortable2 li { margin: 5px; float: left;  padding: 10px 20px; font-size: 1em;   background: #eee; }
+ 
+ 
+ 
+ .show-grid{ width:95%; margin:0 auto;}
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

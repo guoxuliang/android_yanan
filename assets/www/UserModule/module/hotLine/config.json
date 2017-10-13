@@ -1,0 +1,26 @@
+{
+  "code": 0,
+  "message": "操作成功！",
+  "data": [
+    {
+      "id":"01",
+      "name":"图1",
+      "icon":"UserModule/module/hotLine/style/images/banner1.jpg",
+      "describe":"",
+      "type":"1",
+      "content":"",
+      "param":"[{\"param1\":\"param1\"},{\"param2\":\"param2\"}]",
+      "child":[]
+    },
+    {
+      "id":"02",
+      "name":"图2",
+      "icon":"UserModule/module/hotLine/style/images/banner2.jpg",
+      "describe":"",
+      "type":"1",
+      "content":"",
+      "param":"[{\"param1\":\"param1\"},{\"param2\":\"param2\"}]",
+      "child":[]
+    }
+  ]
+}

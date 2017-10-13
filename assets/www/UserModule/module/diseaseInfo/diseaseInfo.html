@@ -1,0 +1,29 @@
+﻿<div aigov-type="headerBack" id="header" aigov-auto-init="true" aigov-title="自测结果">
+</div>
+<div class="ai-body-box" style="background: #eee">
+	<div id="J-ai-box">
+	</div>
+</div>
+
+<script id="J_diseaseInfo_tpl" type="text/x-handlebars-template">
+
+
+<div class="weui_panel weui_panel_access">
+    <div class="weui_panel_hd">{{=name}}</div>
+    <div class="weui_panel_bd">
+        <div class="weui_media_box weui_media_text">
+            <p class="weui_media_desc">{{=feature}}</p>
+        	<ul class="weui_media_info">
+                <li class="weui_media_info_meta">
+					<a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_primary J_btn" data_url="{{=causeUrl}}" data_title="病因">病因</a>
+					<a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_primary J_btn" data_url="{{=scheduleUrl}}" data_title="治疗">治疗</a>
+				</li>
+            </ul>
+        </div>
+    </div>
+{{@result_List}}
+    <a href="javascript:void(0);" class="weui_panel_ft J_button" vid="{{=_val.officeId}}">{{=_val.officeName}} </a>
+{{/@result_List}}
+</div>
+
+</script>

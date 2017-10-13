@@ -1,0 +1,46 @@
+<div aigov-type="headerBack" id="header" aigov-auto-init="true" aigov-title="就诊人管理"></div>
+<div class="ai-body-box" style="background: #fbf9fe;"> 
+	<div class="weui_cells_title">新增就诊人</div>
+	<div class="weui_cells weui_cells_access">
+		<a id="addMember" class="weui_cell" href="javascript:;">
+			<div class="weui_cell_bd weui_cell_primary">
+				<p>新增就诊人</p>
+			</div>
+			<div class="weui_cell_ft"></div>
+		</a> 
+	</div>
+	<div class="weui_cells_title">选择就诊人</div>
+</div>
+
+<div class="weui_dialog_confirm hidden" id="ifOut">
+    <div class="weui_mask"></div>
+    <div class="weui_dialog">
+        <div class="weui_dialog_hd">
+          <strong class="weui_dialog_title"></strong>
+        </div>
+        <div class="weui_dialog_bd">确定要删除吗?</div>
+        <div class="weui_dialog_ft">
+            <a href="javascript:;" id="cancelBtn" class="weui_btn_dialog default">取消</a>
+            <a href="javascript:;" id="sureBtn" class="weui_btn_dialog primary">确定</a>
+        </div>
+    </div>
+</div>
+
+<script id="tpl" type="text/x-handlebars-template">
+{{#each this}}
+	<div class="weui_cell">
+		<div class="weui_cell_bd weui_cell_primary">
+			 <p class="selMember" data-patient-id="{{patientId}}" data-phone-num="{{phoneNum}}" data-patient-name="{{patientName}}" data-cert-code="{{certCode}}" data-card-num="{{cardNum}}" data-his-patient-id="{{hisPatientId}}">{{patientName}}</p>
+			 <p style="color: #acacac;font-size: 0.8em;">{{hospitalName}} {{cardNum}} 
+				{{#ifCond defaultFlag '==' '0'}}
+				默认就诊人
+				{{/ifCond}}
+             </p>
+		</div>
+		<div class="weui_cell_ft">
+             <a class="modMember" href="javascript:;" data-patient-id="{{patientId}}" style="margin-left: 20px;vertical-align: text-top;"><img src="UserModule/module/member/images/edit.png" style="width: 20px;"></a>
+             <a class="delMember" href="javascript:;" data-patient-id="{{patientId}}" style="margin-left: 20px;"><i class="weui_icon_cancel"></i></a>
+        </div>
+	</div>
+{{/each}}
+</script>

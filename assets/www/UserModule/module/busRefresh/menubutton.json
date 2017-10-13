@@ -1,0 +1,39 @@
+﻿[{
+	"id" : "busStationNear",
+	"picture" : "BaseModule/components/buttonlist/style/images/bus/icon_test01.png",
+	"pictureSelected" : "BaseModule/components/buttonlist/style/images/bus/icon_test01_hover.png",
+	"name" : "附件站点",
+	"position" : "1",
+	"notSelectCss" : "no",
+	"content":"aiMenu.openUserDefineModule('busStationNear',"
+},{
+	"id" : "busTrans",
+	"picture" : "BaseModule/components/buttonlist/style/images/bus/icon_02.png",
+	"pictureSelected" : "BaseModule/components/buttonlist/style/images/bus/icon_02_hover.png",
+	"name" : "换向",
+	"position" : "2",
+	"content":"aiMenu.openUserDefineModule('busTrans',"
+},{
+	"id" : "busRefresh",
+	"picture" : "BaseModule/components/buttonlist/style/images/bus/refresh01.png",
+	"pictureSelected" : "BaseModule/components/buttonlist/style/images/bus/refresh01_hover.png",
+	"name" : "刷新",
+	"position" : "0",
+	"content":"aiMenu.openUserDefineModule('busRefresh',"
+},{
+	"id" : "busSameRoute",
+	"picture" : "BaseModule/components/buttonlist/style/images/bus/icon_03.png",
+	"pictureSelected" : "BaseModule/components/buttonlist/style/images/bus/icon_03.png",
+	"name" : "同站线路",
+	"notSelectCss" : "no",
+	"position" : "3",
+	"content":"aiMenu.openUserDefineModule('busSameRoute',"
+},{
+	"id" : "busMore",
+	"picture" : "BaseModule/components/buttonlist/style/images/bus/icon_05.png",
+	"pictureSelected" : "BaseModule/components/buttonlist/style/images/bus/icon_05.png",
+	"name" : "更多车辆",
+	"notSelectCss" : "no",
+	"position" : "4",
+	"content":"aiMenu.openUserDefineModule('busMore',"
+}]

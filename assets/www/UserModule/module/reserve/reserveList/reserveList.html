@@ -1,0 +1,143 @@
+<div class="ai-hospitalInfo-box">
+	<!-- 头部 -->
+	<div class="ai-hospitalInfo-head">
+		<div class="aigov-header-back" id="aigov-header-back-btn"><a></a></div>
+	 	<div class="ai-hospitalInfo-title" id="J_ai-hospitalInfo-title">
+	 		
+	 	</div>
+	 	<div class="aigov-hospitalInfo-login">
+	 	</div>
+	 	<div class="ai-hospitalInfo-button">
+	 		<ul>
+				<li class="ai-hospitalInfo-button-l cur" >
+					<a data_type="0" class="J_hospitalInfo_btn">按医生</a>
+					<div></div>
+				</li>
+				<li class="ai-hospitalInfo-button-r">
+					<a data_type="1"  class="J_hospitalInfo_btn">按日期</a>
+					<div></div>
+				</li>
+			</ul>
+	 	</div>
+    </div>
+    
+    <div class="ai-hospitalInfo-scroll">
+    	<!-- 按医生 开始 -->
+    	<div id="J-ai-hospitalInfo-l">
+
+		</div>
+		<!-- 按医生 结束-->
+		<!-- 按时间 开始 -->
+		<div id="J-ai-hospitalInfo-r" style="display:none">
+
+		</div>
+		<!-- 按时间 结束 -->
+	</div>
+</div>
+<script id="J_reserve_time_tpl" type="text/x-handlebars-template">
+<section id="booking_time">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+	        <tr>
+	            <th width="33.33333%">时间</th>
+	            <th width="33.33333%">上午</th>
+	            <th width="33.33333%">下午</th>
+	        </tr>
+			<tr>
+	            <td>{{=date1_M}}<br>（{{=date1}}）</td>
+	            <td data_time="{{=date1_T}}" data_time_type="门诊上午"></td>
+	            <td data_time="{{=date1_T}}" data_time_type="门诊下午"></td>
+	        </tr>
+			<tr>
+	            <td>{{=date2_M}}<br>（{{=date2}}）</td>
+	            <td data_time="{{=date2_T}}" data_time_type="门诊上午"></td>
+	            <td data_time="{{=date2_T}}" data_time_type="门诊下午"></td>
+	        </tr>
+			<tr>
+	            <td>{{=date3_M}}<br>（{{=date3}}）</td>
+	            <td data_time="{{=date3_T}}" data_time_type="门诊上午"></td>
+	            <td data_time="{{=date3_T}}" data_time_type="门诊下午"></td>
+	        </tr>
+			<tr>
+	            <td>{{=date4_M}}<br>（{{=date4}}）</td>
+	            <td data_time="{{=date4_T}}" data_time_type="门诊上午"></td>
+	            <td data_time="{{=date4_T}}" data_time_type="门诊下午"></td>
+	        </tr>
+			<tr>
+	            <td>{{=date5_M}}<br>（{{=date5}}）</td>
+	            <td data_time="{{=date5_T}}" data_time_type="门诊上午"></td>
+	            <td data_time="{{=date5_T}}" data_time_type="门诊下午"></td>
+	        </tr>
+			<tr>
+	            <td>{{=date6_M}}<br>（{{=date6}}）</td>
+	            <td data_time="{{=date6_T}}" data_time_type="门诊上午"></td>
+	            <td data_time="{{=date6_T}}" data_time_type="门诊下午"></td>
+	        </tr>
+			<tr>
+	            <td>{{=date7_M}}<br>（{{=date7}}）</td>
+	            <td data_time="{{=date7_T}}" data_time_type="门诊上午"></td>
+	            <td data_time="{{=date7_T}}" data_time_type="门诊下午"></td>
+	        </tr>
+    	</tbody>
+    </table>
+</section>
+</script>
+
+<script id="J_reserve_tpl" type="text/x-handlebars-template">
+<section class="booking_doctor">
+ <dl>
+     <dt><img src="data:image/png;base64,{{=doctor_Img}}" lowsrc="UserModule/module/reserve/reserveList/style/images/none.gif" onerror="this.src='UserModule/module/reserve/reserveList/style/images/none.gif'" width="60" height="70"></dt>
+     <dd>
+         <h5>
+             <span class="fl">{{=temp_doctor_name}}<strong>({{=mark_Type}})</strong></span><button class="fr J_flag"></button>
+             <div class="clear"></div>
+         </h5>
+         <p class="J_mark_desc">{{=mark_Desc}}</p>
+         <div class="scheduling">
+             <h4><a class="current J_show" data_doctor_Code="{{=doctor_Code}}">本周排班 <i class="fa fa-angle-down"></i></a>
+				<button class="weui_btn_default J_button_attention" data_doctor_Code="{{=doctor_Code}}" data_doctor_Id="{{=doctor_Id}}" data_attentionId="{{=attentionId}}">关注</button></h4>
+         </div>
+     </dd>
+     <div class="clear"></div>
+ </dl>
+
+ <div class="schedulingList" data_Table="{{=doctor_Code}}">
+     <table width="100%" border="0" cellspacing="0" cellpadding="0">
+         <tbody><tr>
+             <th width="14.28571428571429%">{{=tptDate.date1}}<br>
+				{{=tptDate.date1_M}}</th>
+             <th width="14.28571428571429%">{{=tptDate.date2}}<br>
+				{{=tptDate.date2_M}}</th>
+             <th width="14.28571428571429%">{{=tptDate.date3}}<br>
+				{{=tptDate.date3_M}}</th>
+             <th width="14.28571428571429%">{{=tptDate.date4}}<br>
+				{{=tptDate.date4_M}}</th>
+             <th width="14.28571428571429%">{{=tptDate.date5}}<br>
+				{{=tptDate.date5_M}}</th>
+             <th width="14.28571428571429%">{{=tptDate.date6}}<br>
+				{{=tptDate.date6_M}}</th>
+             <th width="14.28571428571429%">{{=tptDate.date7}}<br>
+				{{=tptDate.date7_M}}</th>
+         </tr>
+         <tr>
+             	<td data_time="{{=tptDate.date1_T}}" data_Doctor_Code="{{=Doctor_Code}}" data_time_type="门诊上午" data_text="上午">&nbsp;</td>
+             	<td data_time="{{=tptDate.date2_T}}" data_Doctor_Code="{{=Doctor_Code}}" data_time_type="门诊上午" data_text="上午">&nbsp;</td>
+             	<td data_time="{{=tptDate.date3_T}}" data_Doctor_Code="{{=Doctor_Code}}" data_time_type="门诊上午" data_text="上午">&nbsp;</td>
+                <td data_time="{{=tptDate.date4_T}}" data_Doctor_Code="{{=Doctor_Code}}" data_time_type="门诊上午" data_text="上午">&nbsp;</td>
+                <td data_time="{{=tptDate.date5_T}}" data_Doctor_Code="{{=Doctor_Code}}" data_time_type="门诊上午" data_text="上午">&nbsp;</td>
+                <td data_time="{{=tptDate.date6_T}}" data_Doctor_Code="{{=Doctor_Code}}" data_time_type="门诊上午" data_text="上午">&nbsp;</td>
+                <td data_time="{{=tptDate.date7_T}}" data_Doctor_Code="{{=Doctor_Code}}" data_time_type="门诊上午" data_text="上午">&nbsp;</td>
+		</tr>
+        <tr>
+                <td data_time="{{=tptDate.date1_T}}" data_Doctor_Code="{{=Doctor_Code}}" data_time_type="门诊下午" data_text="下午">&nbsp;</td>
+                <td data_time="{{=tptDate.date2_T}}" data_Doctor_Code="{{=Doctor_Code}}" data_time_type="门诊下午" data_text="下午">&nbsp;</td>
+                <td data_time="{{=tptDate.date3_T}}" data_Doctor_Code="{{=Doctor_Code}}" data_time_type="门诊下午" data_text="下午">&nbsp;</td>
+                <td data_time="{{=tptDate.date4_T}}" data_Doctor_Code="{{=Doctor_Code}}" data_time_type="门诊下午" data_text="下午">&nbsp;</td>
+                <td data_time="{{=tptDate.date5_T}}" data_Doctor_Code="{{=Doctor_Code}}" data_time_type="门诊下午" data_text="下午">&nbsp;</td>
+                <td data_time="{{=tptDate.date6_T}}" data_Doctor_Code="{{=Doctor_Code}}" data_time_type="门诊下午" data_text="下午">&nbsp;</td>
+                <td data_time="{{=tptDate.date7_T}}" data_Doctor_Code="{{=Doctor_Code}}" data_time_type="门诊下午" data_text="下午">&nbsp;</td>
+  		</tr>
+        </tbody></table>
+    </div>
+</section>
+</script>

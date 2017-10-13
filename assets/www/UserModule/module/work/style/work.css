@@ -1,0 +1,116 @@
+.bgc {
+  background-color: #f5f5f5;
+}
+.grid,
+.grid-list {
+  overflow: hidden;
+  list-style: none;
+  background-color: #fff;
+}
+.grid .grid-item,
+.grid-list .grid-item {
+  position: relative;
+  z-index: 1;
+  float: left;
+  width: 25%;
+  padding: 0;
+  text-align: center;
+}
+.grid-list .grid-item {
+  width: 50%;
+}
+.grid .grid-item .grid-item-contain,
+.grid-list .grid-item .grid-item-contain {
+  display: block;
+}
+.grid .grid-item-icon {
+  width: 3em;
+  height: 3em;
+  margin: 0 auto 0.5em;
+}
+
+.grid-item-icon img {
+  width:100%;
+}
+.gird-item-text {
+  line-height: 1.125em;
+  display: block;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  font-size: 0.875em;
+  color: #333;
+}
+
+.grid-list .gird-item-text {
+  min-height: auto;
+  padding: 0.625em 0;
+  line-height: 1.375em;
+}
+.grid .grid-item-contain {
+  padding: 0.625em 0.32em;
+}
+.grid .grid-item-contain,
+.grid-list .grid-item-contain {
+  position: relative;
+  z-index: 3;
+}
+.grid .grid-item-contain:active,
+.grid-list .grid-item-contain:active  {
+  background-color: #f5f5f5;
+}
+.work-nav {
+  overflow: hidden;
+  padding: 0.625em 0;
+  margin: 0.625em -0.125em;
+  background-color: #fff;
+}
+.work-nav-item {
+  float: left;
+  width: 50%;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0.125em;
+}
+.work-nav-item img {
+  width: 100%;
+  vertical-align: top;
+}
+.work-nav-item:nth-child(2n) {
+  margin-right: 0;
+}
+
+.grid .grid-item:before,
+.grid-list .grid-item:before {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  font-size: 0;
+  border-right: 1px solid #D9D9D9;
+  z-index: 2;
+  color: #D9D9D9;
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+}
+.grid .grid-item:after,
+.grid-list .grid-item:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  right: 0;
+  height: 1px;
+  z-index: 2;
+  font-size: 0;
+  border-bottom: 1px solid #D9D9D9;
+  color: #D9D9D9;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}

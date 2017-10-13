@@ -1,0 +1,104 @@
+.bgc {
+  background-color: #f5f5f5;
+}
+.service-title {
+  line-height: 1.25em;
+  padding: 0.75em 0 0.75em 0.625em;
+  position: relative;
+  font-size: 1em;
+}
+
+.service-title:after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0.625em;
+	bottom: 0;
+	background: #ddd;
+	width: 100%;
+	height: 1px;
+	-webkit-transform: scaleY(0.5);
+	-ms-transform: scaleY(0.5);
+	transform: scaleY(0.5);
+	-webkit-transform-origin: bottom left;
+	-ms-transform-origin: bottom left;
+	transform-origin: bottom left;
+}
+
+.service-list {
+  padding-top: 0.625em;
+}
+.service-item {
+  position: relative;
+  background-color: #fff;
+  margin-bottom: 0.625em;
+}
+.service-item:after,
+.service-item:before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0.625em;
+	bottom: 0;
+	background: #ddd;
+	width: 100%;
+	height: 1px;
+	-webkit-transform: scaleY(0.5);
+	-ms-transform: scaleY(0.5);
+	transform: scaleY(0.5);
+	-webkit-transform-origin: bottom left;
+	-ms-transform-origin: bottom left;
+	transform-origin: bottom left;
+}
+.service-item:after {
+  left: 0;
+}
+.service-item:before {
+  top: 0;
+  left: 0;
+  bottom: auto;
+}
+
+.grid {
+  overflow: hidden;
+  padding: 0.94em 0.625em;
+  list-style: none;
+}
+.grid .grid-item {
+  float: left;
+  width: 25%;
+  padding: 0;
+  text-align: center;
+}
+.grid .grid-item .grid-item-contain {
+  display: block;
+}
+.grid .grid-item-icon {
+  width: 3em;
+  height: 3em;
+  margin: 0 auto 0.5em;
+  border-radius: 1em;
+  background-color: #57ABED;
+}
+
+.grid-item-icon img {
+  width:100%;
+}
+.gird-item-text {
+  min-height: 2.25em;
+  line-height: 1.125em;
+  display: block;
+  /* overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis; */
+  font-size: 0.875em;
+  color: #333;
+}
+
+.grid .grid-item-contain {
+  padding: 0.46em 0.32em;
+  border-radius: 3px;
+}
+.grid .grid-item-contain:active {
+  background-color: #f5f5f5;
+}

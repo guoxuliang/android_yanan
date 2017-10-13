@@ -1,0 +1,230 @@
+/**
+ *@author keyz@asiainfo.com
+ *@createtime 2016-05-27
+**/
+@charset "utf-8";
+
+
+/*我的 头部*/
+.MyHeaderMain{height: 200px; background-image: url("images/weatherBg.png"); background-repeat: no-repeat; background-size: 100% 100%;}
+.myHeader{height:50px;width:100%; position:fixed; top:10px; left:0; }
+.myHeader .back{ position:absolute;font-size:3.6rem; padding-right:20px; left:10px; bottom:5px; color:#fff; z-index:3;  }
+.myHeader button{  background: none; border:none; padding:0; margin:0; }
+.myHeader h3{ position:absolute; width:100%; text-align:center; font-size:20px; color:#fff; bottom:10px; font-weight:500; z-index:1;}
+.myHeader h3 a{ color:#fff;}
+.myHeader h3 i{font-size:20px; margin-left:10px;}
+
+.weather{padding-top:50px;}
+.weather dl{display:table;z-index: 2; color: #fff;width: 100%; }
+.weather dl dt{ display:table-cell;  overflow: hidden;}
+.weather dl dt span{ font-size: 14px; margin-left: 10px; line-height: 30px;}
+.weather dl dt p{ font-size: 18px; text-align: right; margin-right: 10px;}
+.weather dl dd{display:table-cell;   overflow: hidden; vertical-align: top;}
+.weather dl dd span{ font-size: 20px; margin-left: 10px; line-height: 28px;}
+.weather dl dd p{ font-size: 12px; }
+.weather dl dd img{ margin-top: 5px;}
+.weatherBg { position: absolute; z-index: 1; height: 200px;}
+
+
+/*会员中心*/
+.member button{ border-right: 0;border-left: 0; border-bottom:1px #ddd solid; border-top:1px #ddd solid;font:0.9rem Verdana,Arial,'微软雅黑'; color: #70b296;background: #fff; line-height: 50px;width: 100%;}
+
+.user-center .weui_btn_primary {
+    background-color: #00C1AE;
+    color: #fff;
+}
+.weui_btn_primary:not(.weui_btn_disabled):visited {
+    color: #FFFFFF;
+}
+.weui_btn_primary:not(.weui_btn_disabled):active {
+    color: rgba(255, 255, 255, 0.4);
+    background-color: #57c9ae;
+}
+
+.user-center {
+    background: #f5f5f5;
+    position: absolute;
+    top: 0em;
+    left: 0em;
+    right: 0em;
+    bottom: 0em;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.member-hd {
+    position: relative;
+    min-height: 6.8em;
+    background-color: #00C1AE;
+    margin-bottom: 3.8em;
+    padding: 1em;
+}
+.member-photo {
+   position: absolute;
+   left: 1em;
+   bottom: -2.75em;
+   width: 5.5em;
+   height: 5.5em;
+   overflow: hidden;
+   border-radius: 8px; 
+   border: 2px solid #fff;
+}
+.member-photo img {
+    width: 100%;
+    height: 100%;
+}
+.member-info {
+    padding-top: 2em;
+    margin-left: 6.4em;
+    color: #fff;
+}
+.member-info #userName {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.375em;
+    font-size: 1.125em;
+    margin-right: 1em;
+}
+.member-info #userName_st {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #009999;
+    color: #fff;
+    padding: 0.25em 0.75em;
+    line-height: 1.125em;
+    border-radius: 20px;
+    font-size: 0.75em;
+    margin-bottom: 0.25em;
+}
+.member-info  #phone {
+   font-size: 0.875em;
+}
+.member-action { 
+    position: absolute;
+    right: 1em;
+    top: 3.66em;
+}
+.member-action .real-buton {
+    display: inline-block;
+    line-height: 1.375em;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #e64340;
+    padding: 0.25em 0.785em;
+}
+
+.member-ft {
+    padding: 1em;
+}
+
+.my-cricle,
+.health-cricle {
+    color: #fff;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 50%;
+}
+
+.my-cricle1 ,
+.health-cricle1 {
+    color: #3399ff;
+}
+.service_list {
+    background-color: #fff;
+    padding: 0;
+    border-bottom: 0 none;
+}
+.integral {
+    margin-bottom: 1em;
+    background-color: #fff;
+}
+.service_list a ,
+.integral {
+	padding: 0.8em 1em;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    color: #333;
+}
+.service_list a:active {
+    background-color: #f5f5f5;
+}
+.service_list .item_md ,
+.integral_md{
+	-webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.service_list .item_lt img,
+.integral_lt img{
+	width: 1.5em;
+    margin-right: 1em;
+    display: block
+}
+.service_list .item_md h4,
+.integral_md h4{
+	font-size: 1em;
+	font-weight: 400;
+	line-height: 1.5em;
+}
+.service_list .item_rt,
+.integral_rt{
+    padding-right: 1.35em;
+    font-size: 0.875em;
+    color: #999999;
+}
+.service_list .blue{
+	color: #3399ff;
+}
+.service_list a:after {
+    content: " ";
+    position: absolute;
+    left: 1em;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid #e5e5e5;
+    color: #e5e5e5;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    z-index: 2;
+}
+.service_list .item_rt:after {
+    content: " ";
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-width: 1px 1px 0 0;
+    border-color: #C8C8CD;
+    border-style: solid;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    position: absolute;
+    top: 50%;
+    margin-top: -5px;
+    right: 1em;
+}
+.service_list .service_item {
+    margin-bottom: 0;
+}
+
+.integral_get_link {
+    border-radius: 5px;
+    margin: 0 0 0 1em;
+    padding: 0 0.625em;
+    border: 1px solid #66cc66;
+    color: #66cc66
+}
+.integral_get_link:active {
+    background-color: #66cc66;
+    color: #fff;
+}

@@ -1,0 +1,116 @@
+<div class="workBox">
+    <div aigov-type="headerBack" id="header" aigov-auto-init='true' aigov-title="我的账户">
+    </div>
+
+    <div class="myAccount ai-body-box">
+        <div class="cardContent">
+            <h4 class="cartTitle">
+                <span class="fl m-t-10">
+                    <div class="fl a-icon"><img class="h-20" src="UserModule/module/my/account/style/images/listIcon_01.png" /></div>
+                    我的一卡通
+                </span>
+                <span class="fr operation">
+                    <a href="javascript:;" id="applyYkt2"><img src="UserModule/module/my/account/style/images/edit-icon1.png" width="30"></a>
+                </span>
+                <span class="fr operation">
+                    <a href="javascript:;" id="applyYkt3"><img src="UserModule/module/my/account/style/images/edit-icon2.png" width="30"></a>
+                </span>
+                <div class="clear"></div>
+            </h4>
+
+            <div class="myAccount1 cardInfo2 hidden2" id="ykt1" style="display:none;">
+                <div class="padding">
+                    <div class="weui_cells">
+                        <div class="weui_cell">
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <p>未找到您当前登录的手机号绑定的一卡通信息，请确认您当前登录的手机号码是一卡通绑定的手机。<br>
+                                若您的一卡通未绑定手机或您的手机号码发生变更，请携带您的一卡通卡片前往一卡通办理网点登记您的手机号码。<br>
+                                若您还未办理一卡通请点击下面的按钮进行申请。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ul>
+                        <a href="javascript:;" id="changePhoneLogin">更换手机登录</a>
+                        <a href="javascript:;" id="applyYkt">申领一卡通</a>
+                    </ul>
+                </div>
+            </div>
+            <div class="hidden2" id="ykt2" style="display:none;"></div>
+            <div class="myAccount1 cardInfo2 hidden2" id="ykt0" style="display:none;" >
+                <div class="padding">
+                    <div class="weui_cells">
+                        <div class="weui_cell">
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <p>您申请的一卡通目前状态：正在办理</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cardContent">
+            <h4 class="cartTitle" data-init="1">
+                <span class="fl m-t-10">
+                    <div class="fl a-icon"><img class="h-20" src="UserModule/module/my/account/style/images/listIcon_03.png" /></div>
+                    我的公积金
+                </span>
+                <div class="clear"></div>
+            </h4>
+            <div class="myAccount1 cardInfo2 hidden2">
+                <div class="padding hidden2" id="gjj1">
+                    <div class="weui_cells">
+                        <div class="weui_cell">
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <p>账户状态：正常</p>
+                            </div>
+                        </div>
+                        <div class="weui_cell">
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <p>最后缴费年月：<span id="dealtime"></span></p>
+                            </div>
+                        </div>
+                        <div class="weui_cell">
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <p>最后实缴金额：<span id="monthAdd"></span>元</p>
+                            </div>
+                        </div>
+                        <div class="weui_cell">
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <p>累计缴交金额：<span id="sum"></span>元</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="padding hidden2" id="gjj2">
+                    <div class="weui_cells">
+                        <div class="weui_cell">
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <p>暂无数据</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cardContent hidden2">
+            <h4 class="cartTitle">
+                <span class="fl m-t-10"><i class="fa fa-angle-down" aria-hidden="true"></i> 我的一卡通</span>
+                <span class="fr operation">
+                    <a><img src="UserModule/module/my/account/style/images/edit-icon1.png" width="30" ></a>
+                    <a><img src="UserModule/module/my/account/style/images/add-icon1.png" width="30" ></a>
+                </span>
+                <div class="clear"></div>
+            </h4>
+            <div class="noCardInfo">
+                <ul>
+                    <i class="weui_icon_warn"></i><br/ >
+                    您是否已经有一卡通？<br/>
+                    <a class="btn bg-color-green">去绑定</a> <a class="btn bg-color-green">去申请</a>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

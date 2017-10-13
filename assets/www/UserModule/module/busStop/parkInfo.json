@@ -1,0 +1,39 @@
+{
+	"parkInfo":[
+		{
+			"park_name":"西安咸阳国际机场货运站停车场",
+			"park_place":"中国陕西省咸阳市咸阳国际机场",
+			"park_remind":"12",
+			"park_sum":"500",
+			"park_price":"3",
+			"park_distance": "10.3",
+			"park_menu_name1": "订车位",
+			"park_menu_name2": "租车位",
+			"park_menu_name3": "去这里"
+			
+		},
+		{
+			"park_name":"咸阳国际机场VIP过夜车场",
+			"park_place":"中国陕西省咸阳市渭城区空港大道",
+			"park_remind":"22",
+			"park_sum":"200",
+			"park_price":"4",
+			"park_distance": "15.9",
+			"park_menu_name1": "订车位",
+			"park_menu_name2": "租车位",
+			"park_menu_name3": "去这里"
+
+		},
+		{
+			"park_name":"咸阳国际机场停车场",
+			"park_place":"中国陕西省咸阳市渭城区空港大道",
+			"park_remind":"1",
+			"park_sum":"500",
+			"park_price":"5",
+			"park_distance": "6.7s",
+			"park_menu_name1": "订车位",
+			"park_menu_name2": "租车位",
+			"park_menu_name3": "去这里"
+		}
+	]
+}

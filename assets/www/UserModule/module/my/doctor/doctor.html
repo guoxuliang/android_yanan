@@ -1,0 +1,242 @@
+<div class="workBox">
+	<div aigov-type="headerBack" id="header" aigov-auto-init='true' aigov-title="问卷调查">
+	</div>
+	<div class="questionnaire ai-body-box">
+	    <dl>
+	        <dt><img src="UserModule/module/my/doctor/style/images/head1.png" width="60" height="80" /></dt>
+	        <dd>
+	            <h5>
+	                <span id="doctorName"></span>
+	                <div class="clear"></div>
+	            </h5>
+	            <p id="details">
+	            </p>
+	        </dd>
+	        <div class="clear"></div>
+	    </dl>
+    	<div class="division"></div>
+
+	    <form>
+			<div id="evaluate">
+		        <div class="weui_cells_title">
+		        	服务态度
+		        	<span id="question1" data-score="0" data-number="5"></span>
+					<input type="text" id="question1Val" name="question1" class="starVal hidden" readonly="readonly" />
+		        </div>
+				<div class="weui_cells_title">
+		        	诊疗水平
+		        	<span id="question2" data-score="0" data-number="5"></span>
+					<input type="text" id="question2Val" name="question2" class="starVal hidden" readonly="readonly" />
+		        </div>
+				<div class="weui_cells_title">
+		        	诊后疗效
+		        	<span id="question3" data-score="0" data-number="5"></span>
+					<input type="text" id="question3Val" name="question3" class="starVal hidden" readonly="readonly" />
+		        </div>
+				<div class="weui_cells_title">
+		        	医疗费用
+		        	<span id="question4" data-score="0" data-number="5"></span>
+					<input type="text" id="question4Val" name="question4" class="starVal hidden" readonly="readonly" />
+		        </div>
+				<div class="weui_cells_title">
+		        	总体评价
+		        	<span id="question5" data-score="0" data-number="5"></span>
+					<input type="text" id="question5Val" name="question5" class="starVal hidden" readonly="readonly" />
+		        </div>
+		        <hr>
+	        </div>
+
+			<div id="evaluate2" class="hidden">
+				<div class="weui_cells_title" style="color:black;">
+					追加评价
+				</div>
+				<div class="weui_cells_title">
+		        	服务态度
+		        	<span id="question12" data-score="0" data-number="5"></span>
+					<input type="text" id="question1Val2" class="starVal hidden" readonly="readonly" />
+		        </div>
+				<div class="weui_cells_title">
+		        	诊疗水平
+		        	<span id="question22" data-score="0" data-number="5"></span>
+					<input type="text" id="question2Val2" class="starVal hidden" readonly="readonly" />
+		        </div>
+				<div class="weui_cells_title">
+		        	诊后疗效
+		        	<span id="question32" data-score="0" data-number="5"></span>
+					<input type="text" id="question3Val2" class="starVal hidden" readonly="readonly" />
+		        </div>
+				<div class="weui_cells_title">
+		        	医疗费用
+		        	<span id="question42" data-score="0" data-number="5"></span>
+					<input type="text" id="question4Val2" class="starVal hidden" readonly="readonly" />
+		        </div>
+				<div class="weui_cells_title">
+		        	总体评价
+		        	<span id="question52" data-score="0" data-number="5"></span>
+					<input type="text" id="question5Val2" class="starVal hidden" readonly="readonly" />
+		        </div>
+	        </div>
+	        <!-- <div class="weui_cells_title">1.医生会仔细地访问您的病情，了解您的病史吗？</div>
+	        <div class="weui_cells weui_cells_checkbox" id="q1">
+	            <label class="weui_cell weui_check_label" for="s11">
+	                <div class="weui_cell_hd">
+	                    <input type="radio" value="0" class="weui_check" name="radio1" id="s11" checked="checked">
+	                    <i class="weui_icon_checked"></i>
+	                </div>
+	                <div class="weui_cell_bd weui_cell_primary">
+	                    <p>会</p>
+	                </div>
+	            </label>
+	            <label class="weui_cell weui_check_label" for="s12">
+	                <div class="weui_cell_hd">
+	                    <input type="radio" value="1" name="radio1" class="weui_check" id="s12">
+	                    <i class="weui_icon_checked"></i>
+	                </div>
+	                <div class="weui_cell_bd weui_cell_primary">
+	                    <p>不会</p>
+	                </div>
+	            </label>
+	        </div>
+	        <div class="weui_cells_title">2.对医生的医疗技术是否满意？</div>
+	        <div class="weui_cells weui_cells_checkbox" id="q2">
+	            <label class="weui_cell weui_check_label" for="s21">
+	                <div class="weui_cell_hd">
+	                    <input type="radio" value="0" class="weui_check" name="radio2" id="s21" checked="checked">
+	                    <i class="weui_icon_checked"></i>
+	                </div>
+	                <div class="weui_cell_bd weui_cell_primary">
+	                    <p>非常满意</p>
+	                </div>
+	            </label>
+	            <label class="weui_cell weui_check_label" for="s22">
+	                <div class="weui_cell_hd">
+	                    <input type="radio" value="1" name="radio2" class="weui_check" id="s22">
+	                    <i class="weui_icon_checked"></i>
+	                </div>
+	                <div class="weui_cell_bd weui_cell_primary">
+	                    <p>满意</p>
+	                </div>
+	            </label>
+	            <label class="weui_cell weui_check_label" for="s23">
+	                <div class="weui_cell_hd">
+	                    <input type="radio" value="2" name="radio2" class="weui_check" id="s23">
+	                    <i class="weui_icon_checked"></i>
+	                </div>
+	                <div class="weui_cell_bd weui_cell_primary">
+	                    <p>不满意</p>
+	                </div>
+	            </label>
+	        </div>
+	        <div class="weui_cells_title">3.医生会详细地告知您的愈后情况和可能的不良反应？</div>
+	        <div class="weui_cells weui_cells_checkbox" id="q3">
+	            <label class="weui_cell weui_check_label" for="s31">
+	                <div class="weui_cell_hd">
+	                    <input type="radio" value="0" class="weui_check" name="radio3" id="s31" checked="checked">
+	                    <i class="weui_icon_checked"></i>
+	                </div>
+	                <div class="weui_cell_bd weui_cell_primary">
+	                    <p>会</p>
+	                </div>
+	            </label>
+	            <label class="weui_cell weui_check_label" for="s32">
+	                <div class="weui_cell_hd">
+	                    <input type="radio" value="1" name="radio3" class="weui_check" id="s32">
+	                    <i class="weui_icon_checked"></i>
+	                </div>
+	                <div class="weui_cell_bd weui_cell_primary">
+	                    <p>不会</p>
+	                </div>
+	            </label>
+	        </div>
+
+	        <div class="weui_cells_title">4.医生能保持亲切的态度，给您关怀，倾听您的需求，当您有疑问或困难时，能耐心回答并尊重您的意见。</div>
+	        <div class="weui_cells weui_cells_checkbox" id="q4">
+	            <label class="weui_cell weui_check_label" for="s41">
+	                <div class="weui_cell_hd">
+	                    <input type="radio" value="0" class="weui_check" name="radio4" id="s41" checked="checked">
+	                    <i class="weui_icon_checked"></i>
+	                </div>
+	                <div class="weui_cell_bd weui_cell_primary">
+	                    <p>会</p>
+	                </div>
+	            </label>
+	            <label class="weui_cell weui_check_label" for="s42">
+	                <div class="weui_cell_hd">
+	                    <input type="radio" value="1" name="radio4" class="weui_check" id="s42">
+	                    <i class="weui_icon_checked"></i>
+	                </div>
+	                <div class="weui_cell_bd weui_cell_primary">
+	                    <p>不会</p>
+	                </div>
+	            </label>
+	        </div>
+
+	        <div class="weui_cells_title">5.医生能主动指导您或您的家属有关健康与疾病的知识。</div>
+	        <div class="weui_cells weui_cells_checkbox" id="q5">
+	            <label class="weui_cell weui_check_label" for="s51">
+	                <div class="weui_cell_hd">
+	                    <input type="radio" value="0" class="weui_check" name="radio5" id="s51" checked="checked">
+	                    <i class="weui_icon_checked"></i>
+	                </div>
+	                <div class="weui_cell_bd weui_cell_primary">
+	                    <p>会</p>
+	                </div>
+	            </label>
+	            <label class="weui_cell weui_check_label" for="s52">
+	                <div class="weui_cell_hd">
+	                    <input type="radio" value="1" name="radio5" class="weui_check" id="s52">
+	                    <i class="weui_icon_checked"></i>
+	                </div>
+	                <div class="weui_cell_bd weui_cell_primary">
+	                    <p>不会</p>
+	                </div>
+	            </label>
+	        </div>
+
+	        <div class="weui_cells_title">6.您对医生的服务态度是否满意？</div>
+	        <div class="weui_cells weui_cells_checkbox" id="q6">
+	            <label class="weui_cell weui_check_label" for="s61">
+	                <div class="weui_cell_hd">
+	                    <input type="radio" value="0" class="weui_check" name="radio6" id="s61" checked="checked">
+	                    <i class="weui_icon_checked"></i>
+	                </div>
+	                <div class="weui_cell_bd weui_cell_primary">
+	                    <p>满意</p>
+	                </div>
+	            </label>
+	            <label class="weui_cell weui_check_label" for="s62">
+	                <div class="weui_cell_hd">
+	                    <input type="radio" value="1" name="radio6" class="weui_check" id="s62">
+	                    <i class="weui_icon_checked"></i>
+	                </div>
+	                <div class="weui_cell_bd weui_cell_primary">
+	                    <p>不满意</p>
+	                </div>
+	            </label>
+	        </div> -->
+
+	        <div class="weui_cells_title hidden">7.您认为医生需要改进的工作</div>
+	        <div class="weui_cells weui_cells_checkbox hidden">
+	            <div class="weui_cell">
+		            <div class="weui_cell_bd weui_cell_primary">
+		                <textarea class="weui_textarea" rows="3" id="q7" onkeyup="getFontCount(this.value, 200, 'des7')">非常好</textarea>
+		                <div id="des7" class="weui_textarea_counter"><span>0</span>/200</div>
+		            </div>
+	        	</div>
+	        	 <div class="weui_cell" id="q8Div" style="display: none;">
+	        		 <div class="weui_cell_bd weui_cell_primary hidden" >
+		                <textarea class="weui_textarea" rows="3" id="q8" onkeyup="getFontCount(this.value, 200, 'des8')">非常好!!!</textarea>
+		                <div id="des8" class="weui_textarea_counter"><span>0</span>/200</div>
+		            </div>
+		         </div>
+	        </div>
+
+
+	        <input type="hidden" value="" name="id" id="id">
+
+	        <div class="weui_btn_area">
+	            <a class="weui_btn weui_btn_primary" href="javascript:" id="submitBtn">提交</a>
+	        </div>
+	    </form>
+	</div>
+</div>

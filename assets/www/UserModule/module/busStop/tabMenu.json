@@ -1,0 +1,9 @@
+{
+	"menu":[{
+		"menu_name": "附近"
+	},{
+		"menu_name": "已开通"
+	},{
+		"menu_name": "智能排序"
+	}]
+}

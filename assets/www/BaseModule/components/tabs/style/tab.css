@@ -1,0 +1,66 @@
+@charset "utf-8";
+#workTabs {
+  margin-bottom: 0.625em;
+}
+.ai-tabs {
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+  margin-bottom: 0.625em;
+}
+
+.ai-tabs ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  background-color: #fff;
+  text-align: center;
+}
+
+.ai-tabs li {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  line-height: 3em;
+  color: #333;
+}
+
+.ai-tabs li.ai-tabs-select:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 2px solid #6699ff;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.ai-tabs li.ai-tabs-select {
+  font-weight: bold;
+  color: #6699ff;
+}
+
+.ai-tabs li a {
+  font-size: 1em;
+}
+
+.ai-tabs-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-tabs-content>ul {
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-tabs-content>ul>li {
+  float: left;
+  min-height: 100px;
+}

@@ -1,0 +1,55 @@
+<div aigov-type="headerBack" id="header" aigov-auto-init="true" aigov-title="服务详情">
+</div>
+
+<div style="margin-top: 42px;"></div>
+
+<div class="lifeServiceDetailTab">
+    <ul>
+        <li><a href="javascript:void(0);" class="current" data-item="1">订单详情</a> </li>
+        <li><a href="javascript:void(0);" data-item="2">客户评价</a> </li>
+    </ul>
+</div>
+
+<div style="position: absolute;
+    top: 91px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: auto;">
+
+<div class="t1">
+
+<section id="lifeServiceDetail"></section>
+<script id="tpl" type="text/x-handlebars-template">
+	<div class="lifeServiceDetailImg">
+	<img id="serviceLogo" width="100%"/>
+	<h6 id="serviceName"></h6>
+	</div>
+	<div class="m-t-20"></div>
+	<dl>
+	<dt id="servicePrice"></dt>
+	<dd>
+	    <span><img src="UserModule/module/homeService/style/images/lifeService_Icon01.png" width="18" class="fl"/> <label id="serviceChecknum"></label></span>
+	    <button onclick="javascript:aigovApp.nativeFunc.alert('敬请期待！');">立即预约</button>
+	</dd>
+	</dl>
+	<div class="clear"></div>
+	<div class="m-t-20"></div>
+	<ol><span>服务分类</span><label id="serviceTypeName"></label> --> <label id="serviceTwoTypeName"></label></ol>
+	<ol><span>服务区域</span><label id="serviceScopeName"></label></ol>
+	<ol><span>商家名称</span><label id="entName"></label></ol>
+	<ol><span>营业时间</span><label id="serviceHoursDate"></label></ol>
+	<ol><span>联系方式</span><label id="servicePhone"></label></ol>
+	<ol><span>联系人</span><label id="serviceLinkman"></label></ol>
+	<div class="clear"></div>
+</script>
+<div id="lifeServiceDetail2" class="lifeServiceDetail"></div>
+<script id="tpl2" type="text/x-handlebars-template">
+	<h5>服务说明</h5>
+	<div class="m-t-10"></div>
+	<p></p>
+</script>
+
+</div>
+
+<div class="t2 hidden"></div>

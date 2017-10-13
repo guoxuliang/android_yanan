@@ -1,0 +1,39 @@
+﻿<div aigov-type="headerBack" id="header" aigov-auto-init="true" aigov-title="天气预报"></div>
+<div class="ai-body-box">
+    <div id="weatherBg1" style="z-index:-10"></div>
+    <div id="weatherBg2" style="z-index:-9"></div>
+    <div id="message">
+        <div class="dropDownMenu">
+            <dl>
+                <dt>
+                    <div class="dropDownMenuName">
+                        <ul>
+                            <li id="curArea"><a href="javascript:void(0)"><span id="areaName">咸阳</span><img src="UserModule/module/weather/style/images/weather_Icon01.png" width="18" /></a></li>
+                        </ul>
+                    </div>
+                </dt>
+                <dd>
+                    <div class="dropDownMenuList" style="display:none;"></div>
+                </dd>
+            </dl>
+        </div>
+
+        <div class="weatherQuality m-t-30" style="display:none;"><span id="visibility"></span></div>
+
+        <section id="weather"></section>
+    </div>
+</div>
+
+<script id="weatherTpl" type="text/x-handlebars-template">
+    <h5>{{shikuangInfo.temperature}}°<span>{{curWeather}}</span></h5>
+    <p class="m-t-10">{{shikuangInfo.windDirection}} {{shikuangInfo.windSpeed}}级　 湿度 {{shikuangInfo.humidity}}%</p>
+    <p><span>{{time}}</span></p>
+    <div><img src="UserModule/module/weather/style/images/weather_Img02.png" width="100%"/> </div>
+    <div class="weatherList" id="weatherList">
+        <ul>
+            {{#each fortInfo}}
+                <li>{{day}}<br/><img src="UserModule/module/my/style/images/{{weather}}.png" width="35"/><br/><span>{{temperature}}</span></li>
+            {{/each}}
+        </ul>
+    </div>
+</script>

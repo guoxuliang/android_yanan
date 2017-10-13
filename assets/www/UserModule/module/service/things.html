@@ -1,0 +1,132 @@
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<div aigov-type="headerBack" id="header" aigov-auto-init="true" aigov-title="办事指南"></div>
+<div class="ai-body-box">
+</div>
+<!-- 用于显示图片的容器 -->
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script id="tpl" type="text/x-handlebars-template">
+	{{! 基础信息区域 }}
+	<div class="weui_cells weui_cells_form">
+		{{#each baseinfo}}
+
+		{{#ifCond type '==' 'text'}}
+		<div class="weui_cell">
+			<div class="weui_cell_hd"><label class="weui_label">{{label}}</label>
+			</div>
+			{{#ifCond label '==' '联系电话'}}
+			<div class="weui_cell_bd weui_cell_primary"><a href="tel:{{value}}?allow">{{value}}</a>
+			</div>
+			{{else}}
+				{{#ifCond label '==' '监督电话'}}
+				<div class="weui_cell_bd weui_cell_primary"><a href="tel:{{value}}?allow">{{value}}</a>
+				</div>
+				{{else}}
+				<div class="weui_cell_bd weui_cell_primary">{{value}}
+				</div>
+				{{/ifCond}}
+			{{/ifCond}}
+		</div>
+		{{/ifCond}}
+
+		{{#ifCond type '==' 'btn'}}
+			{{! 按钮功能区 }}
+			<div style="padding:15px">
+	  			<a href="javascript:;" id="zxsb" class="weui_btn weui_btn_primary">在线申报</a>
+			</div>
+		{{/ifCond}}
+
+		{{/each}}
+		<div style="padding:15px">
+			<a href="javascript:;" id="zxzx" class="weui_btn weui_btn_primary">在线咨询</a>
+		</div>
+	</div>
+
+	{{! 其它信息区域 }}
+	{{#each otherinfo}}
+	<div class="weui_panel">
+		<div class="weui_panel_hd" style="background:#eee;font-size:16px">{{head}}
+		</div>
+		<div class="weui_panel_bd">
+			<div class="weui_media_box weui_media_text">
+			{{#each items}}
+				{{#ifCond type '==' 'img'}}
+					<p class="weui_media_desc_sp"><img src="{{value}}" onClick="$(this).ImgZoomIn();" /></p>
+				{{/ifCond}}
+				{{#ifCond type '==' 'file' }}
+					<p class="weui_media_desc_sp"><a onClick="window.open('{{value}}','_system')">{{label}}</a></p>
+				{{/ifCond}}
+				{{#ifCond type '==' 'text' }}
+					<p class="weui_media_desc_sp">{{value}}</p>
+				{{/ifCond}}
+			{{/each}}
+			</div>
+		</div>
+	</div>
+	{{/each}}
+</script>

@@ -1,0 +1,90 @@
+<div class="workBox">
+	<div aigov-type="headerBack" id="header" aigov-auto-init='true' aigov-title="我的信息">
+	</div>
+	<div class="ai-body-box">
+	<div class="container">
+	    <div class="weui_tab">
+	        <div class="weui_navbar">
+	            <div class="weui_navbar_item" data-id="1">
+	                生活环境
+	            </div>
+	            <div class="weui_navbar_item" data-id="2">
+	                档案管理
+	            </div>
+	            <div class="weui_navbar_item" data-id="3">
+	                健康摘要
+	            </div>
+	        </div>
+	        <div class="weui_tab_bd" id="content">
+
+
+	        </div>
+	    </div>
+	</div>
+	</div>
+</div>
+
+<script id="tpl" type="text/x-handlebars-template">
+<div class="weui_tab_bd_item" style="display: none;" id="item1">
+					<div class="weui_cells weui_cells_form">
+						<div class="weui_cell">
+				            <div class="weui_cell_hd"><label for="" class="weui_label">排风设施</label></div>
+				            <div class="weui_cell_bd weui_cell_primary">
+				              	{{exhaustFacilityName}}
+				            </div>
+				        </div>
+						<div class="weui_cell">
+				            <div class="weui_cell_hd"><label for="" class="weui_label">燃料类型</label></div>
+				            <div class="weui_cell_bd weui_cell_primary">
+				                {{fuelTypeName}}
+				            </div>
+				        </div>
+				        <div class="weui_cell">
+				            <div class="weui_cell_hd"><label for="" class="weui_label">厕所类别</label></div>
+				            <div class="weui_cell_bd weui_cell_primary">
+				                {{toiletTypeName}}
+				            </div>
+				        </div>
+						<div class="weui_cell" style="display: none;">
+				            <div class="weui_cell_hd"><label for="" class="weui_label">禽出栏</label></div>
+				            <div class="weui_cell_bd weui_cell_primary">
+				                {{livestockPenCode}}
+				            </div>
+				        </div>
+					</div>
+	            </div>
+	            <div class="weui_tab_bd_item" style="display: none;" id="item2">
+	                <div class="weui_cells weui_cells_form">
+						<div class="weui_cell">
+				            <div class="weui_cell_hd"><label for="" class="weui_label">建档时间:</label></div>
+				            <div class="weui_cell_bd weui_cell_primary">
+				              	{{createHaDate}}
+				            </div>
+				        </div>
+						<div class="weui_cell">
+				            <div class="weui_cell_hd"><label for="" class="weui_label">所属机构:</label></div>
+				            <div class="weui_cell_bd weui_cell_primary">
+				              	{{adminOrgCode}}
+				            </div>
+				        </div>
+						<div class="weui_cell">
+				            <div class="weui_cell_hd"><label for="" class="weui_label">责任医生:</label></div>
+				            <div class="weui_cell_bd weui_cell_primary">
+				              	{{respDoctorName}}
+				            </div>
+				        </div>
+				        <div class="weui_cell">
+				            <div class="weui_cell_hd"><label for="" class="weui_label">备注:</label></div>
+				            <div class="weui_cell_bd weui_cell_primary">
+				              	{{remark}}
+				            </div>
+				        </div>
+					</div>
+	            </div>
+ <div class="weui_tab_bd_item" style="display: none;" id="item3">
+	                <div class="weui_cells weui_cells_form">
+
+					</div>
+	            </div>
+</script>
+

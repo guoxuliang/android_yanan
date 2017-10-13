@@ -1,0 +1,64 @@
+﻿﻿<div aigov-type="headerBack" id="header" aigov-auto-init="true" aigov-title="预约确认单">
+</div>
+<div class="ai-body-box">
+	<div class="weui_cells weui_cells_form">
+	    <div class="weui_cell">
+	        <div class="weui_cell_hd"><label class="weui_label">就诊医院:</label></div>
+	        <div class="weui_cell_bd weui_cell_primary j_hospitalName"></div>
+	    </div>
+	    <div class="weui_cell">
+	        <div class="weui_cell_hd"><label class="weui_label">就诊科室:</label></div>
+	        <div class="weui_cell_bd weui_cell_primary j_deptName"></div>
+	    </div>
+	    <div class="weui_cell">
+	        <div class="weui_cell_hd"><label class="weui_label">就诊医生:</label></div>
+	        <div class="weui_cell_bd weui_cell_primary j_doctor_Name"></div>
+	    </div>
+	    <div class="weui_cell">
+	        <div class="weui_cell_hd"><label class="weui_label">门诊类型:</label></div>
+	        <div class="weui_cell_bd weui_cell_primary j_mark_Type"></div>
+	    </div>
+	    <div class="weui_cell">
+	        <div class="weui_cell_hd"><label class="weui_label">就诊日期:</label></div>
+	        <div class="weui_cell_bd weui_cell_primary j_hb_Date"></div>
+	    </div>
+	    <div class="weui_cell">
+	        <div class="weui_cell_hd"><label class="weui_label">预约费用:</label></div>
+	        <div class="weui_cell_bd weui_cell_primary" id="J_fee"></div>
+	    </div>
+	    <div class="weui_cells_title">选择就诊人信息</div>
+	    <div class="weui_cells">
+		    <div class="weui_cell" >
+		        <div class="weui_cell_hd">
+		            <label class="weui_label">就诊人:</label>
+		        </div>
+		        <div class="weui_cell_bd">
+		            <!-- <select class="weui_select" id="J_userName" onchange="$('#cardNum').text($('#J_userName option:selected').attr('cardNum'))">
+		            </select> -->
+		            <input id="J_userName" class="weui_input" type="text" placeholder="" style="width:150px" disabled="disabled">
+		            <a href="javascript:;" id="btnCard" class="weui_btn weui_btn_mini weui_btn_primary">选择</a>
+		        </div>
+		    </div>
+		    <div class="weui_cell weui_cell_select weui_select_after">
+		        <div class="weui_cell_hd">
+		          	<label class="weui_label">就诊时间:</label>
+		        </div>
+		        <div class="weui_cell_bd weui_cell_primary">
+		            <select class="weui_select" id="am_Pm">
+		            </select>
+		        </div>
+		    </div>
+		    <div class="weui_cell">
+		        <div class="weui_cell_hd">
+		            <label class="weui_label">就诊卡:</label>
+		        </div>
+		        <div class="weui_cell_bd weui_cell_primary" id="cardNum">
+		        </div>
+		    </div>
+		</div>
+		
+		<div class="weui_btn_area">
+		    <a class="weui_btn weui_btn_primary" id="button" >确认预约</a>
+		</div>
+	</div>
+</div>

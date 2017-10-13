@@ -1,0 +1,425 @@
+<div class="workBox">
+    <div aigov-type="headerBack" id="header" aigov-auto-init='true' aigov-title="我的健康">
+    </div>
+    <div class="ai-body-box">
+   <!-- <div >
+    	<a class="img_item" id="myInfoBtn">
+    		<div class="box">
+    			<img src="UserModule/module/my/healthy/style/images/icon_01.png">
+    			<p class="ai-service-h-a-t">个人信息</p>
+    		</div>
+
+    	</a>
+    	<a  class="img_item" id="myNoticeBtn" >
+    		<div class="box">
+    			<img src="UserModule/module/my/healthy/style/images/icon_02.png">
+    			<p class="ai-service-h-a-t">我的关注</p>
+    		</div>
+
+    	</a>
+	   	<a  class="img_item" id="myMessageBtn">
+    		<div class="box">
+    			<img src="UserModule/module/my/healthy/style/images/icon_03.png">
+    			<p class="ai-service-h-a-t">我的评价</p>
+    		</div>
+
+    	</a>
+    	<a  class="img_item" id="myMemberBtn">
+    		<div class="box">
+    			<img src="UserModule/module/my/healthy/style/images/card.png">
+    			<p class="ai-service-h-a-t">我的就诊卡</p>
+    		</div>
+
+    	</a>
+    	<div class="clear"></div>
+	</div> -->
+
+    <div style="height:10px;background-color: #eee;width: 100%;"></div>
+
+    <div class="myAccount " style="width: 100%;">
+           <!-- <div class="cardContent">
+           <h4 class="cartTitle">
+               <div class="title_icon">
+                   <div class="fl">
+                   	<img src="UserModule/module/my/healthy/style/images/icon_04.png"/>
+                   </div>
+                   <p class="fl">挂号预约记录</p>
+                   <div class="fr">
+                   	<img src="UserModule/module/my/healthy/style/images/icon_11.png"/>
+                   </div>
+                   <div class="clear"></div>
+               </div>
+
+           </h4>
+           <div class="contentDiv">
+              <div style="margin:5px 20px;color:orange;font-size: 16px;">
+              	<a href="javascript:void(0);" id="orderAllBtn" class="hidden">查看全部预约</a>
+              	<a href="javascript:void(0);" class="noListBtn hidden">暂时没有您的记录</a>
+              </div>
+
+              <div id="orderList" class="list" data-type="order" style="padding:2px 20px 10px 20px; color: #666;font-size: 15px;border-bottom: 1px solid #ccc;">
+              	<div class="item">
+              		<div class="info">
+              			<div class="fl">预约时间:2016/06/18(还有10天)</div>
+              			<div class="fr"><a href="javascript:void(0);">取消预约</a></div>
+              			<div class="clear"></div>
+              		</div>
+              		<div  class="info">
+              			就诊医院:XXXXX
+              		</div>
+              		<div class="info">
+              			科室:XXXXX
+              		</div>
+              		<div class="info">
+              			主任医师:XXXXX
+              		</div>
+              		<div class="info">
+              			状态:XXXXX
+              		</div>
+              	</div>
+
+              </div>
+           </div>
+       </div> -->
+       
+        <div class="cardContent">
+           <h4 id='myOrder' class="cartTitle">
+               <div class="title_icon">
+                   <div class="fl">
+                   		<img src="UserModule/module/my/healthy/style/images/icon_04.png"/>
+                   </div>
+                   <p class="fl">我的预约</p>
+                   <div class="clear"></div>
+               </div>
+           </h4>
+         </div>
+                
+        <div class="cardContent">
+           <h4 id='healthcare' class="cartTitle">
+               <div class="title_icon">
+                   <div class="fl">
+                   		<img src="UserModule/module/my/healthy/style/images/icon_14.png"/>
+                   </div>
+                   <style>
+                    .health-cricle {
+					    color: #fff;
+					    margin-right: 10px;
+					    width: 30px;
+					    height: 30px;
+					    font-size: 14px;
+					    border-radius: 50%;
+					    float: right;
+					    margin-top: 10px;
+					    line-height: 30px;
+					}
+					.health-cricle1 {
+						background: #f60;
+					}
+					</style>
+                   <p class="fl">健康关怀<div class="health-cricle"></div></p>
+                   <div class="clear"></div>
+               </div>
+           </h4>
+         </div>
+
+       <div class="cardContent">
+           <h4 class="cartTitle">
+               <div class="title_icon">
+                   <div class="fl">
+                   	<img src="UserModule/module/my/healthy/style/images/icon_05.png"/>
+                   </div>
+                   <p class="fl">诊断记录</p>
+                   <div class="fr">
+                   	<img src="UserModule/module/my/healthy/style/images/icon_11.png"/>
+                   </div>
+                   <div class="clear"></div>
+               </div>
+
+           </h4>
+           <div class="contentDiv hidden">
+              <div style="margin:5px 20px;color:orange;font-size: 16px;">
+              	<a href="javascript:void(0);" class="allListBtn hidden" data-type="zl">查看全部记录</a>
+              	<a href="javascript:void(0);" class="noListBtn hidden">暂时没有您的记录</a>
+              </div>
+
+              <div id="zlList" class="list row_list" data-type="zl" style="padding:2px 20px 10px 20px; color: #666;font-size: 15px;border-bottom: 1px solid #ccc;">
+              	<div class="item">
+              		<!-- <div class="info">
+              			<div class="fl">2016/5/10</div>
+              			<div class="fl">XXX医院</div>
+              			<div class="fl">XXX科</div>
+              			<div class="fl">门诊</div>
+              			<div class="fr"><a href="javascript:void(0);">详情</a></div>
+              			<div class="clear"></div>
+              		</div>
+              		<div class="info">
+              			<div class="fl">2016/5/10</div>
+              			<div class="fl">XXX医院</div>
+              			<div class="fl">XXX科</div>
+              			<div class="fl">门诊</div>
+              			<div class="fr"><a href="javascript:void(0);">详情</a></div>
+              			<div class="clear"></div>
+              		</div> -->
+              	</div>
+
+              </div>
+           </div>
+       </div>
+
+       <div class="cardContent">
+           <h4 class="cartTitle">
+               <div class="title_icon">
+                   <div class="fl">
+                   	<img src="UserModule/module/my/healthy/style/images/icon_06.png"/>
+                   </div>
+                   <p class="fl">健康体检</p>
+                   <div class="fr">
+                   	<img src="UserModule/module/my/healthy/style/images/icon_11.png"/>
+                   </div>
+                   <div class="clear"></div>
+               </div>
+
+           </h4>
+           <div class="contentDiv hidden">
+              <div style="margin:5px 20px;color:orange;font-size: 16px;">
+              	<a href="javascript:void(0);" class="allListBtn hidden" data-type="tj">查看全部记录</a>
+              	<a href="javascript:void(0);" class="noListBtn hidden">暂时没有您的记录</a>
+              </div>
+
+              <div id="tjList" class="list row_list" data-type="tj" style="padding:2px 20px 10px 20px; color: #666;font-size: 15px;border-bottom: 1px solid #ccc;">
+              	<div class="item">
+              	</div>
+
+              </div>
+           </div>
+       </div>
+
+        <div class="cardContent">
+           <h4 class="cartTitle">
+               <div class="title_icon">
+                   <div class="fl">
+                   	<img src="UserModule/module/my/healthy/style/images/icon_07.png"/>
+                   </div>
+                   <p class="fl">预防接种</p>
+                   <div class="fr">
+                   	<img src="UserModule/module/my/healthy/style/images/icon_11.png"/>
+                   </div>
+                   <div class="clear"></div>
+               </div>
+
+           </h4>
+           <div class="contentDiv hidden">
+              <div style="margin:5px 20px;color:orange;font-size: 16px;">
+              	<a href="javascript:void(0);" class="allListBtn hidden" data-type="ym">查看全部记录</a>
+              	<a href="javascript:void(0);" class="noListBtn hidden" >暂时没有您的记录</a>
+              </div>
+
+              <div id="ymList" class="list row_list" data-type="ym" style="padding:2px 20px 10px 20px; color: #666;font-size: 15px;border-bottom: 1px solid #ccc;">
+              	<div class="item">
+              		<!-- <div class="info">
+              			<div class="fl">2016/5/10</div>
+              			<div class="fl">XXX医院</div>
+              			<div class="fr"><a href="javascript:void(0);">详情</a></div>
+              			<div class="clear"></div>
+              		</div>
+              		<div class="info">
+              			<div class="fl">2016/5/10</div>
+              			<div class="fl">XXX医院</div>
+              			<div class="fr"><a href="javascript:void(0);">详情</a></div>
+              			<div class="clear"></div>
+              		</div> -->
+              	</div>
+
+              </div>
+           </div>
+       </div>
+
+        <div class="cardContent">
+           <h4 class="cartTitle">
+               <div class="title_icon">
+                   <div class="fl">
+                   	<img src="UserModule/module/my/healthy/style/images/icon_08.png"/>
+                   </div>
+                   <p class="fl">血压</p>
+                   <div class="fr">
+                   	<img src="UserModule/module/my/healthy/style/images/icon_11.png"/>
+                   </div>
+                   <div class="clear"></div>
+               </div>
+
+           </h4>
+           <div class="contentDiv hidden">
+              <div style="margin:5px 20px;color:orange;font-size: 16px;">
+              	<a href="javascript:void(0);" class="allListBtn hidden" data-type="xy">查看全部记录</a>
+              	<a href="javascript:void(0);" class="noListBtn hidden">暂时没有您的记录</a>
+              </div>
+
+              <div id="xyList" class="list row_list" data-type="xy" style="padding:2px 20px 10px 20px; color: #666;font-size: 15px;border-bottom: 1px solid #ccc;">
+              	<div class="item">
+              		<!-- <div class="info">
+              			<div class="fl">2016/5/10</div>
+              			<div class="fl">XXX医院</div>
+              			<div class="fr"><a href="javascript:void(0);">详情</a></div>
+              			<div class="clear"></div>
+              		</div>
+              		<div class="info">
+              			<div class="fl">2016/5/10</div>
+              			<div class="fl">XXX医院</div>
+              			<div class="fr"><a href="javascript:void(0);">详情</a></div>
+              			<div class="clear"></div>
+              		</div> -->
+              	</div>
+
+              </div>
+           </div>
+       </div>
+
+        <div class="cardContent">
+           <h4 class="cartTitle">
+               <div class="title_icon">
+                   <div class="fl">
+                   	<img src="UserModule/module/my/healthy/style/images/icon_09.png"/>
+                   </div>
+                   <p class="fl">血糖</p>
+                   <div class="fr">
+                   	<img src="UserModule/module/my/healthy/style/images/icon_11.png"/>
+                   </div>
+                   <div class="clear"></div>
+               </div>
+
+           </h4>
+           <div class="contentDiv hidden">
+              <div style="margin:5px 20px;color:orange;font-size: 16px;">
+              	<a href="javascript:void(0);" class="allListBtn hidden" data-type="xt">查看全部记录</a>
+              	<a href="javascript:void(0);" class="noListBtn hidden">暂时没有您的记录</a>
+              </div>
+
+              <div id="xtList" class="list row_list" data-type="xt" style="padding:2px 20px 10px 20px; color: #666;font-size: 15px;border-bottom: 1px solid #ccc;">
+              	<div class="item">
+              		<!-- <div class="info">
+              			<div class="fl">2016/5/10</div>
+              			<div class="fl">XXX医院</div>
+              			<div class="fr"><a href="javascript:void(0);">详情</a></div>
+              			<div class="clear"></div>
+              		</div>
+              		<div class="info">
+              			<div class="fl">2016/5/10</div>
+              			<div class="fl">XXX医院</div>
+              			<div class="fr"><a href="javascript:void(0);">详情</a></div>
+              			<div class="clear"></div>
+              		</div> -->
+              	</div>
+
+              </div>
+           </div>
+       </div>
+
+        <div class="cardContent">
+           <h4 class="cartTitle">
+               <div class="title_icon">
+                   <div class="fl">
+                   	<img src="UserModule/module/my/healthy/style/images/icon_10.png"/>
+                   </div>
+                   <p class="fl">传染病报告</p>
+                   <div class="fr">
+                   	<img src="UserModule/module/my/healthy/style/images/icon_11.png"/>
+                   </div>
+                   <div class="clear"></div>
+               </div>
+
+           </h4>
+           <div class="contentDiv hidden">
+              <div style="margin:5px 20px;color:orange;font-size: 16px;">
+              	<a href="javascript:void(0);" class="allListBtn hidden" data-type="crb">查看全部记录</a>
+              	<a href="javascript:void(0);" class="noListBtn hidden">暂时没有您的记录</a>
+              </div>
+
+              <div id="crbList" class="list row_list" data-type="crb" style="padding:2px 20px 10px 20px; color: #666;font-size: 15px;border-bottom: 1px solid #ccc;">
+              	<div class="item">
+              		<!-- <div class="info">
+              			<div class="fl">2016/5/10</div>
+              			<div class="fl">XXX医院</div>
+              			<div class="fr"><a href="javascript:void(0);">详情</a></div>
+              			<div class="clear"></div>
+              		</div>
+              		<div class="info">
+              			<div class="fl">2016/5/10</div>
+              			<div class="fl">XXX医院</div>
+              			<div class="fr"><a href="javascript:void(0);">详情</a></div>
+              			<div class="clear"></div>
+              		</div> -->
+              	</div>
+
+              </div>
+           </div>
+       </div>
+
+        <div class="cardContent">
+           <h4 class="cartTitle">
+               <div class="title_icon">
+                   <div class="fl">
+                   	<img src="UserModule/module/my/healthy/style/images/icon_13.png"/>
+                   </div>
+                   <p class="fl">健康小屋</p>
+                   <div class="clear"></div>
+               </div>
+           </h4>
+         </div>
+         
+         
+         
+       </div>
+
+       </div>
+	</div>
+</div>
+
+<script id="tplAppointOrder" type="text/x-handlebars-template">
+	{{#each data}}
+
+		<div class="item" data-order-id="{{orderId}}">
+              		<div class="info">
+              			<div class="fl">预约日期:{{dateDayFormat appTime}}(还有{{attendCardNum}}天)</div>
+						{{#showCancel operateType status}}
+						<div class="fr"><a href="javascript:void(0);" data-order-id="{{orderId}}" class="cancelOrder" data-type="{{operateType}}" data-hospital-code="{{hospitalCode}}" data-appoint-no="{{appointNo}}" data-receipt-no="{{receiptNo}}" data-his-patient-id="{{hisPatientId}}" data-order-fee="{{orderFee}}" data-hid="{{hid}}" data-id-no="{{patientCertNo}}" data-patient-name="{{patientName}}" data-office-code="{{officeCode}}" data-office-name="{{officeName}}" data-doctor-code="{{doctorCode}}" data-doctor-name="{{doctorName}}" data-app-time="{{appTime}}" data-am-pm="{{amPm}}" data-attend-card-num="{{attendCardNum}}" data-hospital-name="{{hospitalName}}" data-doctor-level="{{doctorLevel}}" data-payment-mode="{{paymentMode}}" data-status="{{status}}">取消预约</a></div>
+						{{/showCancel}}
+              			<div class="clear"></div>
+              		</div>
+					<div  class="info">
+              			预约时间:{{amPm}}
+              		</div>
+              		<div  class="info">
+              			就诊医院:{{hospitalName}}
+              		</div>
+              		<div class="info">
+              			科室:{{officeName}}
+              		</div>
+              		<!-- <div class="info">
+              			主任医师:{{nameHidden doctorName}}
+              		</div> -->
+					<div  class="info">
+              			就诊人:{{patientName}}
+              		</div>
+              		<div class="info">
+              			订单状态:{{visitStatusName operateType status payStatus}}
+              		</div>
+              	</div>
+
+	{{/each}}
+</script>
+
+
+<script id="tplListItem" type="text/x-handlebars-template">
+	{{#each data}}
+		<div class="info" style="color:#ACACAC;">
+      <div class="fl">{{data1}}</div>
+			<div class="fr">{{dateDayFormat time}}</div>
+      <div class="clear"></div>
+			<div class="fl">{{data2}}</div>
+			<div class="fl">{{data3}}</div>
+			<div class="fr"><a href="javascript:void(0);" class="detailBtn{{type}}" data-type="{{type}}" data-id="{{id}}" data-other="{{other}}">详情</a></div>
+			<div class="clear"></div>
+		</div>
+    <hr style="border-color:#ffffff;margin:5px 0;">
+	{{/each}}
+</script>

@@ -1,0 +1,10 @@
+﻿{
+	"data" :[{
+		"part_Id":"11111",
+		"part_Name":"部位"
+	},{
+		"part_Id":"22222",
+		"part_Name":"部位2"
+	}],
+	"code":0
+}

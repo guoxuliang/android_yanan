@@ -1,0 +1,284 @@
+<div class="workBox">
+	<div aigov-type="headerBack" id="header" aigov-auto-init='true' aigov-title="详情">
+	</div>
+
+	<div class="ai-body-box">
+	<div id="info">
+	
+	</div>
+	</div>
+	
+
+	
+	
+</div>
+<!-- 门诊 -->
+<script id="tplMZ" type="text/x-handlebars-template">
+	<div class="weui_cells_title">基本信息</div>
+	<div class="weui_cells weui_cells_form">
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">就诊时间:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+              	{{dateDayFormat outpatient.visitDtime}}
+            </div>
+        </div>
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">诊断:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{outpatient.outpatDiagName}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">医疗机构:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{outpatient.orgName}}
+            </div>
+        </div>
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">就诊科室:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{outpatient.visitDeptName}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">责任医师:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{nameHidden outpatient.respDoctorName}}
+            </div>
+        </div>
+<!--
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">开发调阅:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+				{{outpatient.openAccess}}
+               	<input class="weui_switch" type="checkbox">
+            </div>
+            <div class="">
+                评价
+            </div>
+        </div>
+-->
+	</div>
+	
+	<div class="weui_cells_title">就诊结算信息</div>
+	<div class="weui_cells weui_cells_form">
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">应收金额:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{fee.receivableAmount}}
+            </div>
+        </div>
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">自费金额:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+              {{fee.selfAmount}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">医保报销金额:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{fee.medicalInsuranceAmount}}
+            </div>
+        </div>
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">农合补偿金额:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{fee.cooperationMedicalAmount}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">优惠金额:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{fee.discountAmount}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">实收金额:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+               	{{fee.realAmount}}
+            </div>
+        </div>
+	</div>
+	
+	<div class="weui_cells_title">症状</div>
+	<div class="weui_cells weui_cells_form">
+		<table class="table_info">
+			<thead>
+				<tr>
+					<th>症状名称</th>
+					<th>发病日期</th>
+					<th>症状持续时间</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each sympList.symp}}
+		      	<tr>
+			        <td>{{symptomName}}</td>
+			        <td>{{dateDayFormat onsetDtimeDesc}}</td>
+			        <td>{{sympDurationMins}}</td>
+		      	</tr>
+				{{/each}}
+		     </tbody>
+		</table>
+	</div>	
+	<div class="weui_cells_title">用药信息</div>
+	<div class="weui_cells weui_cells_form">
+		<table class="table_info">
+			<thead>
+				<tr>
+					<th>药物类型</th>
+					<th>药物名称</th>
+					<th>用药天数</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each drugList.drug}}
+		      	<tr>
+			        <td>{{drugTypeDesc}}</td>
+			        <td>{{drugName}}</td>
+			        <td>{{drugUsingDays}}</td>
+		      	</tr>
+				{{/each}}
+		     </tbody>
+		</table>
+	</div>
+</script>
+
+<!-- 住院 -->
+<script id="tplZY" type="text/x-handlebars-template">
+	<div class="weui_cells_title">基本信息</div>
+	<div class="weui_cells weui_cells_form">
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">就诊时间:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+              	{{dateDayFormat inpatient.inDtime}}
+            </div>
+        </div>
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">诊断:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{inpatient.inDiagName}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">医疗机构:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{inpatient.orgName}}
+            </div>
+        </div>
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">就诊科室:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{inpatient.inDeptName}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">责任医师:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{nameHidden inpatient.respDoctorName}}
+            </div>
+        </div>
+<!--
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">开发调阅:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+				{{inpatient.openAccess}}
+               	<input class="weui_switch" type="checkbox">
+            </div>
+            <div class="">
+                评价
+            </div>
+        </div>
+-->
+	</div>
+	
+	<div class="weui_cells_title">就诊结算信息</div>
+	<div class="weui_cells weui_cells_form">
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">应收金额:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{fee.receivableAmount}}
+            </div>
+        </div>
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">自费金额:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+              {{fee.selfAmount}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">医保报销金额:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{fee.medicalInsuranceAmount}}
+            </div>
+        </div>
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">农合补偿金额:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{fee.cooperationMedicalAmount}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">优惠金额:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{fee.discountAmount}}
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">实收金额:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+               	{{fee.realAmount}}
+            </div>
+        </div>
+	</div>
+	
+	<div class="weui_cells_title">症状</div>
+	<div class="weui_cells weui_cells_form">
+		<table  class="table_info">
+			<thead>
+				<tr>
+					<th>症状名称</th>
+					<th>发病日期</th>
+					<th>症状持续时间</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each sympList.symp}}
+		      	<tr>
+			        <td>{{symptomName}}</td>
+			        <td>{{dateDayFormat onsetDtimeDesc}}</td>
+			        <td>{{sympDurationMins}}</td>
+		      	</tr>
+				{{/each}}
+		     </tbody>
+		</table>
+	</div>
+	<!--
+	<div class="weui_cells_title">描述</div>
+	<div class="weui_cells weui_cells_form">
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">主诉:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+               	间歇心急
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">客观检查:</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+               	无
+            </div>
+        </div>
+	</div>
+	
+	<div class="weui_cells_title">用药信息</div>
+	<div class="weui_cells weui_cells_form">
+		<table class="table_info">
+			<tr>
+				<th>药物类型</th>
+				<th>药物名称</th>
+				<th>用药天数</th>
+			</tr>
+		</table>
+	</div>
+	-->
+</script>

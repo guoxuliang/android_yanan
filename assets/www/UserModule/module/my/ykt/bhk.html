@@ -1,0 +1,481 @@
+<div class="workBox">
+    <div aigov-type="headerBack" id="header" aigov-auto-init='true' aigov-title="">
+    </div>
+
+    <div class="ai-body-box">
+        <form id="czsForm" enctype="multipart/form-data">
+        <div class="weui_cells weui_cells_form">
+
+            <div class="czs-wizard">
+                <div class="czs-wizard-header">
+                    <ul class="czs-wizard-steps">
+                        <li data-step="1" class="active">
+                            <span class="step">1</span>
+                            <span class="title">填写身份信息</span>
+                        </li>
+                        <li data-step="2">
+                            <span class="step">2</span>
+                            <span class="title">填写表单</span>
+                        </li>
+                        <li data-step="3">
+                            <span class="step">3</span>
+                            <span class="title">上传身份证</span>
+                        </li>
+                        <li data-step="4">
+                            <span class="step">4</span>
+                            <span class="title">信息提交</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="czs-wizard-content">
+                    <div class="czs-step-pane active" data-step="1">
+                        <div class="center">
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">卡&nbsp;&nbsp;类&nbsp;&nbsp;型</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <select class="weui_select" name="cardType" id="cardType">
+                                        <option value="0">城乡一卡通</option>
+                                        <option value="1">居民健康卡</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="weui_cell grsl grsl1 hidden2">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">卡&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;样</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <img src="UserModule/module/my/ykt/style/images/card_img02.png" width="100%">
+                                </div>
+                            </div>
+                            <div class="weui_cell grsl2 hidden2">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">卡&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;样</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <img src="UserModule/module/my/ykt/style/images/card_img01.png" width="100%">
+                                </div>
+                            </div>
+                            <div class="weui_cell grsl hidden2">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">押金/卡费</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary t-l">
+                                    <label>20元/张</label>
+                                </div>
+                            </div>
+                            <div class="weui_cell grsl hidden2">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">优惠月票区</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary t-l">
+                                    <label>
+                                        无
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="weui_cell grsl grsl1 hidden2">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">电子钱包区</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary t-l">
+                                    <label>
+                                        可用于：医院就诊，诊间支付；地铁、公交车、公共租赁自行车等公共交通领域；特约商户小额支付；起充50，上限1000。
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="weui_cell grsl2 hidden2">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">电子钱包区</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary t-l">
+                                    <label>
+                                        可用于：预约挂号，医院就诊，诊间支付；地铁、公交车、公共租赁自行车等公共交通领域；特约商户小额支付；起充50，上限1000。
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="weui_cell grsl hidden2">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">特&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;性</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary t-l">
+                                    <label>
+                                        实名制可挂失
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="weui_cell grsl hidden2">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label"><font style="color:red">*</font>身份证号</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <input class="weui_input" type="text" id="cardNo" name="cardNo" placeholder="请输入身份证号">
+                                </div>
+                            </div>
+                            <div class="weui_cell grsl hidden2">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label"><font style="color:red">*</font>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <input class="weui_input" type="text" id="cardName" name="cardName" placeholder="请输入姓名">
+                                </div>
+                            </div>
+                            <div class="weui_cell grsl hidden2">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">验&nbsp;&nbsp;证&nbsp;&nbsp;码</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <input class="weui_input" type="text" id="code" name="code" placeholder="请输入验证码">
+                                </div>
+                                <div class="weui_cell_ft">
+                                    <img id="checkCodeImg" style="height:30px;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="czs-step-pane" data-step="2">
+                        <div class="center">
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary t-l">
+                                    <span id="cardNameSpan"></span>
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">身份证号</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary t-l">
+                                    <span id="cardNoSpan"></span>
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label"><font style="color:red">*</font>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <select class="weui_select" name="sex" id="sex" dictId="CARD_SEX">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label"><font style="color:red">*</font>民&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;族</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                	<select class="weui_select" name="nation" id="nation" dictId="CARD_NATION">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label"><font style="color:red">*</font>户籍类别</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <select class="weui_select" name="censusRegister" id="censusRegister" dictId="CENSUS_TYPE">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label"><font style="color:red">*</font>户籍地址</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <input class="weui_input" type="text" id="censusRegisterAddr" name="censusRegisterAddr">
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label"><font style="color:red">*</font>申领人电话</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <input class="weui_input" type="text" id="contractPhone" name="contractPhone">
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label"><font style="color:red">*</font>身份证有效期起</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <input class="weui_input" type="date" id="expiryDateStart" name="expiryDateStart">
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label"><font style="color:red">*</font>身份证有效期至</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <input class="weui_input" type="date" id="expiryDateEnd" name="expiryDateEnd">
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label"><font style="color:red">*</font>领卡方式</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <select class="weui_select" name="obtainCardtype" id="obtainCardtype">
+                                        <option value="0">邮寄</option>
+                                        <option value="1">自取</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">邮寄地址</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <input class="weui_input" type="text" id="mailAddr" name="mailAddr">
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">领卡网点</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <input type="hidden" name="obtainCardnet" id="obtainCardnet">
+                                    <select class="weui_select" name="obtainCardnet1" id="obtainCardnet1" dictId="OBTAIN_CARD_NET1" disabled>
+                                    </select>
+                                    <select class="weui_select" name="obtainCardnet2" id="obtainCardnet2" dictId="OBTAIN_CARD_NET2" disabled>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label"><font style="color:red">*</font>支付方式</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <select class="weui_select" name="payType" id="payType" dictId="CARD_APPLY_PAY_TYPE" disabled>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="czs-step-pane" data-step="3">
+						<div class="bd">
+						    <div class="weui_cells_title"><font style="color:red">*</font>身份证正面照(拍照时请确保姓名、证件号码等信息清晰可见)</div>
+							<div class="weui_cells">
+					          <div class="weui_cell">
+				            	<div class="content">
+				            		<input type="hidden" id="idFront" name="idFront" />
+									<div>
+										<img src="UserModule/module/my/ykt/style/images/idcard_front.jpg" />
+										<input type="file" accept="image/*"/>
+										<div>
+											<dl>
+												<img src="UserModule/module/my/ykt/style/images/camera-icon.png" />
+												<span>点此选取照片</span>
+											</dl>
+											<dt class="hide"><img src="UserModule/module/my/ykt/style/images/watermark.png" style="width:100%" /></dt>
+										</div>
+									</div>
+								</div>
+					          </div>
+							</div>
+						</div>
+						<div class="bd">
+						    <div class="weui_cells_title"><font style="color:red">*</font>身份证反面照(拍照时请确保签发机关、有效期限等信息清晰可见)</div>
+							<div class="weui_cells">
+					          <div class="weui_cell">
+				            	<div class="content">
+					            	<input type="hidden" id="idBack" name="idBack" />
+									<div>
+										<img src="UserModule/module/my/ykt/style/images/idcard_back.jpg" />
+										<input type="file" accept="image/*"/>
+										<div>
+											<dl>
+												<img src="UserModule/module/my/ykt/style/images/camera-icon.png" />
+												<span>点此选取照片</span>
+											</dl>
+											<dt class="hide"><img src="UserModule/module/my/ykt/style/images/watermark.png" style="width:100%" /></dt>
+										</div>
+									</div>
+								</div>
+					          </div>
+							</div>
+						</div>
+						<div class="bd">
+						    <div class="weui_cells_title"><font style="color:red">*</font>身份证手持照</div>
+							<div class="weui_cells">
+					          <div class="weui_cell">
+				            	<div class="content">
+					            	<input type="hidden" id="idHand" name="idHand" />
+									<div>
+										<img src="UserModule/module/my/ykt/style/images/idcard_hand.jpg" />
+										<input type="file" accept="image/*"/>
+										<div>
+											<dl>
+												<img src="UserModule/module/my/ykt/style/images/camera-icon.png" />
+												<span>点此选取照片</span>
+											</dl>
+											<dt class="hide"><img src="UserModule/module/my/ykt/style/images/watermark.png" style="width:100%" /></dt>
+										</div>
+									</div>
+								</div>
+					          </div>
+							</div>
+						</div>
+                    </div>
+                    <div class="czs-step-pane" data-step="4">
+                        <div class="center">
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary t-l">
+                                    <span id="cardNameSpan2"></span>
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">身份证号</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary t-l">
+                                    <span id="cardNoSpan2"></span>
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary t-l">
+                                    <span id="sexSpan"></span>
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">民&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;族</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary t-l">
+                                    <span id="nationSpan"></span>
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">户籍类别</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary t-l">
+                                    <span id="censusRegisterSpan"></span>
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">户籍地址</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary t-l">
+                                    <span id="censusRegisterAddrSpan">秦都区</span>
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">申领人电话</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary t-l">
+                                    <span id="contractPhoneSpan"></span>
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">身份证有效期起</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary t-l">
+                                    <span id="expiryDateStartSpan"></span>
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">身份证有效期至</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary t-l">
+                                    <span id="expiryDateEndSpan"></span>
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">领卡方式</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary t-l">
+                                    <span id="obtainCardtypeSpan"></span>
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">邮寄地址</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary t-l">
+                                    <span id="mailAddrSpan"></span>
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">领卡网点</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary t-l">
+                                    <span id="obtainCardnetSpan"></span>
+                                </div>
+                            </div>
+                            <div class="weui_cell">
+                                <div class="weui_cell_hd">
+                                    <label class="weui_label">支付方式</label>
+                                </div>
+                                <div class="weui_cell_bd weui_cell_primary t-l">
+                                    <span id="payTypeSpan"></span>
+                                </div>
+                            </div>
+                        <div class="bd">
+						    <div class="weui_cells_title">身份证正面照</div>
+							<div class="weui_cells">
+					          <div class="weui_cell">
+				            	<div class="content">
+									<div>
+										<img id="idFrontReview" src="UserModule/module/my/ykt/style/images/idcard_front.jpg" />
+									</div>
+								</div>
+					          </div>
+							</div>
+						</div>
+						<div class="bd">
+						    <div class="weui_cells_title">身份证反面照</div>
+							<div class="weui_cells">
+					          <div class="weui_cell">
+				            	<div class="content">
+									<div>
+										<img id="idBackReview" src="UserModule/module/my/ykt/style/images/idcard_back.jpg" />
+									</div>
+								</div>
+					          </div>
+							</div>
+						</div>
+						<div class="bd">
+						    <div class="weui_cells_title">身份证手持照</div>
+							<div class="weui_cells">
+					          <div class="weui_cell">
+				            	<div class="content">
+									<div>
+										<img id="idHandReview" src="UserModule/module/my/ykt/style/images/idcard_hand.jpg" />
+									</div>
+								</div>
+					          </div>
+							</div>
+						</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="weui_btn_area" style="margin-bottom: 40px;">
+                    <button type="button" class="am-btn am-btn-success weui_btn weui_btn_primary czs-wizard-next" data-czs-valid="checkMonotor">
+                                                                       下一步 <i class="am-icon-chevron-right"></i>
+                    </button>
+                    <button type="button" class="am-btn am-btn-success weui_btn weui_btn_primary czs-wizard-finish hidden2" id="submitBtn">
+                       	完成<i class="am-icon-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+
+    </div>
+
+</div>

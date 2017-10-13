@@ -1,0 +1,29 @@
+﻿[{
+	"id" : "aigovMain",
+	"picture" : "BaseModule/components/buttonlist/style/images/icon_01.png",
+	"pictureSelected" : "BaseModule/components/buttonlist/style/images/icon_01_hover.png",
+	"name" : "首页",
+	"position" : "0",
+	"content":"aiMenu.openModule('index')"
+},{
+	"id" : "work",
+	"picture" : "BaseModule/components/buttonlist/style/images/icon_02.png",
+	"pictureSelected" : "BaseModule/components/buttonlist/style/images/icon_02_hover.png",
+	"name" : "消息",
+	"position" : "1",
+	"content":"aiMenu.openModule('my')"
+},{
+	"id" : "hotline",
+	"picture" : "BaseModule/components/buttonlist/style/images/icon_03.png",
+	"pictureSelected" : "BaseModule/components/buttonlist/style/images/icon_03_hover.png",
+	"name" : "互动",
+	"position" : "2",
+	"content":"aiMenu.openModule('hotline')"
+},{
+	"id" : "my",
+	"picture" : "BaseModule/components/buttonlist/style/images/icon_04.png",
+	"pictureSelected" : "BaseModule/components/buttonlist/style/images/icon_04_hover.png",
+	"name" : "我的",
+	"position" : "3",
+	"content":"aiMenu.openModule('my')"
+}]

@@ -1,0 +1,64 @@
+
+.borderBottom{border-bottom: 1px solid #ddd;}
+.opers span{width: 33%; float: left;}
+.opers span:nth-child(1){text-align: left;}
+.opers span:nth-child(2){text-align: center;}
+.opers span:nth-child(3){text-align: right;}
+
+.h-20{height: 20px;}
+
+
+
+
+.weui_cell {
+    position: relative;
+}
+
+.weui_cells {
+    margin-top: @weuiCellsMarginTop;
+    background-color: @weuiCellBg;
+    line-height: @weuiCellLineHeight;
+    font-size: @weuiCellFontSize;
+    overflow: hidden;
+}
+
+.weui_cells_title {
+    margin-top: .77em;
+    margin-bottom: .3em;
+    padding-left: @weuiCellGapH;
+    padding-right: @weuiCellGapH;
+    color: @globalTextColor;
+    font-size: @weuiCellTipsFontSize;
+}
+
+.weui_cells_tips {
+    margin-top: .3em;
+    color: @globalTextColor;
+    padding-left: @weuiCellGapH;
+    padding-right: @weuiCellGapH;
+    font-size: @weuiCellTipsFontSize;
+}
+
+.weui_cell {
+    padding: @weuiCellGapV @weuiCellGapH;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.weui_cell_ft {
+    text-align: right;
+    color: @globalTextColor;
+}
+
+.weui_cell_primary {
+    flex: 1;
+}
+
+section{ background: #fff; font-size: 18px; margin-bottom: 50px; }
+section > p{ font-size: 15px; background: #eee; color: #999; padding: 10px 10px 3px 10px;}
+section > p > input{ margin: 6px 0 5px 10px; background: #fff;  border: solid 1px #ddd;}
+section > dl{border-bottom:1px solid #ddd; border-top:1px solid #ddd; padding: 15px 10px;}
+section > dl > dt{ float: left; color: #555; }
+section > dl > dt > span{ margin-left: 5px; font-size: 14px; color: #999; }
+section > dl > dd{ float: right; color: #efa530;}

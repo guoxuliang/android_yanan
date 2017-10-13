@@ -1,0 +1,11 @@
+.closeBtn{
+    width: 4em;
+    height: 4em;
+    background: url(../images/close.png) no-repeat center center;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    right: 0em;
+    top: 0em;
+    -webkit-background-size: 100% auto;
+}

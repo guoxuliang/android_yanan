@@ -1,0 +1,28 @@
+
+
+<div class="ai-body-box" id="J_hopitalMap" style="position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    overflow: auto;" >
+	
+</div>
+<script id="tpl" type="text/x-handlebars-template">
+	<div>
+		<img alt="" src="{{=img}}" style="width:100%" class='J_open_map' data_title="{{=title}}" data_address="{{=add1}}" data_lng="{{=lng}}" data_lat="{{=lat}}"/>
+   	</div>
+	<div class="weui_panel weui_panel_access">
+       <div class="weui_panel_bd">
+           <div class="weui_media_box weui_media_text">
+               	<h4 class="weui_media_title">{{=title}}</h4>
+               	<p class="weui_media_desc" style="line-height: 1.8;font-size:0.9em;">所属区域:{{=belongto}}</p>
+				<p class="weui_media_desc" style="line-height: 1.8;font-size:0.9em;">服务类型:{{=type}}</p>
+				<p class="weui_media_desc" style="line-height: 1.8;font-size:0.9em;">具体地址:{{=add1}}</p>
+				<p class="weui_media_desc J_open_map" style="line-height: 1.8;font-size:0.9em;" data_title="{{=title}}" data_address="{{=add1}}" data_lng="{{=lng}}" data_lat="{{=lat}}">详细地址:{{=add2}}&nbsp;<img src="UserModule/module/other/guide/style/images/marker_red_sprite.png" style="height:1.2em"/></p>
+           </div>
+       </div>
+   </div>
+  	<div class="weui_btn_area">
+  		<a href="tel:{{=phone}}?allow" class="weui_btn weui_btn_primary" id="J_hospitalInfo_Map">电话咨询</a>
+  	</div>
+</script>

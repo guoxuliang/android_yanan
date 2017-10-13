@@ -1,0 +1,17 @@
+.aigov-hospitallDept-list{
+	color: #727272;
+}
+
+
+.aigov-document-title{
+	color: #3a3a3a;
+    font-size: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 1em 2em 1em 0.5em;
+    background: transparent url('./images/arrow_right.png') no-repeat;
+    background-position: right;
+    -webkit-background-size: 0.5em 1em;
+    margin-right: 1em;
+}

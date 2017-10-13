@@ -1,0 +1,114 @@
+.ai-service-scroll{
+	position: absolute;
+	top:3em;
+	right:0px;
+	bottom:0px;
+	left:0px;
+	overflow:auto;
+}
+.newsnav-wrapper {
+    height: 3em;
+    padding: 0.5em 0px;
+    font-size: 1em;
+    line-height: 2em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.newsnav-wrapper .swiper-slide{
+    font-size: 1em;
+    text-decoration: none;
+    outline: none;
+    
+    text-align: center;
+    border-right: 1px solid #ddd;
+    /*padding: 0 10px;*/
+    font-family: 'STHeiti','Microsoft YaHei',Helvetica,Arial,sans-serif;
+}
+.newsnav-wrapper .swiper-slide a.current{
+	font-weight: bold;
+}
+.weui_panel {
+    background-color: #fff;
+    margin-top: 0; 
+    position: relative;
+    overflow: hidden;
+}
+
+#newstop-wrapper img {
+  	box-sizing: border-box;
+  	/* max-width: 100%; */
+  	width: 100%;
+  	height:265px;
+  	vertical-align: middle;
+  	border: 0;
+}
+
+.subscribe{
+	background-color: #00cc99;
+    z-index: 100;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    height: 3em;
+    line-height: 3em;
+    width: 3em;
+    position: absolute;
+    right: 0;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-bottom: 1px solid #ddd;
+}
+
+.subscribe .cross{
+	position: absolute;
+    width: 5px;
+    height: 25px;
+    opacity: 0.9;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.subscribe .cross:before {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+ }
+ .subscribe .cross:before,
+ .subscribe .cross:after {
+    position: absolute;
+    content: ' ';
+    height: 17px;
+    width: 3px;
+    background-color: #fff;
+    height: 22px;
+}
+
+.swiper-slide p{
+	z-index: 101;
+	position: absolute;
+	top: 230px;
+	background-color: #fff;
+	opacity: 0.8;
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	/*padding-left: 10px;*/
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.swiper-slide a{
+	color:#000;
+	display: block;
+    overflow: hidden;
+}
+
+.hide {
+	display:none;
+}
+
+.show{
+	display:block;
+}

@@ -1,0 +1,70 @@
+<div class="workBox">
+	<div aigov-type="headerBack" id="header" aigov-auto-init='true' aigov-title="详情">
+	</div>
+
+	<div class="ai-body-box">
+	<div id="info">
+
+	</div>
+	</div>
+
+
+</div>
+
+<script id="tpl" type="text/x-handlebars-template">
+{{#each data}}
+
+    {{#each this}}
+        {{#ifCond @index '==' '0'}}
+            <div class="weui_cells_title">
+                <img src="UserModule/module/my/healthy/detail/style/icon01.png" width="15px;">
+                {{testName}}
+            </div>
+            <table class="tjDetail" width="98%" border="1" cellpadding="2" cellspacing="0" >
+                <tr>
+                    <td>项目名称</td>
+                    <td>定量数值</td>
+                    <td>计量单位</td>
+                    <td>参考范围</td>
+                    <td>结果</td>
+                </tr>
+        {{/ifCond}}
+            {{#if qualitativeResult}}
+                {{#ifCond testResultName '==' '正常'}}
+                    <tr>
+                {{else}}
+                    <tr style="color:red;">
+                {{/ifCond}}
+                    <td>{{testItemName}}</td>
+                    <td>{{qualitativeResult}}</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>{{testResultName}}</td>
+
+                </tr>
+            {{else}}
+                {{#ifCond testResultName '==' '正常'}}
+                    <tr>
+                {{else}}
+                    <tr style="color:red;">
+                {{/ifCond}}
+                    <td>{{testItemName}}</td>
+                    <td>{{testResultValue}}</td>
+                    {{#if testResultUnit}}
+                        <td>{{testResultUnit}}</td>
+                    {{else}}
+                        <td>--</td>
+                    {{/if}}
+                    {{#if referenceRange}}
+                        <td>{{referenceRange}}</td>
+                    {{else}}
+                        <td>--</td>
+                    {{/if}}
+                    <td>{{testResultName}}</td>
+                </tr>
+            {{/if}}
+        {{/each}}
+        </table>
+    {{/each}}
+    <br><br>
+</script>
